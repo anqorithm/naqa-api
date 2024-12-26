@@ -32,6 +32,25 @@ cp .env.example .env
 # Edit .env with your configurations
 ```
 
+## Environment Variables
+
+Before running the application, make sure to set up your environment variables:
+
+```bash
+# Copy the example env file
+cp .env.example .env
+
+# Fill in your environment variables in .env file:
+API_VERSION      # API version
+ENVIRONMENT      # development, production, etc.
+PORT            # Server port
+APP_NAME        # Application name
+APP_DESCRIPTION # Application description
+MONGO_URI      # MongoDB connection URI
+MONGO_DATABASE # MongoDB database name
+APPVERSION     # Application version
+```
+
 ## Running the Application
 
 ### Local Development

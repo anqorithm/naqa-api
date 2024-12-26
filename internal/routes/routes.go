@@ -56,11 +56,9 @@ func (r *Router) setupV1Routes(v1 fiber.Router) {
 func (r *Router) setupUserRoutes(v1 fiber.Router) {
 	users := v1.Group("/users")
 	users.Get("/", r.h.GetUsersHandler)
-	// Add more user routes here
 }
 
 func (r *Router) setupTaskRoutes(v1 fiber.Router) {
 	tasks := v1.Group("/tasks")
 	tasks.Get("/", r.h.GetTasksHandler)
-	// Add more task routes here
 }
