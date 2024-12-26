@@ -1,8 +1,6 @@
 # Naqa API
 
 [![Release](https://github.com/anqorithm/naqa-api/actions/workflows/release.yml/badge.svg)](https://github.com/anqorithm/naqa-api/actions/workflows/release.yml)
-[![Tests](https://github.com/anqorithm/naqa-api/actions/workflows/test.yml/badge.svg)](https://github.com/anqorithm/naqa-api/actions/workflows/test.yml)
-[![Docker](https://github.com/anqorithm/naqa-api/actions/workflows/docker.yml/badge.svg)](https://github.com/anqorithm/naqa-api/actions/workflows/docker.yml)
 
 Naqa API is a RESTful service designed to provide data on the purification process of Saudi stocks.
 
