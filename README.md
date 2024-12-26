@@ -17,7 +17,7 @@ Naqa API is a RESTful service designed to provide data on the purification proce
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/anqorithm/naqa-api
 cd naqa-api
 ```
 
