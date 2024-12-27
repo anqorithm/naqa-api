@@ -229,6 +229,30 @@ GET {{baseUrl}}/api/v1/stocks/year/2023/search?sector=%D8%A7%D9%84%D8%B7%D8%A7%D
 Content-Type: {{contentType}}
 ```
 
+### مصدر البيانات | Data Source
+
+<div dir="rtl">
+
+هذه الخدمة مبنية على قوائم التطهير المنشورة للعامة من قبل فضيلة الشيخ الدكتور محمد بن سعود العصيمي (المشرف العام على موقع المقاصد). تم جمع وتنظيم البيانات من:
+
+- [حاسبة التطهير - موقع المقاصد](https://almaqased.net/cleansing-calculator/%D9%82%D9%88%D8%A7%D8%A6%D9%85-%D8%A7%D9%84%D8%AA%D8%AD%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A-%D9%84%D9%84%D8%B4%D8%B1%D9%83%D8%A7%D8%AA/)
+- قوائم التحليل المالي للشركات المنشورة للعامة
+- حسابات نسب التطهير المعتمدة من قبل الشيخ د. محمد العصيمي
+
+</div>
+
+> **Important Note**: All purification rates and Shariah classifications are based on the publicly available lists and calculations approved by Sheikh Dr. Mohammed Al-Osaimi, the General Supervisor of Almaqased website.
+
+### الاعتماد والإشراف | Supervision
+
+<div dir="rtl">
+
+تحت إشراف:  
+**فضيلة الشيخ الدكتور محمد بن سعود العصيمي**  
+المشرف العام على موقع المقاصد للاقتصاد الإسلامي
+
+</div>
+
 ### Inspiration and Data Source
 
 This API is inspired by [NaqausStocks.com](https://naquastocks.com/).
