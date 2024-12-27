@@ -50,6 +50,9 @@ func (h *Handler) GetStocksByYearHandler(c *fiber.Ctx) error {
 }
 
 func (h *Handler) SearchStocksHandler(c *fiber.Ctx) error {
+	// Get year from URL parameters
+	year := c.Params("year")
+	
 	// Get query parameters
 	name := c.Query("name")
 	code := c.Query("code")
@@ -72,7 +75,7 @@ func (h *Handler) SearchStocksHandler(c *fiber.Ctx) error {
 		filter["sharia_opinion"] = shariaOpinion
 	}
 	
-	collection := h.db.Collection("2023")
+	collection := h.db.Collection(year)
 	cursor, err := collection.Find(c.Context(), filter)
 	if err != nil {
 		return c.Status(500).JSON(fiber.Map{
