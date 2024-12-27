@@ -30,6 +30,9 @@ func (r *Router) SetupRoutes() {
 	v1 := r.app.Group("/api/v1")
 	r.setupV1Routes(v1)
 
+	// Add purification calculation endpoint
+	r.app.Post("/api/v1/stocks/calculate-purification", r.h.CalculatePurificationHandler)
+
 	// API routes
 	api := r.app.Group("/api")
 
@@ -42,19 +45,9 @@ func (r *Router) SetupRoutes() {
 }
 
 func (r *Router) setupV1Routes(v1 fiber.Router) {
-	// ...existing code...
-
-	// Stock market routes
 	r.setupStockRoutes(v1)
 }
 
-func (r *Router) setupUserRoutes(v1 fiber.Router) {
-	// ...existing code...
-}
-
-func (r *Router) setupTaskRoutes(v1 fiber.Router) {
-	// ...existing code...
-}
 
 func (r *Router) setupStockRoutes(v1 fiber.Router) {
 	stocks := v1.Group("/stocks")
@@ -64,4 +57,7 @@ func (r *Router) setupStockRoutes(v1 fiber.Router) {
 	
 	// Search stocks by various parameters
 	stocks.Get("/year/:year/search", middleware.ValidateYear(), r.h.SearchStocksHandler)
+
+	// Calculate purification amount
+	stocks.Post("/calculate-purification", r.h.CalculatePurificationHandler)
 }

@@ -1,9 +1,12 @@
 package handlers
 
 import (
-    "github.com/gofiber/fiber/v2"
-    "go.mongodb.org/mongo-driver/bson"
 	"fmt"
+	"strconv"
+	"time"
+
+	"github.com/gofiber/fiber/v2"
+	"go.mongodb.org/mongo-driver/bson"
 )
 
 type Stock struct {
@@ -16,6 +19,20 @@ type Stock struct {
 
 type StockResponse struct {
     Stocks []Stock `json:"stocks"`
+}
+
+// PurificationRequest represents the request body for purification calculation
+type PurificationRequest struct {
+    StartDate    string  `json:"start_date"`
+    EndDate      string  `json:"end_date"`
+    NumberOfStocks int   `json:"number_of_stocks"`
+    StockCode    string  `json:"stock_code"`
+}
+
+type PurificationResponse struct {
+    PurificationAmount float64 `json:"purification_amount"`
+    DaysHeld          int     `json:"days_held"`
+    PurificationRate  float64 `json:"purification_rate"`
 }
 
 func safeString(v interface{}) string {
@@ -102,4 +119,55 @@ func (h *Handler) SearchStocksHandler(c *fiber.Ctx) error {
     }
     
     return c.JSON(StockResponse{Stocks: result})
+}
+
+func (h *Handler) CalculatePurificationHandler(c *fiber.Ctx) error {
+    var req PurificationRequest
+    if err := c.BodyParser(&req); err != nil {
+        return c.Status(400).JSON(fiber.Map{"error": "Invalid request body"})
+    }
+
+    // Parse dates
+    startDate, err := time.Parse("2006-01-02", req.StartDate)
+    if err != nil {
+        return c.Status(400).JSON(fiber.Map{"error": "Invalid start date format. Use YYYY-MM-DD"})
+    }
+
+    endDate, err := time.Parse("2006-01-02", req.EndDate)
+    if err != nil {
+        return c.Status(400).JSON(fiber.Map{"error": "Invalid end date format. Use YYYY-MM-DD"})
+    }
+
+    // Calculate days held
+    daysHeld := int(endDate.Sub(startDate).Hours() / 24)
+    if daysHeld < 0 {
+        return c.Status(400).JSON(fiber.Map{"error": "End date must be after start date"})
+    }
+
+    // Get stock purification rate from database
+    collection := h.db.Collection("2023") // Use appropriate year
+    var stock bson.M
+    err = collection.FindOne(c.Context(), bson.M{"code": req.StockCode}).Decode(&stock)
+    if err != nil {
+        return c.Status(404).JSON(fiber.Map{"error": "Stock not found"})
+    }
+
+    // Get purification rate and convert to float64
+    purificationStr := safeString(stock["purification"])
+    purificationRate, err := strconv.ParseFloat(purificationStr, 64)
+    if err != nil {
+        return c.Status(500).JSON(fiber.Map{"error": "Invalid purification rate in database"})
+    }
+
+    // Calculate purification amount
+    // Formula: (numberOfStocks * purificationRate * daysHeld) / 365
+    purificationAmount := float64(req.NumberOfStocks) * purificationRate * float64(daysHeld) / 365.0
+
+    response := PurificationResponse{
+        PurificationAmount: purificationAmount,
+        DaysHeld:          daysHeld,
+        PurificationRate:  purificationRate,
+    }
+
+    return c.JSON(response)
 }
