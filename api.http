@@ -1,5 +1,5 @@
 ### Environment Variables
-@baseUrl = http://localhost:3030
+@baseUrl = http://localhost:3000
 @contentType = application/json
 
 ### Health Check
