@@ -18,12 +18,12 @@ func ValidateYear() fiber.Handler {
 	return func(c *fiber.Ctx) error {
 		year := c.Params("year")
 		if year == "" {
-			return handlers.SendError(c, fiber.StatusBadRequest, 
+			return handlers.SendError(c, fiber.StatusNotFound,
 				models.ErrCodeValidationFailed,
 				"Year parameter is required",
 				fiber.Map{
 					"available_years": availableYears,
-					"example": fmt.Sprintf("/api/v1/stocks/year/%s", availableYears[len(availableYears)-1]),
+					"example":         fmt.Sprintf("/api/v1/stocks/year/%s", availableYears[len(availableYears)-1]),
 				})
 		}
 
@@ -36,14 +36,14 @@ func ValidateYear() fiber.Handler {
 		}
 
 		if !valid {
-			return handlers.SendError(c, fiber.StatusBadRequest, 
+			return handlers.SendError(c, fiber.StatusNotFound,
 				models.ErrCodeValidationFailed,
-				fmt.Sprintf("The year '%s' is not supported", year),
+				fmt.Sprintf("Year '%s' not found", year),
 				fiber.Map{
-					"provided_year":    year,
+					"provided_year":   year,
 					"available_years": availableYears,
-					"latest_year":      availableYears[len(availableYears)-1],
-					"suggestion":       fmt.Sprintf("Try using the latest available year: %s", availableYears[len(availableYears)-1]),
+					"latest_year":     availableYears[len(availableYears)-1],
+					"suggestion":      fmt.Sprintf("Try using the latest available year: %s", availableYears[len(availableYears)-1]),
 				})
 		}
 
