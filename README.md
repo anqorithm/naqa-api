@@ -119,14 +119,32 @@ docker run -d -p 3000:3000 naqa-api
 ### Project Structure
 ```
 .
-├── cmd/
-│   └── api/          # Application entrypoint
-├── internal/
-│   ├── config/       # Configuration
-│   ├── handlers/     # Request handlers
-│   ├── middleware/   # Custom middleware
-│   └── routes/       # Route definitions
-└── docker-compose.yml
+├── cmd
+│   └── api
+│       └── main.go
+├── docker-compose.yml
+├── Dockerfile
+├── docs
+│   ├── docs.go
+│   ├── swagger.json
+│   └── swagger.yaml
+├── go.mod
+├── go.sum
+├── internal
+│   ├── config
+│   │   ├── config.go
+│   │   └── mongodb.go
+│   ├── handlers
+│   │   ├── handlers.go
+│   │   └── stocks.go
+│   ├── middleware
+│   │   ├── middleware.go
+│   │   └── year_validator.go
+│   └── routes
+│       └── routes.go
+├── LICENSE
+├── Makefile
+└── README.md
 ```
 
 ### Building for Production
