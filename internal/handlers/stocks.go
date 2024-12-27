@@ -29,6 +29,9 @@ func (h *Handler) GetStocksByYearHandler(c *fiber.Ctx) error {
 		return SendError(c, fiber.StatusInternalServerError, models.ErrCodeDatabaseError,
 			"Failed to parse stocks", nil)
 	}
+	if len(stocks)==0 {
+		return c.Status(404).JSON(fiber.Map{"error": "Stock Not Found We could not find any stock matching your criteria. Please verify your search parameters and try again. "});
+	}
 
 	result := make([]models.Stock, 0, len(stocks))
 	for _, doc := range stocks {
@@ -75,7 +78,9 @@ func (h *Handler) SearchStocksHandler(c *fiber.Ctx) error {
 	if err := cursor.All(c.Context(), &stocks); err != nil {
 		return c.Status(500).JSON(fiber.Map{"error": "Failed to parse stocks"})
 	}
-
+	if len(stocks)==0 {
+		return c.Status(404).JSON(fiber.Map{"error": "Stock Not Found We could not find any stock matching your criteria. Please verify your search parameters and try again. "});
+	}
 	result := make([]models.Stock, 0, len(stocks))
 	for _, doc := range stocks {
 		stock := models.Stock{
