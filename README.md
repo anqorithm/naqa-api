@@ -119,10 +119,8 @@ docker run -d -p 3000:3000 naqa-api
 `http://localhost:3000/api/v1`
 
 ### Available Endpoints
-- `GET /` - API information
-- `GET /health` - Health check
-
-### Environment Variables
+```http
+## Environment Variables
 @baseUrl = http://localhost:3030  
 @contentType = application/json
 
@@ -150,36 +148,39 @@ Content-Type: {{contentType}}
 POST {{baseUrl}}/api/v1/stocks/calculate-purification  
 Content-Type: {{contentType}}
 
-```json
-{
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31",
-    "number_of_stocks": 100,
-    "stock_code": "1111"
-}
 ```
 
 ### Search Examples
 
 #### Search by Name
+```http
 GET {{baseUrl}}/api/v1/stocks/year/2023/search?name=%D8%A3%D8%B1%D8%A7%D9%85%D9%83%D9%88  
 Content-Type: {{contentType}}
+```
 
 #### Search by Code
+```http
 GET {{baseUrl}}/api/v1/stocks/year/2023/search?code=2222  
 Content-Type: {{contentType}}
+```
 
 #### Search by Sector
+```http
 GET {{baseUrl}}/api/v1/stocks/year/2023/search?sector=%D8%A7%D9%84%D8%B7%D8%A7%D9%82%D8%A9  
 Content-Type: {{contentType}}
+```
 
 #### Search by Sharia Opinion
+```http
 GET {{baseUrl}}/api/v1/stocks/year/2023/search?sharia_opinion=%D9%86%D9%82%D9%8A%D8%A9  
 Content-Type: {{contentType}}
+```
 
 #### Combined Search
+```http
 GET {{baseUrl}}/api/v1/stocks/year/2023/search?sector=%D8%A7%D9%84%D8%B7%D8%A7%D9%82%D8%A9&sharia_opinion=%D9%86%D9%82%D9%8A%D8%A9  
 Content-Type: {{contentType}}
+```
 
 ### Inspiration and Data Source
 
@@ -264,6 +265,36 @@ classDiagram
     main --> Routes : initializes
     main --> Config : loads
     Handlers --> MongoDB : uses
+```
+
+### Docker-Compose Diagram
+
+```mermaid
+graph LR
+    subgraph Docker-Compose
+        subgraph naqa-network
+            api[API Service]
+            mongo[MongoDB]
+            api --> |depends_on| mongo
+        end
+        
+        volume[(mongodb_data)]
+        mongo --> |volume| volume
+        
+        api --> |port| port1[3000:3000]
+        mongo --> |port| port2[27017:27017]
+        
+        env1[Environment:<br/>MONGODB_URI<br/>PORT] --> api
+    end
+
+    classDef default fill:#f9f9f9,stroke:#333,stroke-width:2px;
+    classDef network fill:#e1f5fe,stroke:#333,stroke-width:2px;
+    classDef volume fill:#fff3e0,stroke:#333,stroke-width:2px;
+    classDef env fill:#f3e5f5,stroke:#333,stroke-width:2px;
+    
+    class naqa-network network;
+    class volume volume;
+    class env1 env;
 ```
 
 ### Building for Production
