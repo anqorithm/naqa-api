@@ -15,11 +15,11 @@ GET {{baseUrl}}/
 Content-Type: {{contentType}}
 
 ### Get Stocks by Year
-GET {{baseUrl}}/api/v1/stocks/year/2017
+GET {{baseUrl}}/api/v1/stocks/year/2018
 Content-Type: {{contentType}}
 
 ### Search Stocks with Parameters
-GET {{baseUrl}}/api/v1/stocks/year/2023/search?name=aramco&sector=energy&sharia_opinion=نقية
+GET {{baseUrl}}/api/v1/stocks/year/2023/search?sector=الطاقة&sharia_opinion=نقية
 Content-Type: {{contentType}}
 
 ### Calculate Purification Amount
