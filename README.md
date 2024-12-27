@@ -1,16 +1,13 @@
 # NAQA API
 
 [![Go Version](https://img.shields.io/github/go-mod/go-version/anqorithm/naqa-api)](https://golang.org/)
-[![Build Status](https://img.shields.io/github/workflow/status/anqorithm/naqa-api/main)](https://github.com/anqorithm/naqa-api/actions)
 [![Go Report Card](https://goreportcard.com/badge/github.com/anqorithm/naqa-api)](https://goreportcard.com/report/github.com/anqorithm/naqa-api)
 [![License](https://img.shields.io/github/license/anqorithm/naqa-api)](LICENSE)
 [![Code Size](https://img.shields.io/github/languages/code-size/anqorithm/naqa-api)](https://github.com/anqorithm/naqa-api)
 [![Last Commit](https://img.shields.io/github/last-commit/anqorithm/naqa-api)](https://github.com/anqorithm/naqa-api/commits/main)
-[![Docker Image Size](https://img.shields.io/docker/image-size/anqorithm/naqa-api)](https://hub.docker.com/r/anqorithm/naqa-api)
-[![Coverage](https://img.shields.io/codecov/c/github/anqorithm/naqa-api)](https://codecov.io/gh/anqorithm/naqa-api)
-[![API Documentation](https://img.shields.io/badge/api-documentation-blue)](https://naqa-api.docs.stoplight.io)
-[![MongoDB](https://img.shields.io/badge/MongoDB-4.4+-green.svg)](https://www.mongodb.com/)
-[![Fiber Framework](https://img.shields.io/badge/Fiber-2.x-blue.svg)](https://gofiber.io/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-5.0+-green.svg)](https://www.mongodb.com/)
+[![Fiber Framework](https://img.shields.io/badge/Fiber-v2.52.5-blue.svg)](https://gofiber.io/)
+[![Cloud Run](https://img.shields.io/badge/Cloud%20Run-4285F4?logo=google-cloud&logoColor=white&style=flat)](https://cloud.google.com/run)
 
 Naqa API is a RESTful service designed to provide data on the purification process of Saudi stocks.
 
@@ -188,6 +185,10 @@ This API is inspired by [NaqausStocks.com](https://naquastocks.com/).
 
 Data source: [Almaqased Cleansing Calculator](https://almaqased.net/cleansing-calculator/%D9%82%D9%88%D8%A7%D8%A6%D9%85-%D8%A7%D9%84%D8%AA%D8%AD%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A-%D9%84%D9%84%D8%B4%D8%B1%D9%83%D8%A7%D8%AA/)  
 المشرف العام: د. محمد بن سعود العصيمي
+
+
+> **Note:** Supported Years: 2018, 2019, 2020, 2021, 2022, 2023
+
 
 ## Development
 
