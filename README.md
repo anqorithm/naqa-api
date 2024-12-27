@@ -1,4 +1,4 @@
-# NAQA API
+# NAQA API | نقاء API
 
 [![Go Version](https://img.shields.io/github/go-mod/go-version/anqorithm/naqa-api)](https://golang.org/)
 [![Go Report Card](https://goreportcard.com/badge/github.com/anqorithm/naqa-api)](https://goreportcard.com/report/github.com/anqorithm/naqa-api)
@@ -9,18 +9,68 @@
 [![Fiber Framework](https://img.shields.io/badge/Fiber-v2.52.5-blue.svg)](https://gofiber.io/)
 [![Cloud Run](https://img.shields.io/badge/Cloud%20Run-4285F4?logo=google-cloud&logoColor=white&style=flat)](https://cloud.google.com/run)
 
-Naqa API is a RESTful service designed to provide data on the purification process of Saudi stocks.
+<div dir="rtl">
+
+## نظرة عامة | Overview
+نقاء API هي خدمة RESTful مصممة لتوفير بيانات عن عملية تطهير الأسهم السعودية. توفر الخدمة معلومات دقيقة عن نسب التطهير للأسهم في السوق السعودي وتصنيفها الشرعي.
+
+### المميزات الرئيسية | Key Features
+- 🧮 حساب مبلغ التطهير للأسهم | Stock Purification Amount Calculator
+- 🔍 البحث في الأسهم حسب القطاع والتصنيف الشرعي | Search Stocks by Sector and Shariah Classification
+- 📊 معلومات محدثة عن الأسهم النقية والمختلطة | Updated Pure and Mixed Stocks Information
+- 🌐 دعم كامل للغة العربية | Full Arabic Language Support
+- 🔄 واجهة برمجة تطبيقات RESTful سهلة الاستخدام | Easy-to-use RESTful API
+
+### المتطلبات | Requirements
+- Go 1.23.4 أو أحدث | or higher
+- Git
+- MongoDB
+
+### تثبيت المشروع | Project Setup
+```bash
+git clone https://github.com/anqorithm/naqa-api
+cd naqa-api
+go mod download
+```
+
+### المتغيرات البيئية | Environment Variables
+```bash
+MONGO_URI=       # رابط قاعدة البيانات | Database URL
+MONGO_DATABASE=  # اسم قاعدة البيانات | Database Name
+PORT=           # منفذ الخدمة | Service Port
+```
+
+### التصنيف الشرعي | Shariah Classification
+- نقية | Pure: أسهم متوافقة تماماً مع الشريعة | Fully Shariah Compliant Stocks
+- مختلطة | Mixed: أسهم تحتاج إلى تطهير | Stocks Requiring Purification
+- غير متوافقة | Non-Compliant: أسهم غير متوافقة مع الشريعة | Non-Shariah Compliant Stocks
+
+### السنوات المدعومة | Supported Years
+> السنوات المتوفرة | Available Years: 2018, 2019, 2020, 2021, 2022, 2023
+
+</div>
+
+---
+
+## Overview
+NAQA API is a RESTful service designed to provide data about the purification process of Saudi stocks. The service offers accurate information about stock purification rates in the Saudi market and their Shariah classification.
+
+### Key Features
+- 🧮 Calculate stock purification amounts
+- 🔍 Search stocks by sector and Shariah classification
+- 📊 Updated information about pure and mixed stocks
+- 🌐 Full Arabic language support
+- 🔄 Easy-to-use RESTful API
+
+### Prerequisites
+- Go 1.23.4 or higher
+- Git
+- MongoDB
 
 ## Version Information
 - Version: 1.0.0
 - Environment: Development
 - Base API Path: `/api/v1`
-
-## Prerequisites
-
-- Go 1.23.4 or higher
-- Git
-- MongoDB
 
 ## Quick Start
 
@@ -306,3 +356,12 @@ go build -o naqa-api cmd/api/main.go
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Credits
+
+### Data Source
+- [Almaqased Cleansing Calculator](https://almaqased.net/)
+- المشرف العام: د. محمد بن سعود العصيمي
+
+### Inspiration
+This API is inspired by [NaqausStocks.com](https://naquastocks.com/)
