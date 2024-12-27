@@ -174,7 +174,7 @@ docker run -d -p 3000:3000 naqa-api
 ### Available Endpoints
 ```http
 ## Environment Variables
-@baseUrl = http://localhost:3030  
+@baseUrl = http://localhost:3000  
 @contentType = application/json
 
 ### Health Check
