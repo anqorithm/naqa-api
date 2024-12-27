@@ -35,9 +35,9 @@ go mod download
 
 ### المتغيرات البيئية | Environment Variables
 ```bash
-MONGO_URI=       # رابط قاعدة البيانات | Database URL
-MONGO_DATABASE=  # اسم قاعدة البيانات | Database Name
-PORT=           # منفذ الخدمة | Service Port
+MONGO_URI=       
+MONGO_DATABASE=
+PORT=
 ```
 
 ### التصنيف الشرعي | Shariah Classification
@@ -68,7 +68,7 @@ NAQA API is a RESTful service designed to provide data about the purification pr
 - MongoDB
 
 ## Version Information
-- Version: 1.0.0
+- Version: 1.5.4
 - Environment: Development
 - Base API Path: `/api/v1`
 
