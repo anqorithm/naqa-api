@@ -48,13 +48,12 @@ func (r *Router) setupV1Routes(v1 fiber.Router) {
 	r.setupStockRoutes(v1)
 }
 
-
 func (r *Router) setupStockRoutes(v1 fiber.Router) {
 	stocks := v1.Group("/stocks")
-	
+
 	// Get all stocks for a specific year
 	stocks.Get("/year/:year", middleware.ValidateYear(), r.h.GetStocksByYearHandler)
-	
+
 	// Search stocks by various parameters
 	stocks.Get("/year/:year/search", middleware.ValidateYear(), r.h.SearchStocksHandler)
 
