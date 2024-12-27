@@ -423,15 +423,6 @@ graph LR
         
         env1[Environment:<br/>MONGODB_URI<br/>PORT] --> api
     end
-
-    classDef default fill:#f9f9f9,stroke:#333,stroke-width:2px;
-    classDef network fill:#e1f5fe,stroke:#333,stroke-width:2px;
-    classDef volume fill:#fff3e0,stroke:#333,stroke-width:2px;
-    classDef env fill:#f3e5f5,stroke:#333,stroke-width:2px;
-    
-    class naqa-network network;
-    class volume volume;
-    class env1 env;
 ```
 
 ### Building for Production
