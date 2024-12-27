@@ -7,7 +7,7 @@
 [![Last Commit](https://img.shields.io/github/last-commit/anqorithm/naqa-api)](https://github.com/anqorithm/naqa-api/commits/main)
 [![MongoDB](https://img.shields.io/badge/MongoDB-5.0+-green.svg)](https://www.mongodb.com/)
 [![Fiber Framework](https://img.shields.io/badge/Fiber-v2.52.5-blue.svg)](https://gofiber.io/)
-[![Cloud Run](https://img.shields.io/badge/Cloud%20Run-4285F4?logo=google-cloud&logoColor=white&style=flat)](https://cloud.google.com/run)
+![GCP Deployment](https://img.shields.io/badge/Deployed%20on-GCP-4285F4?logo=google-cloud&logoColor=white)
 
 <div dir="rtl">
 
@@ -61,6 +61,12 @@ NAQA API is a RESTful service designed to provide data about the purification pr
 - 📊 Updated information about pure and mixed stocks
 - 🌐 Full Arabic language support
 - 🔄 Easy-to-use RESTful API
+
+### Deployed on GCP
+
+![GCP Deployment](https://img.shields.io/badge/Deployed%20on-GCP-4285F4?logo=google-cloud&logoColor=white)
+
+[Access the API on GCP](https://naqa-api-36462279645.europe-west1.run.app/)
 
 ### Prerequisites
 - Go 1.23.4 or higher
@@ -259,7 +265,6 @@ This API is inspired by [NaqausStocks.com](https://naquastocks.com/).
 
 Data source: [Almaqased Cleansing Calculator](https://almaqased.net/cleansing-calculator/%D9%82%D9%88%D8%A7%D8%A6%D9%85-%D8%A7%D9%84%D8%AA%D8%AD%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A-%D9%84%D9%84%D8%B4%D8%B1%D9%83%D8%A7%D8%AA/)  
 المشرف العام: د. محمد بن سعود العصيمي
-
 
 > **Note:** Supported Years: 2018, 2019, 2020, 2021, 2022, 2023
 
