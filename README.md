@@ -1,6 +1,16 @@
-# Naqa API
+# NAQA API
 
-[![Release](https://github.com/anqorithm/naqa-api/actions/workflows/release.yml/badge.svg)](https://github.com/anqorithm/naqa-api/actions/workflows/release.yml)
+[![Go Version](https://img.shields.io/github/go-mod/go-version/anqorithm/naqa-api)](https://golang.org/)
+[![Build Status](https://img.shields.io/github/workflow/status/anqorithm/naqa-api/main)](https://github.com/anqorithm/naqa-api/actions)
+[![Go Report Card](https://goreportcard.com/badge/github.com/anqorithm/naqa-api)](https://goreportcard.com/report/github.com/anqorithm/naqa-api)
+[![License](https://img.shields.io/github/license/anqorithm/naqa-api)](LICENSE)
+[![Code Size](https://img.shields.io/github/languages/code-size/anqorithm/naqa-api)](https://github.com/anqorithm/naqa-api)
+[![Last Commit](https://img.shields.io/github/last-commit/anqorithm/naqa-api)](https://github.com/anqorithm/naqa-api/commits/main)
+[![Docker Image Size](https://img.shields.io/docker/image-size/anqorithm/naqa-api)](https://hub.docker.com/r/anqorithm/naqa-api)
+[![Coverage](https://img.shields.io/codecov/c/github/anqorithm/naqa-api)](https://codecov.io/gh/anqorithm/naqa-api)
+[![API Documentation](https://img.shields.io/badge/api-documentation-blue)](https://naqa-api.docs.stoplight.io)
+[![MongoDB](https://img.shields.io/badge/MongoDB-4.4+-green.svg)](https://www.mongodb.com/)
+[![Fiber Framework](https://img.shields.io/badge/Fiber-2.x-blue.svg)](https://gofiber.io/)
 
 Naqa API is a RESTful service designed to provide data on the purification process of Saudi stocks.
 
