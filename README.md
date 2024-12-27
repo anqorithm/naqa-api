@@ -34,6 +34,29 @@ cp .env.example .env
 # Edit .env with your configurations
 ```
 
+## Installation
+1. Clone the project.
+2. Install Go dependencies:
+   ```
+   go mod download
+   ```
+
+## Environment
+Set the following environment variables or edit the .env file:
+- MONGO_URI
+- MONGO_DATABASE
+- PORT
+
+## Usage
+1. Run the server:
+   ```
+   go run cmd/api/main.go
+   ```
+2. Access the API at:
+   ```
+   http://localhost:3000/api/v1
+   ```
+
 ## Environment Variables
 
 Before running the application, make sure to set up your environment variables:

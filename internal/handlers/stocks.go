@@ -1,4 +1,49 @@
 package handlers
+package handlers
+
+import (
+	"github.com/gofiber/fiber/v2"
+	"strconv"
+)
+
+func getStringValue(val interface{}) string {
+	switch v := val.(type) {
+	case string:
+		return v
+	case float64:
+		return strconv.FormatFloat(v, 'f', -1, 64)
+	default:
+		return ""
+	}
+}
+
+func (h *Handler) GetStocksByYearHandler(c *fiber.Ctx) error {
+	// ...existing code...
+	for _, doc := range stockDocs {
+		stock := Stock{
+			Name:          getStringValue(doc["name"]),
+			Code:          getStringValue(doc["code"]),
+			Sector:        getStringValue(doc["sector"]),
+			ShariaOpinion: getStringValue(doc["sharia_opinion"]),
+		}
+		// ...existing code...
+	}
+	// ...existing code...
+}
+
+func (h *Handler) SearchStocksHandler(c *fiber.Ctx) error {
+	// ...existing code...
+	for _, doc := range stockDocs {
+		stock := Stock{
+			Name:          getStringValue(doc["name"]),
+			Code:          getStringValue(doc["code"]),
+			Sector:        getStringValue(doc["sector"]),
+			ShariaOpinion: getStringValue(doc["sharia_opinion"]),
+		}
+		// ...existing code...
+	}
+	// ...existing code...
+}
 
 import (
 	"fmt"
@@ -66,7 +111,7 @@ func (h *Handler) GetStocksByYearHandler(c *fiber.Ctx) error {
 	if err != nil {
 		return c.Status(500).JSON(ErrorResponse{Error: "Failed to fetch stocks"})
 	}
-		
+
 	var stockDocs []bson.M
 	if err = cursor.All(c.Context(), &stockDocs); err != nil {
 		return c.Status(500).JSON(ErrorResponse{Error: "Failed to parse stocks"})
