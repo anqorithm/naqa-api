@@ -58,10 +58,3 @@ func (h *Handler) HealthCheckHandler(c *fiber.Ctx) error {
 		"timestamp": time.Now().Format(time.RFC3339),
 	})
 }
-
-// HandleSomething handles an example endpoint
-func (h *Handler) HandleSomething(c *fiber.Ctx) error {
-	return c.JSON(fiber.Map{
-		"message": "Handler example",
-	})
-}
