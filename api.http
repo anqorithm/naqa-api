@@ -1,5 +1,5 @@
 ### Environment Variables
-@baseUrl = http://localhost:3000
+@baseUrl = https://naqa-api-36462279645.europe-west1.run.app/
 @contentType = application/json
 
 ### Health Check
@@ -15,7 +15,7 @@ GET {{baseUrl}}/
 Content-Type: {{contentType}}
 
 ### Get Stocks by Year
-GET {{baseUrl}}/api/v1/stocks/year/2022
+GET {{baseUrl}}/api/v1/stocks/year/2017
 Content-Type: {{contentType}}
 
 ### Search Stocks with Parameters
