@@ -269,15 +269,12 @@ Data source: [Almaqased Cleansing Calculator](https://almaqased.net/cleansing-ca
 ### Project Structure
 ```
 .
+├── api.http
 ├── cmd
 │   └── api
 │       └── main.go
 ├── docker-compose.yml
 ├── Dockerfile
-├── docs
-│   ├── docs.go
-│   ├── swagger.json
-│   └── swagger.yaml
 ├── go.mod
 ├── go.sum
 ├── internal
@@ -285,6 +282,7 @@ Data source: [Almaqased Cleansing Calculator](https://almaqased.net/cleansing-ca
 │   │   ├── config.go
 │   │   └── mongodb.go
 │   ├── handlers
+│   │   ├── errors.go
 │   │   ├── handlers.go
 │   │   └── stocks.go
 │   ├── middleware
