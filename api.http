@@ -1,6 +1,12 @@
-### Environment Variables
+// ###############################################################################
+// Environment Variables
+// ###############################################################################
 @baseUrl = http://localhost:3000
 @contentType = application/json
+
+// ###############################################################################
+// API Endpoints
+// ###############################################################################
 
 ### Health Check
 GET {{baseUrl}}/api/health
@@ -15,7 +21,7 @@ GET {{baseUrl}}/
 Content-Type: {{contentType}}
 
 ### Get Stocks by Year
-GET {{baseUrl}}/api/v1/stocks/year/2018
+GET {{baseUrl}}/api/v1/stocks/year/2023
 Content-Type: {{contentType}}
 
 ### Search Stocks with Parameters
@@ -33,7 +39,9 @@ Content-Type: {{contentType}}
     "stock_code": "1111"
 }
 
-### Search Examples
+// ###############################################################################
+// Search Examples
+// ###############################################################################
 
 ### Search by Name
 GET {{baseUrl}}/api/v1/stocks/year/2023/search?name=%D8%A3%D8%B1%D8%A7%D9%85%D9%83%D9%88

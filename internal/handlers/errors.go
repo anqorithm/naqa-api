@@ -1,27 +1,21 @@
 package handlers
 
 import (
+	"github.com/anqorithm/naqa-api/internal/models"
 	"github.com/gofiber/fiber/v2"
 )
 
-type ErrorResponse struct {
-	Status  string      `json:"status"`
-	Code    string      `json:"code"`
-	Message string      `json:"message"`
-	Details interface{} `json:"details,omitempty"`
-}
+// ###############################################################################
+// Error Handling Functions
+// ###############################################################################
 
-func NewErrorResponse(code string, message string, details interface{}) *ErrorResponse {
-	return &ErrorResponse{
+func SendError(c *fiber.Ctx, status int, code string, message string, details interface{}) error {
+	return c.Status(status).JSON(&models.ErrorResponse{
 		Status:  "error",
 		Code:    code,
 		Message: message,
 		Details: details,
-	}
-}
-
-func SendError(c *fiber.Ctx, status int, code string, message string, details interface{}) error {
-	return c.Status(status).JSON(NewErrorResponse(code, message, details))
+	})
 }
 
 // Common error codes

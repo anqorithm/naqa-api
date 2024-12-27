@@ -190,7 +190,7 @@ GET {{baseUrl}}/
 Content-Type: {{contentType}}
 
 ### Get Stocks by Year
-GET {{baseUrl}}/api/v1/stocks/year/2025  
+GET {{baseUrl}}/api/v1/stocks/year/2023  
 Content-Type: {{contentType}}
 
 ### Search Stocks with Parameters
@@ -293,8 +293,13 @@ Data source: [Almaqased Cleansing Calculator](https://almaqased.net/cleansing-ca
 │   ├── middleware
 │   │   ├── middleware.go
 │   │   └── year_validator.go
-│   └── routes
-│       └── routes.go
+│   ├── models
+│   │   ├── error.go
+│   │   └── stock.go
+│   ├── routes
+│   │   └── routes.go
+│   └── utils
+│       └── safe.go
 ├── LICENSE
 ├── Makefile
 └── README.md

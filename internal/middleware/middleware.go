@@ -12,6 +12,10 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/monitor"
 )
 
+// ###############################################################################
+// Middleware Functions
+// ###############################################################################
+
 // Logger returns a logger middleware
 func Logger() fiber.Handler {
 	return logger.New(logger.Config{

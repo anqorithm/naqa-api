@@ -19,6 +19,10 @@ func NewHandler(db *mongo.Database) *Handler {
 	}
 }
 
+// ###############################################################################
+// Handler Functions
+// ###############################################################################
+
 // RootHandler handles the "/" endpoint
 func (h *Handler) RootHandler(c *fiber.Ctx) error {
 	return c.JSON(fiber.Map{
@@ -33,18 +37,18 @@ func (h *Handler) RootHandler(c *fiber.Ctx) error {
 
 // ApiV1Handler handles the "/api/v1" endpoint
 func (h *Handler) ApiV1Handler(c *fiber.Ctx) error {
-    return c.JSON(fiber.Map{
-        "status":      "active",
-        "message":     "Welcome to NAQA API v1",
-        "version":     "1.0.0",
-        "env":         os.Getenv("APP_ENV"),
-        "server_time": time.Now().Format(time.RFC3339),
-        "request_id":  c.Get("X-Request-ID", uuid.New().String()),
-        "endpoints": []string{
-            "/api/v1/stocks",
-            "/api/v1/health",
-        },
-    })
+	return c.JSON(fiber.Map{
+		"status":      "active",
+		"message":     "Welcome to NAQA API v1",
+		"version":     "1.0.0",
+		"env":         os.Getenv("APP_ENV"),
+		"server_time": time.Now().Format(time.RFC3339),
+		"request_id":  c.Get("X-Request-ID", uuid.New().String()),
+		"endpoints": []string{
+			"/api/v1/stocks",
+			"/api/v1/health",
+		},
+	})
 }
 
 // HealthCheckHandler handles the health check endpoint
