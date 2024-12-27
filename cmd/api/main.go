@@ -8,10 +8,26 @@ import (
 	"github.com/anqorithm/naqa-api/internal/middleware"
 	"github.com/anqorithm/naqa-api/internal/routes"
 
+	_ "github.com/anqorithm/naqa-api/docs" // import swagger docs
 	"github.com/gofiber/fiber/v2"
 	"github.com/joho/godotenv"
 )
 
+// @title           Naqa API
+// @version         1.0
+// @description     Stock Market API Service
+// @termsOfService  http://swagger.io/terms/
+
+// @contact.name   API Support
+// @contact.url    http://www.swagger.io/support
+// @contact.email  support@swagger.io
+
+// @license.name  Apache 2.0
+// @license.url   http://www.apache.org/licenses/LICENSE-2.0.html
+
+// @host      localhost:3000
+// @BasePath  /api/v1
+// @schemes   http https
 func main() {
 	// Load .env file
 	if err := godotenv.Load(); err != nil {
@@ -38,7 +54,7 @@ func main() {
 	app.Use(middleware.Security())
 	app.Use(middleware.Compress())
 	app.Use(middleware.CORS())
-	app.Use(middleware.RateLimit())
+	app.Use(middleware.RateLimit())	
 
 	// Monitor dashboard at /metrics
 	app.Use("/metrics", middleware.Monitor())

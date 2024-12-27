@@ -1,0 +1,125 @@
+basePath: /api/v1
+definitions:
+  internal_handlers.ErrorResponse:
+    properties:
+      error:
+        example: Failed to fetch stocks
+        type: string
+    type: object
+  internal_handlers.Stock:
+    properties:
+      code:
+        example: "2222"
+        type: string
+      name:
+        example: Saudi Aramco
+        type: string
+      sector:
+        example: Energy
+        type: string
+      sharia_opinion:
+        example: compliant
+        type: string
+    type: object
+  internal_handlers.StockResponse:
+    properties:
+      stocks:
+        description: |-
+          List of stocks
+          swagger:allOf
+        items:
+          $ref: '#/definitions/internal_handlers.Stock'
+        type: array
+    type: object
+host: localhost:3000
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: Stock Market API Service
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Naqa API
+  version: "1.0"
+paths:
+  /stocks/year/{year}:
+    get:
+      consumes:
+      - application/json
+      description: Retrieves all stocks for a specific year from the database
+      parameters:
+      - description: Year of stocks data
+        in: path
+        name: year
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handlers.StockResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/internal_handlers.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/internal_handlers.ErrorResponse'
+      summary: Get stocks by year
+      tags:
+      - stocks
+  /stocks/year/{year}/search:
+    get:
+      consumes:
+      - application/json
+      description: Search stocks with various filters
+      parameters:
+      - description: Year of stocks
+        in: path
+        name: year
+        required: true
+        type: string
+      - description: Stock name
+        in: query
+        name: name
+        type: string
+      - description: Stock code
+        in: query
+        name: code
+        type: string
+      - description: Stock sector
+        in: query
+        name: sector
+        type: string
+      - description: Sharia compliance status
+        in: query
+        name: sharia_opinion
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handlers.StockResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/internal_handlers.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/internal_handlers.ErrorResponse'
+      summary: Search stocks
+      tags:
+      - stocks
+schemes:
+- http
+- https
+swagger: "2.0"

@@ -10,6 +10,7 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/limiter"
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/gofiber/fiber/v2/middleware/monitor"
+	"github.com/gofiber/swagger"
 )
 
 // Logger returns a logger middleware
@@ -52,9 +53,18 @@ func RateLimit() fiber.Handler {
 
 // Monitor returns an enhanced dashboard monitoring middleware
 func Monitor() fiber.Handler {
-    return monitor.New(monitor.Config{
-        Title:      "Naqa API - System Metrics",
-        Refresh:    3 * time.Second,    // Refresh metrics every 3 seconds
-        APIOnly:    true,               // Monitor only API routes
-    })
+	return monitor.New(monitor.Config{
+		Title:   "Naqa API - System Metrics",
+		Refresh: 3 * time.Second, // Refresh metrics every 3 seconds
+		APIOnly: true,            // Monitor only API routes
+	})
+}
+
+// Swagger returns swagger UI middleware
+func Swagger() fiber.Handler {
+	return swagger.New(swagger.Config{
+		Title:        "Naqa API Documentation",
+		DeepLinking:  true,
+		DocExpansion: "none",
+	})
 }

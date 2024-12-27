@@ -23,6 +23,9 @@ func (r *Router) SetupRoutes() {
 	// Global middleware
 	r.app.Use(middleware.Logger())
 
+	// Swagger documentation
+	r.app.Get("/swagger/*", middleware.Swagger())
+
 	// Root route
 	r.app.Get("/", r.h.RootHandler)
 
@@ -42,28 +45,18 @@ func (r *Router) SetupRoutes() {
 }
 
 func (r *Router) setupV1Routes(v1 fiber.Router) {
-	// Base API info
-	v1.Get("/", r.h.ApiV1Handler)
-
-	// Health check
-	v1.Get("/health", r.h.HealthCheckHandler)
-
-	// Resources
-	r.setupUserRoutes(v1)
-	r.setupTaskRoutes(v1)
+	// ...existing code...
 
 	// Stock market routes
 	r.setupStockRoutes(v1)
 }
 
 func (r *Router) setupUserRoutes(v1 fiber.Router) {
-	users := v1.Group("/users")
-	users.Get("/", r.h.GetUsersHandler)
+	// ...existing code...
 }
 
 func (r *Router) setupTaskRoutes(v1 fiber.Router) {
-	tasks := v1.Group("/tasks")
-	tasks.Get("/", r.h.GetTasksHandler)
+	// ...existing code...
 }
 
 func (r *Router) setupStockRoutes(v1 fiber.Router) {
