@@ -6,4 +6,7 @@
 # Binaries
 /bin/
 *.exe
-*.exe~*.dll*.so*.dylib# Go specific*.test*.outgo.workgo.sum/vendor/# IDE specific files.idea/.vscode/*.swp*.swo# OS specific.DS_StoreThumbs.db# Debug filesdebug/# Test coveragecoverage.txtcoverage.html   
+*.exe~*.dll*.so*.dylib# Go specific*.test*.outgo.workgo.sum/vendor/# IDE specific files.idea/.vscode/*.swp*.swo# OS specific.DS_StoreThumbs.db# Debug filesdebug/# Test coveragecoverage.txtcoverage.html
+data/
+air.log
+main

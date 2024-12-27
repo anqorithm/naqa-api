@@ -19,21 +19,21 @@ type MongoConfig struct {
 
 // NewMongoConfig creates a new MongoDB configuration
 func NewMongoConfig() *MongoConfig {
-	uri := os.Getenv("MONGODB_URI")
+	uri := os.Getenv("MONGO_URI")
 	if uri == "" {
 		uri = "mongodb://localhost:27017"
 	}
 
-	dbName := os.Getenv("MONGODB_DATABASE")
+	dbName := os.Getenv("MONGO_DATABASE")
 	if dbName == "" {
 		dbName = "naqa"
 	}
 
-	return &MongoConfig{
+	return &MongoConfig{	
 		URI:      uri,
 		Database: dbName,
-		Timeout:  10 * time.Second,
-	}
+		Timeout:  30 * time.Second, // Increased timeout
+	}	
 }
 
 // ConnectDB establishes connection to MongoDB
@@ -41,7 +41,14 @@ func ConnectDB(cfg *MongoConfig) (*mongo.Database, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), cfg.Timeout)
 	defer cancel()
 
-	clientOptions := options.Client().ApplyURI(cfg.URI)
+	clientOptions := options.Client().
+		ApplyURI(cfg.URI).
+		SetTimeout(cfg.Timeout).
+		SetConnectTimeout(cfg.Timeout).
+		SetSocketTimeout(cfg.Timeout).
+		SetRetryWrites(true).
+		SetRetryReads(true)
+
 	client, err := mongo.Connect(ctx, clientOptions)
 	if err != nil {
 		return nil, err
@@ -53,6 +60,6 @@ func ConnectDB(cfg *MongoConfig) (*mongo.Database, error) {
 		return nil, err
 	}
 
-	log.Println("Connected to MongoDB!")
+	log.Printf("Connected to MongoDB at: %s", cfg.URI)
 	return client.Database(cfg.Database), nil
 }
