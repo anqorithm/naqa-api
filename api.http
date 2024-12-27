@@ -1,5 +1,5 @@
 ### Environment Variables
-@baseUrl = https://naqa-api-36462279645.europe-west1.run.app/
+@baseUrl = http://localhost:3000
 @contentType = application/json
 
 ### Health Check
@@ -23,7 +23,7 @@ GET {{baseUrl}}/api/v1/stocks/year/2023/search?sector=الطاقة&sharia_opinio
 Content-Type: {{contentType}}
 
 ### Calculate Purification Amount
-POST {{baseUrl}}/api/v1/stocks/calculate-purification
+POST {{baseUrl}}/api/v1/stocks/year/2023/calculate-purification
 Content-Type: {{contentType}}
 
 {
