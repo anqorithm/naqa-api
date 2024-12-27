@@ -124,6 +124,72 @@ docker run -d -p 3000:3000 naqa-api
 - `GET /users` - Users endpoints
 - `GET /tasks` - Tasks endpoints
 
+### Environment Variables
+@baseUrl = http://localhost:3030  
+@contentType = application/json
+
+### Health Check
+GET {{baseUrl}}/api/health  
+Content-Type: {{contentType}}
+
+### Metrics Dashboard
+GET {{baseUrl}}/metrics  
+Content-Type: {{contentType}}
+
+### Root Endpoint
+GET {{baseUrl}}/  
+Content-Type: {{contentType}}
+
+### Get Stocks by Year
+GET {{baseUrl}}/api/v1/stocks/year/2025  
+Content-Type: {{contentType}}
+
+### Search Stocks with Parameters
+GET {{baseUrl}}/api/v1/stocks/year/2023/search?name=aramco&sector=energy&sharia_opinion=نقية  
+Content-Type: {{contentType}}
+
+### Calculate Purification Amount
+POST {{baseUrl}}/api/v1/stocks/calculate-purification  
+Content-Type: {{contentType}}
+
+```json
+{
+    "start_date": "2023-01-01",
+    "end_date": "2023-12-31",
+    "number_of_stocks": 100,
+    "stock_code": "1111"
+}
+```
+
+### Search Examples
+
+#### Search by Name
+GET {{baseUrl}}/api/v1/stocks/year/2023/search?name=%D8%A3%D8%B1%D8%A7%D9%85%D9%83%D9%88  
+Content-Type: {{contentType}}
+
+#### Search by Code
+GET {{baseUrl}}/api/v1/stocks/year/2023/search?code=2222  
+Content-Type: {{contentType}}
+
+#### Search by Sector
+GET {{baseUrl}}/api/v1/stocks/year/2023/search?sector=%D8%A7%D9%84%D8%B7%D8%A7%D9%82%D8%A9  
+Content-Type: {{contentType}}
+
+#### Search by Sharia Opinion
+GET {{baseUrl}}/api/v1/stocks/year/2023/search?sharia_opinion=%D9%86%D9%82%D9%8A%D8%A9  
+Content-Type: {{contentType}}
+
+#### Combined Search
+GET {{baseUrl}}/api/v1/stocks/year/2023/search?sector=%D8%A7%D9%84%D8%B7%D8%A7%D9%82%D8%A9&sharia_opinion=%D9%86%D9%82%D9%8A%D8%A9  
+Content-Type: {{contentType}}
+
+### Inspiration and Data Source
+
+This API is inspired by [NaqausStocks.com](https://naquastocks.com/).
+
+Data source: [Almaqased Cleansing Calculator](https://almaqased.net/cleansing-calculator/%D9%82%D9%88%D8%A7%D8%A6%D9%85-%D8%A7%D9%84%D8%AA%D8%AD%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A-%D9%84%D9%84%D8%B4%D8%B1%D9%83%D8%A7%D8%AA/)  
+المشرف العام: د. محمد بن سعود العصيمي
+
 ## Development
 
 ### Project Structure
@@ -155,6 +221,51 @@ docker run -d -p 3000:3000 naqa-api
 ├── LICENSE
 ├── Makefile
 └── README.md
+```
+
+## Architecture Design & Diagrams
+
+### Class Diagram
+
+```mermaid
+classDiagram
+    class Config {
+        +MongoDB mongodb
+        +Load()
+    }
+
+    class MongoDB {
+        +string URI
+        +string Database
+        +string Collection
+        +Connect()
+    }
+
+    class Handlers {
+        +HandleError(w ResponseWriter, err error, status int)
+        +GetStocks(w ResponseWriter, r *Request)
+        +GetStocksByYear(w ResponseWriter, r *Request)
+    }
+
+    class Middleware {
+        +YearValidator(next http.Handler) http.Handler
+        +ValidateYear(year string) bool
+    }
+
+    class Routes {
+        +SetupRoutes(r *mux.Router)
+    }
+
+    class main {
+        +main()
+    }
+
+    Config --> MongoDB : contains
+    Routes --> Handlers : uses
+    Routes --> Middleware : uses
+    main --> Routes : initializes
+    main --> Config : loads
+    Handlers --> MongoDB : uses
 ```
 
 ### Building for Production
