@@ -74,7 +74,7 @@ NAQA API is a RESTful service designed to provide data about the purification pr
 - MongoDB
 
 ## Version Information
-- Version: 1.8.0
+- Version: 1.8.1
 - Environment: Development
 - Base API Path: `/api/v1`
 
@@ -444,6 +444,7 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 - **Abdullah Alqahtani** - *Initial work* - [anqorithm](https://github.com/anqorithm)
   - Email: anqorithm@protonmail.com
+- **Yasser** - [zYaseer](https://github.com/zYasser)
 
 ## License
 
