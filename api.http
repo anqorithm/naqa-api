@@ -14,13 +14,11 @@ Content-Type: {{contentType}}
 GET {{baseUrl}}/
 Content-Type: {{contentType}}
 
-### Stock Operations
-
-# Get Stocks by Year
-GET {{baseUrl}}/api/v1/stocks/year/2023
+### Get Stocks by Year
+GET {{baseUrl}}/api/v1/stocks/year/2025
 Content-Type: {{contentType}}
 
-# Search Stocks with Parameters
+### Search Stocks with Parameters
 GET {{baseUrl}}/api/v1/stocks/year/2023/search?name=aramco&sector=energy&sharia_opinion=نقية
 Content-Type: {{contentType}}
 
@@ -37,22 +35,22 @@ Content-Type: {{contentType}}
 
 ### Search Examples
 
-# Search by Name
-GET {{baseUrl}}/api/v1/stocks/year/2023/search?name=أرامكو
+### Search by Name
+GET {{baseUrl}}/api/v1/stocks/year/2023/search?name=%D8%A3%D8%B1%D8%A7%D9%85%D9%83%D9%88
 Content-Type: {{contentType}}
 
-# Search by Code
+### Search by Code
 GET {{baseUrl}}/api/v1/stocks/year/2023/search?code=2222
 Content-Type: {{contentType}}
 
-# Search by Sector
-GET {{baseUrl}}/api/v1/stocks/year/2023/search?sector=الطاقة
+### Search by Sector
+GET {{baseUrl}}/api/v1/stocks/year/2023/search?sector=%D8%A7%D9%84%D8%B7%D8%A7%D9%82%D8%A9
 Content-Type: {{contentType}}
 
-# Search by Sharia Opinion
-GET {{baseUrl}}/api/v1/stocks/year/2023/search?sharia_opinion=نقية
+### Search by Sharia Opinion
+GET {{baseUrl}}/api/v1/stocks/year/2023/search?sharia_opinion=%D9%86%D9%82%D9%8A%D8%A9
 Content-Type: {{contentType}}
 
-# Combined Search
-GET {{baseUrl}}/api/v1/stocks/year/2023/search?sector=الطاقة&sharia_opinion=نقية
+### Combined Search
+GET {{baseUrl}}/api/v1/stocks/year/2023/search?sector=%D8%A7%D9%84%D8%B7%D8%A7%D9%82%D8%A9&sharia_opinion=%D9%86%D9%82%D9%8A%D8%A9
 Content-Type: {{contentType}}

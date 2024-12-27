@@ -6,7 +6,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"go.mongodb.org/mongo-driver/mongo"
 )
-
+	
 type Router struct {
 	app *fiber.App
 	h   *handlers.Handler

@@ -52,12 +52,14 @@ func (h *Handler) GetStocksByYearHandler(c *fiber.Ctx) error {
     var stocks []bson.M
     cursor, err := collection.Find(c.Context(), bson.M{})
     if err != nil {
-        return c.Status(500).JSON(fiber.Map{"error": "Failed to fetch stocks"})
+        return SendError(c, fiber.StatusInternalServerError, ErrCodeDatabaseError, 
+            "Failed to fetch stocks", nil)
     }
     defer cursor.Close(c.Context())
 
     if err := cursor.All(c.Context(), &stocks); err != nil {
-        return c.Status(500).JSON(fiber.Map{"error": "Failed to parse stocks"})
+        return SendError(c, fiber.StatusInternalServerError, ErrCodeDatabaseError, 
+            "Failed to parse stocks", nil)
     }
 
     result := make([]Stock, 0, len(stocks))
@@ -124,24 +126,37 @@ func (h *Handler) SearchStocksHandler(c *fiber.Ctx) error {
 func (h *Handler) CalculatePurificationHandler(c *fiber.Ctx) error {
     var req PurificationRequest
     if err := c.BodyParser(&req); err != nil {
-        return c.Status(400).JSON(fiber.Map{"error": "Invalid request body"})
+        return SendError(c, fiber.StatusBadRequest, ErrCodeInvalidRequest, 
+            "Invalid request body", nil)
     }
 
     // Parse dates
     startDate, err := time.Parse("2006-01-02", req.StartDate)
     if err != nil {
-        return c.Status(400).JSON(fiber.Map{"error": "Invalid start date format. Use YYYY-MM-DD"})
+        return SendError(c, fiber.StatusBadRequest, ErrCodeInvalidDateFormat, 
+            "Invalid start date format", map[string]string{
+                "expected_format": "YYYY-MM-DD",
+                "provided_value": req.StartDate,
+            })
     }
 
     endDate, err := time.Parse("2006-01-02", req.EndDate)
     if err != nil {
-        return c.Status(400).JSON(fiber.Map{"error": "Invalid end date format. Use YYYY-MM-DD"})
+        return SendError(c, fiber.StatusBadRequest, ErrCodeInvalidDateFormat, 
+            "Invalid end date format", map[string]string{
+                "expected_format": "YYYY-MM-DD",
+                "provided_value": req.EndDate,
+            })
     }
 
     // Calculate days held
     daysHeld := int(endDate.Sub(startDate).Hours() / 24)
     if daysHeld < 0 {
-        return c.Status(400).JSON(fiber.Map{"error": "End date must be after start date"})
+        return SendError(c, fiber.StatusBadRequest, ErrCodeValidationFailed, 
+            "End date must be after start date", map[string]string{
+                "start_date": req.StartDate,
+                "end_date": req.EndDate,
+            })
     }
 
     // Get stock purification rate from database
