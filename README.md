@@ -306,6 +306,37 @@ Data source: [Almaqased Cleansing Calculator](https://almaqased.net/cleansing-ca
 ```
 
 
+## حساب مبلغ تطهير الأسهم | Stock Purification Amount Calculation
+
+<div dir="rtl">
+
+### معادلة حساب مبلغ التطهير
+يتم حساب مبلغ تطهير الأسهم باستخدام المعادلة التالية:
+
+</div>
+
+$$
+\text{مبلغ التطهير} = \frac{\text{عدد الأسهم} \times \text{نسبة التطهير} \times \text{عدد أيام التملك}}{365.0}
+$$
+
+<div dir="rtl">
+
+حيث:
+- `عدد الأسهم`: إجمالي عدد الأسهم المملوكة
+- `نسبة التطهير`: نسبة التطهير السنوية (النسبة المئوية)
+- `عدد أيام التملك`: عدد الأيام التي تم فيها امتلاك الأسهم
+- `365.0`: عدد أيام السنة (ثابت)
+
+### مثال
+لـ 100 سهم بنسبة تطهير 2.5% تم امتلاكها لمدة 180 يوم:
+
+</div>
+
+$$
+\text{مبلغ التطهير} = \frac{100 \times 0.025 \times 180}{365.0} = 1.23
+$$
+
+
 ## Stock Purification Amount Calculation
 
 The purification amount for stocks is calculated using the following formula:
