@@ -30,9 +30,6 @@ func (r *Router) SetupRoutes() {
 	v1 := r.app.Group("/api/v1")
 	r.setupV1Routes(v1)
 
-	// Add purification calculation endpoint
-	r.app.Post("/api/v1/stocks/calculate-purification", r.h.CalculatePurificationHandler)
-
 	// API routes
 	api := r.app.Group("/api")
 

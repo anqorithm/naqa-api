@@ -1,12 +1,11 @@
 package handlers
 
 import (
-	"context"
 	"os"
 	"time"
 
 	"github.com/gofiber/fiber/v2"
-	"go.mongodb.org/mongo-driver/bson"
+	"github.com/google/uuid"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
@@ -34,14 +33,18 @@ func (h *Handler) RootHandler(c *fiber.Ctx) error {
 
 // ApiV1Handler handles the "/api/v1" endpoint
 func (h *Handler) ApiV1Handler(c *fiber.Ctx) error {
-	return c.JSON(fiber.Map{
-		"message": "Welcome to API v1",
-		"endpoints": []string{
-			"/api/v1/health",
-			"/api/v1/users",
-			"/api/v1/tasks",
-		},
-	})
+    return c.JSON(fiber.Map{
+        "status":      "active",
+        "message":     "Welcome to NAQA API v1",
+        "version":     "1.0.0",
+        "env":         os.Getenv("APP_ENV"),
+        "server_time": time.Now().Format(time.RFC3339),
+        "request_id":  c.Get("X-Request-ID", uuid.New().String()),
+        "endpoints": []string{
+            "/api/v1/stocks",
+            "/api/v1/health",
+        },
+    })
 }
 
 // HealthCheckHandler handles the health check endpoint
@@ -57,52 +60,4 @@ func (h *Handler) HandleSomething(c *fiber.Ctx) error {
 	return c.JSON(fiber.Map{
 		"message": "Handler example",
 	})
-}
-
-// GetUsersHandler handles the /api/v1/users endpoint
-func (h *Handler) GetUsersHandler(c *fiber.Ctx) error {
-	collection := h.db.Collection("users")
-	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
-	defer cancel()
-
-	cursor, err := collection.Find(ctx, bson.M{})
-	if err != nil {
-		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
-			"error": "Error fetching users",
-		})
-	}
-	defer cursor.Close(ctx)
-
-	var users []fiber.Map
-	if err := cursor.All(ctx, &users); err != nil {
-		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
-			"error": "Error parsing users data",
-		})
-	}
-
-	return c.JSON(users)
-}
-
-// GetTasksHandler handles the /api/v1/tasks endpoint
-func (h *Handler) GetTasksHandler(c *fiber.Ctx) error {
-	collection := h.db.Collection("tasks")
-	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
-	defer cancel()
-
-	cursor, err := collection.Find(ctx, bson.M{})
-	if err != nil {
-		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
-			"error": "Error fetching tasks",
-		})
-	}
-	defer cursor.Close(ctx)
-
-	var tasks []fiber.Map
-	if err := cursor.All(ctx, &tasks); err != nil {
-		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
-			"error": "Error parsing tasks data",
-		})
-	}
-
-	return c.JSON(tasks)
 }
