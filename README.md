@@ -121,8 +121,6 @@ docker run -d -p 3000:3000 naqa-api
 ### Available Endpoints
 - `GET /` - API information
 - `GET /health` - Health check
-- `GET /users` - Users endpoints
-- `GET /tasks` - Tasks endpoints
 
 ### Environment Variables
 @baseUrl = http://localhost:3030  
