@@ -305,6 +305,29 @@ Data source: [Almaqased Cleansing Calculator](https://almaqased.net/cleansing-ca
 └── README.md
 ```
 
+
+## Stock Purification Amount Calculation
+
+The purification amount for stocks is calculated using the following formula:
+
+$$
+\text{purificationAmount} = \frac{\text{numberOfStocks} \times \text{purificationRate} \times \text{daysHeld}}{365.0}
+$$
+
+Where:
+- `numberOfStocks`: Total number of stocks held
+- `purificationRate`: Annual purification rate (percentage)
+- `daysHeld`: Number of days the stocks were held
+- `365.0`: Days in a year (constant)
+
+### Example
+For 100 stocks with 2.5% purification rate held for 180 days:
+
+$$
+\text{purificationAmount} = \frac{100 \times 0.025 \times 180}{365.0} = 1.23
+$$
+
+
 ## Architecture Design & Diagrams
 
 ### Class Diagram
