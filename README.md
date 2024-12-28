@@ -169,6 +169,40 @@ go run cmd/api/main.go
 ```
 Server will start at `http://localhost:3000`
 
+## أداء النظام | System Performance
+
+<div dir="rtl">
+
+### مؤشرات الأداء
+- استخدام المعالج: 0.0%
+- استخدام الذاكرة: 31.1 MB
+- زمن الاستجابة: 195ms
+- الاتصالات المفتوحة: 7.8 MB
+
+</div>
+
+### Performance Metrics
+
+#### CPU & Memory Usage
+![Performance Metrics](./assets/2.png)
+
+#### System Statistics
+- CPU Usage: 0.0%
+- Memory Usage: 31.1 MB
+- Response Time: 195ms
+- Open Connections: 7.8 MB
+
+<details>
+<summary>Monitoring Features</summary>
+
+- CPU/Memory tracking
+- Response time analysis
+- Connection monitoring
+- Error rate tracking
+- Resource utilization
+- Performance trends
+
+</details>
 ### Docker Setup
 
 #### Using Docker Compose (Recommended)
