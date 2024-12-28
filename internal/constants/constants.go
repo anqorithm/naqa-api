@@ -28,4 +28,4 @@ const (
 )
 
 // Available years for stock data
-var AvailableYears = []string{"2018", "2019", "2020", "2021", "2022", "2023"}
+var AvailableYears = []string{"2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"}

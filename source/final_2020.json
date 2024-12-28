@@ -1,0 +1,1348 @@
+{
+  "stocks": [
+    {
+      "id": 1,
+      "purification": "0.0126",
+      "sharia_opinion": "*",
+      "name": "أرامكو السعودية",
+      "code": "2222",
+      "sector": "الطاقة"
+    },
+    {
+      "id": 2,
+      "purification": "0.0849",
+      "sharia_opinion": "نقية",
+      "name": "المصافي",
+      "code": "2030",
+      "sector": "الطاقة"
+    },
+    {
+      "id": 3,
+      "purification": "0.0044",
+      "sharia_opinion": "نقية",
+      "name": "الدريس",
+      "code": "4200",
+      "sector": "الطاقة"
+    },
+    {
+      "id": 4,
+      "purification": "0.0022",
+      "sharia_opinion": "نقية",
+      "name": "مبكو",
+      "code": "1202",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 5,
+      "purification": "0.0116",
+      "sharia_opinion": "نقية",
+      "name": "أسلاك",
+      "code": "1301",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 6,
+      "purification": "0.0127",
+      "sharia_opinion": "نقية",
+      "name": "أنابيب السعودية",
+      "code": "1320",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 7,
+      "purification": "0.0005",
+      "sharia_opinion": "نقية",
+      "name": "كيمانول",
+      "code": "2001",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 8,
+      "purification": "0.0093",
+      "sharia_opinion": "نقية",
+      "name": "سابك للمغذيات الزراعية",
+      "code": "2020",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 9,
+      "purification": "0.0114",
+      "sharia_opinion": "نقية",
+      "name": "جبسكو",
+      "code": "2090",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 10,
+      "purification": "0.0331",
+      "sharia_opinion": "نقية",
+      "name": "زجاج",
+      "code": "2150",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 11,
+      "purification": "0.0524",
+      "sharia_opinion": "نقية",
+      "name": "اللجين",
+      "code": "2170",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 12,
+      "purification": "0.0610",
+      "sharia_opinion": "نقية",
+      "name": "فيبكو",
+      "code": "2180",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 13,
+      "purification": "0.0133",
+      "sharia_opinion": "نقية",
+      "name": "الزامل للصناعة",
+      "code": "2240",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 14,
+      "purification": "0.0001",
+      "sharia_opinion": "نقية",
+      "name": "ينساب",
+      "code": "2290",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 15,
+      "purification": "0.0139",
+      "sharia_opinion": "نقية",
+      "name": "المتقدمة",
+      "code": "2330",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 16,
+      "purification": "0.0020",
+      "sharia_opinion": "نقية",
+      "name": "أسمنت حائل",
+      "code": "3001",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 17,
+      "purification": "0.0004",
+      "sharia_opinion": "نقية",
+      "name": "أسمنت نجران",
+      "code": "3002",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 18,
+      "purification": "0.0236",
+      "sharia_opinion": "نقية",
+      "name": "أسمنت المدينة",
+      "code": "3003",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 19,
+      "purification": "0.0008",
+      "sharia_opinion": "نقية",
+      "name": "أسمنت أم القرى",
+      "code": "3005",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 20,
+      "purification": "0.0054",
+      "sharia_opinion": "نقية",
+      "name": "الواحة",
+      "code": "3007",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 21,
+      "purification": "0.0063",
+      "sharia_opinion": "نقية",
+      "name": "الكثيري القابضة",
+      "code": "3008",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 22,
+      "purification": "0.0048",
+      "sharia_opinion": "نقية",
+      "name": "أسمنت اليمامة",
+      "code": "3020",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 23,
+      "purification": "0.0028",
+      "sharia_opinion": "نقية",
+      "name": "أسمنت السعودية",
+      "code": "3030",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 24,
+      "purification": "0.0149",
+      "sharia_opinion": "نقية",
+      "name": "أسمنت القصيم",
+      "code": "3040",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 25,
+      "purification": "0.0022",
+      "sharia_opinion": "نقية",
+      "name": "أسمنت ينبع",
+      "code": "3060",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 26,
+      "purification": "0.0256",
+      "sharia_opinion": "نقية",
+      "name": "أسمنت الشرقية",
+      "code": "3080",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 27,
+      "purification": "0.0087",
+      "sharia_opinion": "نقية",
+      "name": "أسمنت تبوك",
+      "code": "3090",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 28,
+      "purification": "0.0002",
+      "sharia_opinion": "نقية",
+      "name": "أسمنت الجوف",
+      "code": "3091",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 29,
+      "purification": "0.0044",
+      "sharia_opinion": "نقية",
+      "name": "بوان",
+      "code": "1302",
+      "sector": "السلع الرأس مالية"
+    },
+    {
+      "id": 30,
+      "purification": "0.0048",
+      "sharia_opinion": "نقية",
+      "name": "صناعات كهربائية",
+      "code": "1303",
+      "sector": "السلع الرأس مالية"
+    },
+    {
+      "id": 31,
+      "purification": "0.0036",
+      "sharia_opinion": "نقية",
+      "name": "الخزف السعودي",
+      "code": "2040",
+      "sector": "السلع الرأس مالية"
+    },
+    {
+      "id": 32,
+      "purification": "0.0042",
+      "sharia_opinion": "نقية",
+      "name": "الفخارية",
+      "code": "2360",
+      "sector": "السلع الرأس مالية"
+    },
+    {
+      "id": 33,
+      "purification": "0.0033",
+      "sharia_opinion": "نقية",
+      "name": "صادرات",
+      "code": "4140",
+      "sector": "السلع الرأس مالية"
+    },
+    {
+      "id": 34,
+      "purification": "0.0051",
+      "sharia_opinion": "نقية",
+      "name": "مهارة",
+      "code": "1831",
+      "sector": "الخدمات التجارية والمهنية"
+    },
+    {
+      "id": 35,
+      "purification": "0.0127",
+      "sharia_opinion": "نقية",
+      "name": "صدر",
+      "code": "1832",
+      "sector": "الخدمات التجارية والمهنية"
+    },
+    {
+      "id": 36,
+      "purification": "0.0048",
+      "sharia_opinion": "نقية",
+      "name": "مبرد (باتك)",
+      "code": "4110",
+      "sector": "النقل"
+    },
+    {
+      "id": 37,
+      "purification": "0.0064",
+      "sharia_opinion": "نقية",
+      "name": "العبد اللطيف",
+      "code": "2340",
+      "sector": "السلع طويلة الأجل"
+    },
+    {
+      "id": 38,
+      "purification": "0.0075",
+      "sharia_opinion": "نقية",
+      "name": "لازوردي",
+      "code": "4011",
+      "sector": "السلع طويلة الأجل"
+    },
+    {
+      "id": 39,
+      "purification": "0.0055",
+      "sharia_opinion": "نقية",
+      "name": "ثوب الأصيل",
+      "code": "4012",
+      "sector": "السلع طويلة الأجل"
+    },
+    {
+      "id": 40,
+      "purification": "0.0223",
+      "sharia_opinion": "نقية",
+      "name": "مجموعة فتيحي",
+      "code": "4180",
+      "sector": "السلع طويلة الأجل"
+    },
+    {
+      "id": 41,
+      "purification": "0.0082",
+      "sharia_opinion": "نقية",
+      "name": "عبدالمحسن الحكير",
+      "code": "1820",
+      "sector": "الخدمات الإستهلاكية"
+    },
+    {
+      "id": 42,
+      "purification": "0.0025",
+      "sharia_opinion": "نقية",
+      "name": "دور",
+      "code": "4010",
+      "sector": "الخدمات الإستهلاكية"
+    },
+    {
+      "id": 43,
+      "purification": "0.0039",
+      "sharia_opinion": "نقية",
+      "name": "شمس",
+      "code": "4170",
+      "sector": "الخدمات الإستهلاكية"
+    },
+    {
+      "id": 44,
+      "purification": "0.0030",
+      "sharia_opinion": "نقية",
+      "name": "الخليج للتدريب",
+      "code": "4290",
+      "sector": "الخدمات الإستهلاكية"
+    },
+    {
+      "id": 45,
+      "purification": "0.0028",
+      "sharia_opinion": "نقية",
+      "name": "الوطنية للتعليم",
+      "code": "4291",
+      "sector": "الخدمات الإستهلاكية"
+    },
+    {
+      "id": 46,
+      "purification": "0.0044",
+      "sharia_opinion": "نقية",
+      "name": "هرفي للأغذية",
+      "code": "6002",
+      "sector": "الخدمات الإستهلاكية"
+    },
+    {
+      "id": 47,
+      "purification": "0.0096",
+      "sharia_opinion": "نقية",
+      "name": "ريدان الغذائية",
+      "code": "6012",
+      "sector": "الخدمات الإستهلاكية"
+    },
+    {
+      "id": 48,
+      "purification": "0.0420",
+      "sharia_opinion": "نقية",
+      "name": "اکسترا",
+      "code": "4003",
+      "sector": "تجزئة السلع الكمالية"
+    },
+    {
+      "id": 49,
+      "purification": "0.0031",
+      "sharia_opinion": "نقية",
+      "name": "ساكو",
+      "code": "4008",
+      "sector": "تجزئة السلع الكمالية"
+    },
+    {
+      "id": 50,
+      "purification": "0.0120",
+      "sharia_opinion": "نقية",
+      "name": "ساسكو",
+      "code": "4050",
+      "sector": "تجزئة السلع الكمالية"
+    },
+    {
+      "id": 51,
+      "purification": "0.0086",
+      "sharia_opinion": "نقية",
+      "name": "باعظيم",
+      "code": "4051",
+      "sector": "تجزئة السلع الكمالية"
+    },
+    {
+      "id": 52,
+      "purification": "0.0025",
+      "sharia_opinion": "نقية",
+      "name": "جرير",
+      "code": "4190",
+      "sector": "تجزئة السلع الكمالية"
+    },
+    {
+      "id": 53,
+      "purification": "0.0145",
+      "sharia_opinion": "نقية",
+      "name": "أسواق ع العثيم",
+      "code": "4001",
+      "sector": "تجزئة الأغذية"
+    },
+    {
+      "id": 54,
+      "purification": "0.0191",
+      "sharia_opinion": "نقية",
+      "name": "أنعام القابضة",
+      "code": "4061",
+      "sector": "تجزئة الأغذية"
+    },
+    {
+      "id": 55,
+      "purification": "0.0052",
+      "sharia_opinion": "نقية",
+      "name": "بن داود",
+      "code": "4161",
+      "sector": "تجزئة الأغذية"
+    },
+    {
+      "id": 56,
+      "purification": "0.0075",
+      "sharia_opinion": "نقية",
+      "name": "وفرة",
+      "code": "2100",
+      "sector": "إنتاج الأغذية"
+    },
+    {
+      "id": 57,
+      "purification": "0.0035",
+      "sharia_opinion": "نقية",
+      "name": "سدافكو",
+      "code": "2270",
+      "sector": "إنتاج الأغذية"
+    },
+    {
+      "id": 58,
+      "purification": "0.0104",
+      "sharia_opinion": "نقية",
+      "name": "المراعي",
+      "code": "2280",
+      "sector": "إنتاج الأغذية"
+    },
+    {
+      "id": 59,
+      "purification": "0.0057",
+      "sharia_opinion": "نقية",
+      "name": "حلواني إخوان",
+      "code": "6001",
+      "sector": "إنتاج الأغذية"
+    },
+    {
+      "id": 60,
+      "purification": "0.0018",
+      "sharia_opinion": "نقية",
+      "name": "نادك",
+      "code": "6010",
+      "sector": "إنتاج الأغذية"
+    },
+    {
+      "id": 61,
+      "purification": "0.0035",
+      "sharia_opinion": "نقية",
+      "name": "جاكو",
+      "code": "6020",
+      "sector": "إنتاج الأغذية"
+    },
+    {
+      "id": 62,
+      "purification": "0.0005",
+      "sharia_opinion": "نقية",
+      "name": "الشرقية للتنمية",
+      "code": "6060",
+      "sector": "إنتاج الأغذية"
+    },
+    {
+      "id": 63,
+      "purification": "0.0042",
+      "sharia_opinion": "نقية",
+      "name": "الجوف الزراعية",
+      "code": "6070",
+      "sector": "إنتاج الأغذية"
+    },
+    {
+      "id": 64,
+      "purification": "0.0034",
+      "sharia_opinion": "نقية",
+      "name": "جازادكو",
+      "code": "6090",
+      "sector": "إنتاج الأغذية"
+    },
+    {
+      "id": 65,
+      "purification": "0.0045",
+      "sharia_opinion": "نقية",
+      "name": "الكيميائية",
+      "code": "2230",
+      "sector": "الرعاية الصحية"
+    },
+    {
+      "id": 66,
+      "purification": "0.0044",
+      "sharia_opinion": "نقية",
+      "name": "المواساة",
+      "code": "4002",
+      "sector": "الرعاية الصحية"
+    },
+    {
+      "id": 67,
+      "purification": "0.0086",
+      "sharia_opinion": "نقية",
+      "name": "دلة الصحية",
+      "code": "4004",
+      "sector": "الرعاية الصحية"
+    },
+    {
+      "id": 68,
+      "purification": "0.0003",
+      "sharia_opinion": "نقية",
+      "name": "الحمادي",
+      "code": "4007",
+      "sector": "الرعاية الصحية"
+    },
+    {
+      "id": 69,
+      "purification": "0.0542",
+      "sharia_opinion": "نقية",
+      "name": "سليمان الحبيب",
+      "code": "4013",
+      "sector": "الرعاية الصحية"
+    },
+    {
+      "id": 70,
+      "purification": "0.0427",
+      "sharia_opinion": "نقية",
+      "name": "متطورة",
+      "code": "2120",
+      "sector": "الاستثمار والتمويل"
+    },
+    {
+      "id": 71,
+      "purification": "0.0194",
+      "sharia_opinion": "نقية",
+      "name": "عسير",
+      "code": "4080",
+      "sector": "الاستثمار والتمويل"
+    },
+    {
+      "id": 72,
+      "purification": "0.0027",
+      "sharia_opinion": "نقية",
+      "name": "الباحة",
+      "code": "4130",
+      "sector": "الاستثمار والتمويل"
+    },
+    {
+      "id": 73,
+      "purification": "0.0008",
+      "sharia_opinion": "نقية",
+      "name": "بحر العرب",
+      "code": "7201",
+      "sector": "التطبيقات وخدمات التقنية"
+    },
+    {
+      "id": 74,
+      "purification": "0.0118",
+      "sharia_opinion": "نقية",
+      "name": "اس تي سي",
+      "code": "7010",
+      "sector": "الاتصالات"
+    },
+    {
+      "id": 75,
+      "purification": "0.0090",
+      "sharia_opinion": "نقية",
+      "name": "الرياض ريت",
+      "code": "4330",
+      "sector": "الصناديق العقارية المتداولة"
+    },
+    {
+      "id": 76,
+      "purification": "0.0000",
+      "sharia_opinion": "نقية",
+      "name": "الجزيرة ريت",
+      "code": "4331",
+      "sector": "الصناديق العقارية المتداولة"
+    },
+    {
+      "id": 77,
+      "purification": "0.0000",
+      "sharia_opinion": "نقية",
+      "name": "جدوى ريت الحرمين",
+      "code": "4332",
+      "sector": "الصناديق العقارية المتداولة"
+    },
+    {
+      "id": 78,
+      "purification": "0.0003",
+      "sharia_opinion": "نقية",
+      "name": "تعليم ريت",
+      "code": "4333",
+      "sector": "الصناديق العقارية المتداولة"
+    },
+    {
+      "id": 79,
+      "purification": "0.0011",
+      "sharia_opinion": "نقية",
+      "name": "المعذر ريت",
+      "code": "4334",
+      "sector": "الصناديق العقارية المتداولة"
+    },
+    {
+      "id": 80,
+      "purification": "0.0013",
+      "sharia_opinion": "نقية",
+      "name": "مشاركة ريت",
+      "code": "4335",
+      "sector": "الصناديق العقارية المتداولة"
+    },
+    {
+      "id": 81,
+      "purification": "0.0098",
+      "sharia_opinion": "نقية",
+      "name": "ملكية ريت",
+      "code": "4336",
+      "sector": "الصناديق العقارية المتداولة"
+    },
+    {
+      "id": 82,
+      "purification": "0.0001",
+      "sharia_opinion": "نقية",
+      "name": "مشاعر ريت",
+      "code": "4337",
+      "sector": "الصناديق العقارية المتداولة"
+    },
+    {
+      "id": 83,
+      "purification": "0.0001",
+      "sharia_opinion": "نقية",
+      "name": "الأهلي ريت ١",
+      "code": "4338",
+      "sector": "الصناديق العقارية المتداولة"
+    },
+    {
+      "id": 84,
+      "purification": "0.0010",
+      "sharia_opinion": "نقية",
+      "name": "دراية ريت",
+      "code": "4339",
+      "sector": "الصناديق العقارية المتداولة"
+    },
+    {
+      "id": 85,
+      "purification": "0.0000",
+      "sharia_opinion": "نقية",
+      "name": "الراجحي ريت",
+      "code": "4340",
+      "sector": "الصناديق العقارية المتداولة"
+    },
+    {
+      "id": 86,
+      "purification": "0.0003",
+      "sharia_opinion": "نقية",
+      "name": "جدوى ريت السعودية",
+      "code": "4342",
+      "sector": "الصناديق العقارية المتداولة"
+    },
+    {
+      "id": 87,
+      "purification": "0.0009",
+      "sharia_opinion": "نقية",
+      "name": "سدكو كابيتال ريت",
+      "code": "4344",
+      "sector": "الصناديق العقارية المتداولة"
+    },
+    {
+      "id": 88,
+      "purification": "0.0005",
+      "sharia_opinion": "نقية",
+      "name": "سويكورب وابل ريت",
+      "code": "4345",
+      "sector": "الصناديق العقارية المتداولة"
+    },
+    {
+      "id": 89,
+      "purification": "0.0000",
+      "sharia_opinion": "نقية",
+      "name": "ميفك ريت",
+      "code": "4346",
+      "sector": "الصناديق العقارية المتداولة"
+    },
+    {
+      "id": 90,
+      "purification": "0.0006",
+      "sharia_opinion": "نقية",
+      "name": "بنيان ريت",
+      "code": "4347",
+      "sector": "الصناديق العقارية المتداولة"
+    },
+    {
+      "id": 91,
+      "purification": "0.0174",
+      "sharia_opinion": "نقية",
+      "name": "طيبة",
+      "code": "4090",
+      "sector": "إدارة وتطوير العقارات"
+    },
+    {
+      "id": 92,
+      "purification": "0.0383",
+      "sharia_opinion": "نقية",
+      "name": "مكة",
+      "code": "4100",
+      "sector": "إدارة وتطوير العقارات"
+    },
+    {
+      "id": 93,
+      "purification": "0.0079",
+      "sharia_opinion": "نقية",
+      "name": "التعمير",
+      "code": "4150",
+      "sector": "إدارة وتطوير العقارات"
+    },
+    {
+      "id": 94,
+      "purification": "0.0144",
+      "sharia_opinion": "نقية",
+      "name": "دار الأركان",
+      "code": "4300",
+      "sector": "إدارة وتطوير العقارات"
+    },
+    {
+      "id": 95,
+      "purification": "0.0005",
+      "sharia_opinion": "نقية",
+      "name": "مدينة المعرفة",
+      "code": "4310",
+      "sector": "إدارة وتطوير العقارات"
+    },
+    {
+      "id": 96,
+      "purification": "0.0232",
+      "sharia_opinion": "نقية",
+      "name": "الأندلس",
+      "code": "4320",
+      "sector": "إدارة وتطوير العقارات"
+    },
+    {
+      "id": 97,
+      "purification": "0.0141",
+      "sharia_opinion": "نقية",
+      "name": "المراكز العربية",
+      "code": "4321",
+      "sector": "إدارة وتطوير العقارات"
+    },
+    {
+      "id": 98,
+      "purification": "0.0009",
+      "sharia_opinion": "نقية",
+      "name": "أسمنت الرياض",
+      "code": "9512",
+      "sector": "المواد الأساسية (موازي)"
+    },
+    {
+      "id": 99,
+      "purification": "0.0018",
+      "sharia_opinion": "نقية",
+      "name": "حديد وطني",
+      "code": "9513",
+      "sector": "المواد الأساسية (موازي)"
+    },
+    {
+      "id": 100,
+      "purification": "0.0017",
+      "sharia_opinion": "نقية",
+      "name": "الناقول",
+      "code": "9514",
+      "sector": "المواد الأساسية (موازي)"
+    },
+    {
+      "id": 101,
+      "purification": "0.0400",
+      "sharia_opinion": "نقية",
+      "name": "الوطنية للبناء والتسويق",
+      "code": "9510",
+      "sector": "السلع الرأس مالية (موازي)"
+    },
+    {
+      "id": 102,
+      "purification": "0.0005",
+      "sharia_opinion": "نقية",
+      "name": "فش فاش",
+      "code": "9515",
+      "sector": "إنتاج الأغذية (موازي)"
+    },
+    {
+      "id": 103,
+      "purification": "0.0143",
+      "sharia_opinion": "مختلطة",
+      "name": "البحري",
+      "code": "4030",
+      "sector": "الطاقة"
+    },
+    {
+      "id": 104,
+      "purification": "0.0015",
+      "sharia_opinion": "مختلطة",
+      "name": "تکوین",
+      "code": "1201",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 105,
+      "purification": "0.0077",
+      "sharia_opinion": "مختلطة",
+      "name": "بي سي اي",
+      "code": "1210",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 106,
+      "purification": "0.0706",
+      "sharia_opinion": "مختلطة",
+      "name": "معادن",
+      "code": "1211",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 107,
+      "purification": "0.0009",
+      "sharia_opinion": "مختلطة",
+      "name": "اليمامة للحديد",
+      "code": "1304",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 108,
+      "purification": "0.0279",
+      "sharia_opinion": "مختلطة",
+      "name": "بتروكيم",
+      "code": "2002",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 109,
+      "purification": "0.7500",
+      "sharia_opinion": "مختلطة",
+      "name": "سابك",
+      "code": "2010",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 110,
+      "purification": "0.1325",
+      "sharia_opinion": "مختلطة",
+      "name": "التصنيع الوطنية",
+      "code": "2060",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 111,
+      "purification": "0.0013",
+      "sharia_opinion": "مختلطة",
+      "name": "أنابيب",
+      "code": "2200",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 112,
+      "purification": "0.0136",
+      "sharia_opinion": "مختلطة",
+      "name": "نماء للكيماويات",
+      "code": "2210",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 113,
+      "purification": "0.0036",
+      "sharia_opinion": "مختلطة",
+      "name": "معدنية",
+      "code": "2220",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 114,
+      "purification": "0.0933",
+      "sharia_opinion": "مختلطة",
+      "name": "المجموعة السعودية",
+      "code": "2250",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 115,
+      "purification": "0.0170",
+      "sharia_opinion": "مختلطة",
+      "name": "سبكيم العالمية",
+      "code": "2310",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 116,
+      "purification": "0.0012",
+      "sharia_opinion": "مختلطة",
+      "name": "كيان السعودية",
+      "code": "2350",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 117,
+      "purification": "0.0036",
+      "sharia_opinion": "مختلطة",
+      "name": "أسمنت الشمالية",
+      "code": "3004",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 118,
+      "purification": "0.0095",
+      "sharia_opinion": "مختلطة",
+      "name": "أسمنت العربية",
+      "code": "3010",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 119,
+      "purification": "0.0014",
+      "sharia_opinion": "مختلطة",
+      "name": "أسمنت الجنوب",
+      "code": "3050",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 120,
+      "purification": "0.0017",
+      "sharia_opinion": "مختلطة",
+      "name": "أسترا الصناعية",
+      "code": "1212",
+      "sector": "السلع الرأس مالية"
+    },
+    {
+      "id": 121,
+      "purification": "0.0237",
+      "sharia_opinion": "مختلطة",
+      "name": "الكابلات",
+      "code": "2110",
+      "sector": "السلع الرأس مالية"
+    },
+    {
+      "id": 122,
+      "purification": "0.0183",
+      "sharia_opinion": "مختلطة",
+      "name": "البابطين",
+      "code": "2320",
+      "sector": "السلع الرأس مالية"
+    },
+    {
+      "id": 123,
+      "purification": "0.0031",
+      "sharia_opinion": "مختلطة",
+      "name": "مسك",
+      "code": "2370",
+      "sector": "السلع الرأس مالية"
+    },
+    {
+      "id": 124,
+      "purification": "0.0033",
+      "sharia_opinion": "مختلطة",
+      "name": "العمران",
+      "code": "4141",
+      "sector": "السلع الرأس مالية"
+    },
+    {
+      "id": 125,
+      "purification": "0.0082",
+      "sharia_opinion": "مختلطة",
+      "name": "التموين",
+      "code": "6004",
+      "sector": "الخدمات التجارية والمهنية"
+    },
+    {
+      "id": 126,
+      "purification": "0.0150",
+      "sharia_opinion": "مختلطة",
+      "name": "سيسكو",
+      "code": "2190",
+      "sector": "النقل"
+    },
+    {
+      "id": 127,
+      "purification": "0.0032",
+      "sharia_opinion": "مختلطة",
+      "name": "الخدمات الأرضية",
+      "code": "4031",
+      "sector": "النقل"
+    },
+    {
+      "id": 128,
+      "purification": "0.0213",
+      "sharia_opinion": "مختلطة",
+      "name": "الجماعي",
+      "code": "4040",
+      "sector": "النقل"
+    },
+    {
+      "id": 129,
+      "purification": "0.0051",
+      "sharia_opinion": "مختلطة",
+      "name": "بدجت السعودية",
+      "code": "4260",
+      "sector": "النقل"
+    },
+    {
+      "id": 130,
+      "purification": "0.0023",
+      "sharia_opinion": "مختلطة",
+      "name": "ذیب",
+      "code": "4261",
+      "sector": "النقل"
+    },
+    {
+      "id": 131,
+      "purification": "0.0285",
+      "sharia_opinion": "مختلطة",
+      "name": "نسيج",
+      "code": "1213",
+      "sector": "السلع طويلة الأجل"
+    },
+    {
+      "id": 132,
+      "purification": "0.0039",
+      "sharia_opinion": "مختلطة",
+      "name": "صدق",
+      "code": "2130",
+      "sector": "السلع طويلة الأجل"
+    },
+    {
+      "id": 133,
+      "purification": "0.0161",
+      "sharia_opinion": "مختلطة",
+      "name": "سيرا القابضة",
+      "code": "1810",
+      "sector": "الخدمات الإستهلاكية"
+    },
+    {
+      "id": 134,
+      "purification": "0.0122",
+      "sharia_opinion": "مختلطة",
+      "name": "وقت اللياقة",
+      "code": "1830",
+      "sector": "الخدمات الإستهلاكية"
+    },
+    {
+      "id": 135,
+      "purification": "0.0005",
+      "sharia_opinion": "مختلطة",
+      "name": "عطاء",
+      "code": "4292",
+      "sector": "الخدمات الإستهلاكية"
+    },
+    {
+      "id": 136,
+      "purification": "0.0467",
+      "sharia_opinion": "مختلطة",
+      "name": "تهامة",
+      "code": "4070",
+      "sector": "الإعلام والترفيه"
+    },
+    {
+      "id": 137,
+      "purification": "0.0220",
+      "sharia_opinion": "مختلطة",
+      "name": "شاكر",
+      "code": "1214",
+      "sector": "تجزئة السلع الكمالية"
+    },
+    {
+      "id": 138,
+      "purification": "0.0015",
+      "sharia_opinion": "مختلطة",
+      "name": "أبو معطي",
+      "code": "4191",
+      "sector": "تجزئة السلع الكمالية"
+    },
+    {
+      "id": 139,
+      "purification": "0.0088",
+      "sharia_opinion": "مختلطة",
+      "name": "فواز الحكير",
+      "code": "4240",
+      "sector": "تجزئة السلع الكمالية"
+    },
+    {
+      "id": 140,
+      "purification": "0.0010",
+      "sharia_opinion": "مختلطة",
+      "name": "أسواق المزرعة",
+      "code": "4006",
+      "sector": "تجزئة الأغذية"
+    },
+    {
+      "id": 141,
+      "purification": "0.1960",
+      "sharia_opinion": "مختلطة",
+      "name": "صافولا",
+      "code": "2050",
+      "sector": "إنتاج الأغذية"
+    },
+    {
+      "id": 142,
+      "purification": "0.0029",
+      "sharia_opinion": "مختلطة",
+      "name": "تبوك الزراعية",
+      "code": "6040",
+      "sector": "إنتاج الأغذية"
+    },
+    {
+      "id": 143,
+      "purification": "0.0099",
+      "sharia_opinion": "مختلطة",
+      "name": "أيان",
+      "code": "2140",
+      "sector": "الرعاية الصحية"
+    },
+    {
+      "id": 144,
+      "purification": "0.0961",
+      "sharia_opinion": "مختلطة",
+      "name": "رعاية",
+      "code": "4005",
+      "sector": "الرعاية الصحية"
+    },
+    {
+      "id": 145,
+      "purification": "0.0005",
+      "sharia_opinion": "مختلطة",
+      "name": "المستشفى السعودي الألماني",
+      "code": "4009",
+      "sector": "الرعاية الصحية"
+    },
+    {
+      "id": 146,
+      "purification": "0.0238",
+      "sharia_opinion": "مختلطة",
+      "name": "الدوائية",
+      "code": "2070",
+      "sector": "الادوية"
+    },
+    {
+      "id": 147,
+      "purification": "0.1095",
+      "sharia_opinion": "مختلطة",
+      "name": "ام آي اس",
+      "code": "7200",
+      "sector": "التطبيقات وخدمات التقنية"
+    },
+    {
+      "id": 148,
+      "purification": "0.0040",
+      "sharia_opinion": "مختلطة",
+      "name": "اتحاد اتصالات",
+      "code": "7020",
+      "sector": "الاتصالات"
+    },
+    {
+      "id": 149,
+      "purification": "0.0164",
+      "sharia_opinion": "مختلطة",
+      "name": "زين السعودية",
+      "code": "7030",
+      "sector": "الاتصالات"
+    },
+    {
+      "id": 150,
+      "purification": "0.0375",
+      "sharia_opinion": "مختلطة",
+      "name": "الغاز",
+      "code": "2080",
+      "sector": "المرافق العامة"
+    },
+    {
+      "id": 151,
+      "purification": "0.0273",
+      "sharia_opinion": "مختلطة",
+      "name": "كهرباء السعودية",
+      "code": "5110",
+      "sector": "المرافق العامة"
+    },
+    {
+      "id": 152,
+      "purification": "0.0011",
+      "sharia_opinion": "مختلطة",
+      "name": "الخبير ريت",
+      "code": "4348",
+      "sector": "الصناديق العقارية المتداولة"
+    },
+    {
+      "id": 153,
+      "purification": "0.0095",
+      "sharia_opinion": "مختلطة",
+      "name": "العقارية",
+      "code": "4020",
+      "sector": "إدارة وتطوير العقارات"
+    },
+    {
+      "id": 154,
+      "purification": "0.0076",
+      "sharia_opinion": "مختلطة",
+      "name": "إعمار",
+      "code": "4220",
+      "sector": "إدارة وتطوير العقارات"
+    },
+    {
+      "id": 155,
+      "purification": "0.0076",
+      "sharia_opinion": "مختلطة",
+      "name": "البحر الأحمر",
+      "code": "4230",
+      "sector": "إدارة وتطوير العقارات"
+    },
+    {
+      "id": 156,
+      "purification": "0.0011",
+      "sharia_opinion": "مختلطة",
+      "name": "جبل عمر",
+      "code": "4250",
+      "sector": "إدارة وتطوير العقارات"
+    },
+    {
+      "id": 157,
+      "purification": "0.0105",
+      "sharia_opinion": "مختلطة",
+      "name": "التطويرية الغذائية",
+      "code": "9501",
+      "sector": "الخدمات الإستهلاكية (موازي)"
+    },
+    {
+      "id": 158,
+      "purification": "0.0227",
+      "sharia_opinion": "مختلطة",
+      "name": "سمو",
+      "code": "9511",
+      "sector": "إدارة وتطوير العقارات (موازي)"
+    },
+    {
+      "id": 159,
+      "purification": NaN,
+      "sharia_opinion": NaN,
+      "name": NaN,
+      "code": NaN,
+      "sector": NaN
+    },
+    {
+      "id": 160,
+      "purification": "مبلغ التطهير لكل سهم",
+      "sharia_opinion": "الرأي الشرعي",
+      "name": "الشركة",
+      "code": "رمز الشركة",
+      "sector": "القطاع"
+    },
+    {
+      "id": 161,
+      "purification": "0.2422",
+      "sharia_opinion": "غير متوافقة",
+      "name": "بترو رابغ",
+      "code": "2380",
+      "sector": "الطاقة"
+    },
+    {
+      "id": 162,
+      "purification": "0.0001",
+      "sharia_opinion": "غير متوافقة",
+      "name": "صناعة الورق",
+      "code": "2300",
+      "sector": "المواد الأساسية"
+    },
+    {
+      "id": 163,
+      "purification": "0.0360",
+      "sharia_opinion": "غير متوافقة",
+      "name": "أميانتيت",
+      "code": "2160",
+      "sector": "السلع الرأس مالية"
+    },
+    {
+      "id": 164,
+      "purification": "0.0017",
+      "sharia_opinion": "غير متوافقة",
+      "name": "طباعة وتغليف",
+      "code": "4270",
+      "sector": "الخدمات التجارية والمهنية"
+    },
+    {
+      "id": 165,
+      "purification": "0.0180",
+      "sharia_opinion": "غير متوافقة",
+      "name": "الأسماك",
+      "code": "6050",
+      "sector": "إنتاج الأغذية"
+    },
+    {
+      "id": 166,
+      "purification": "0.0570",
+      "sharia_opinion": "غير متوافقة",
+      "name": "الخريف",
+      "code": "2081",
+      "sector": "المرافق العامة"
+    },
+    {
+      "id": 167,
+      "purification": NaN,
+      "sharia_opinion": "غير متوافقة النشاط",
+      "name": "الأبحاث والإعلام",
+      "code": "4210",
+      "sector": "الإعلام والترفيه"
+    },
+    {
+      "id": 168,
+      "purification": NaN,
+      "sharia_opinion": "غير متوافقة النشاط",
+      "name": "المملكة",
+      "code": "4280",
+      "sector": "الاستثمار والتمويل"
+    }
+  ]
+}
