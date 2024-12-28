@@ -417,7 +417,6 @@ classDiagram
     Routes --> YearValidator : uses
     StockHandler --> ErrorHandler : uses
     StockHandler --> Stock : manages
-
 ```
 
 ### Docker-Compose Diagram
@@ -444,8 +443,7 @@ graph LR
 
 ### Request Flow Diagram
 
-
-```mermid
+```mermaid
 sequenceDiagram
     participant C as Client
     participant F as Fiber App
