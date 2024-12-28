@@ -13,7 +13,7 @@ GET {{baseUrl}}/api/v1/health
 Content-Type: {{contentType}}
 
 ### Metrics Dashboard
-GET {{baseUrl}}/metrics
+GET {{baseUrl}}/api/v1/metrics
 Content-Type: {{contentType}}
 
 ### Root Endpoint

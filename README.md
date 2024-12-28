@@ -203,6 +203,7 @@ Server will start at `http://localhost:3000`
 - Performance trends
 
 </details>
+
 ### Docker Setup
 
 #### Using Docker Compose (Recommended)
