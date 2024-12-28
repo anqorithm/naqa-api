@@ -286,6 +286,8 @@ Data source: [Almaqased Cleansing Calculator](https://almaqased.net/cleansing-ca
 │   ├── config
 │   │   ├── config.go
 │   │   └── mongodb.go
+│   ├── constants
+│   │   └── constants.go
 │   ├── handlers
 │   │   ├── errors.go
 │   │   ├── handlers.go
