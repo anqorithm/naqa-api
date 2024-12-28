@@ -9,6 +9,14 @@
 [![Fiber Framework](https://img.shields.io/badge/Fiber-v2.52.5-blue.svg)](https://gofiber.io/)
 ![GCP Deployment](https://img.shields.io/badge/Deployed%20on-GCP-4285F4?logo=google-cloud&logoColor=white)
 
+<div dir="rtl" style="text-align: center; margin: 20px 0; padding: 20px; background-color: #f8f9fa; border-radius: 5px;">
+
+> {فَأَمَّا الزَّبَدُ فَيَذْهَبُ جُفَاءً ۖ وَأَمَّا مَا يَنفَعُ النَّاسَ فَيَمْكُثُ فِي الْأَرْضِ}
+>
+> <div style="font-size: 0.9em; color: #666;">سورة الرعد - آية 17</div>
+
+</div>
+
 <div dir="rtl">
 
 ## نظرة عامة | Overview
@@ -506,8 +514,6 @@ go build -o naqa-api cmd/api/main.go
 ## المساهمة | Contributing
 
 <div dir="rtl">
-
-> {فَأَمَّا الزَّبَدُ فَيَذْهَبُ جُفَاءً ۖ وَأَمَّا مَا يَنفَعُ النَّاسَ فَيَمْكُثُ فِي الْأَرْضِ}
 
 نرحب بمساهماتكم في تطوير هذا المشروع. للمساهمة:
 
