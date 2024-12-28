@@ -154,11 +154,11 @@ cp .env.example .env
 # Fill in your environment variables in .env file:
 API_VERSION      # API version
 ENVIRONMENT      # development, production, etc.
-PORT            # Server port
-APP_NAME        # Application name
-APP_DESCRIPTION # Application description
-MONGO_URI      # MongoDB connection URI
-MONGO_DATABASE # MongoDB database name
+PORT             # Server port
+APP_NAME         # Application name
+APP_DESCRIPTION  # Application description
+MONGO_URI        # MongoDB connection URI
+MONGO_DATABASE   # MongoDB database name
 ```
 
 ## Running the Application
