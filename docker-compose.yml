@@ -1,4 +1,9 @@
+################################################################################
+# Docker Compose file for running the API and MongoDB
+################################################################################
+
 services:
+  # API service
   api:
     build:
       context: .
@@ -7,13 +12,17 @@ services:
       - "${PORT:-3000}:${PORT:-3000}"
     restart: unless-stopped
     environment:
+      - API_VERSION=${API_VERSION}
+      - ENVIRONMENT=${ENVIRONMENT}
+      - APP_NAME=${APP_NAME}
+      - APP_DESCRIPTION=${APP_DESCRIPTION}
       - MONGODB_URI=${MONGO_URI}/${MONGO_DATABASE}
       - PORT=${PORT}
     depends_on:
       - mongodb
     networks:
       - naqa-network
-
+  # MongoDB service
   mongodb:
     image: mongo:latest
     ports:
@@ -23,9 +32,11 @@ services:
     networks:
       - naqa-network
 
+# Networks
 networks:
   naqa-network:
     driver: bridge
 
+# Volumes
 volumes:
   mongodb_data:

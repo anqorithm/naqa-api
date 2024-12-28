@@ -7,13 +7,13 @@ import (
 )
 
 type Config struct {
-	AppName        string
-	Version        string
-	Port           string
-	Environment    string
-	Description    string
-	MongoURI       string
-	MongoDatabase  string
+	AppName       string
+	Version       string
+	Port          string
+	Environment   string
+	Description   string
+	MongoURI      string
+	MongoDatabase string
 }
 
 func LoadConfig() (*Config, error) {
@@ -22,8 +22,8 @@ func LoadConfig() (*Config, error) {
 	}
 
 	return &Config{
-		AppName:        getEnv("APP_NAME", "Naqa API"),
-		Version:        getEnv("API_VERSION", "1.0.0"),
+		AppName:       getEnv("APP_NAME", "Naqa API"),
+		Version:       getEnv("API_VERSION", "1.0.0"),
 		Port:          getEnv("PORT", "3000"),
 		Environment:   getEnv("ENVIRONMENT", "development"),
 		Description:   getEnv("APP_DESCRIPTION", ""),

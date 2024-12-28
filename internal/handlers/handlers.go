@@ -43,7 +43,7 @@ func (h *Handler) ApiV1Handler(c *fiber.Ctx) error {
 		"status":      "active",
 		"message":     "Welcome to NAQA API v1",
 		"version":     "1.0.0",
-		"env":         os.Getenv("APP_ENV"),
+		"env":         os.Getenv("ENVIRONMENT"),
 		"server_time": time.Now().Format(time.RFC3339),
 		"request_id":  c.Get("X-Request-ID", uuid.New().String()),
 		"endpoints": []string{
@@ -62,15 +62,45 @@ func (h *Handler) HealthCheckHandler(c *fiber.Ctx) error {
 }
 
 func (h *Handler) GetStocksBaseHandler(c *fiber.Ctx) error {
+	latestYear := constants.AvailableYears[len(constants.AvailableYears)-1]
 	return c.JSON(fiber.Map{
 		"status":          "success",
 		"message":         "Welcome to Stocks API",
 		"available_years": constants.AvailableYears,
-		"endpoints": map[string]string{
-			"get_stocks": "/api/v1/stocks/year/{year}",
-			"search":     "/api/v1/stocks/year/{year}/search",
-			"calculate":  "/api/v1/stocks/year/{year}/calculate-purification",
+		"endpoints": []map[string]interface{}{
+			{
+				"name":        "Get Stocks",
+				"path":        "/api/v1/stocks/year/{year}",
+				"method":      "GET",
+				"description": "Get all stocks for a specific year",
+				"example":     fmt.Sprintf("/api/v1/stocks/year/%s", latestYear),
+			},
+			{
+				"name":        "Search Stocks",
+				"path":        "/api/v1/stocks/year/{year}/search",
+				"method":      "GET",
+				"description": "Search stocks with filters",
+				"example":     fmt.Sprintf("/api/v1/stocks/year/%s/search?sector=الطاقة&sharia_opinion=نقية", latestYear),
+				"parameters": []string{
+					"name", "code", "sector", "sharia_opinion",
+				},
+			},
+			{
+				"name":        "Calculate Purification",
+				"path":        "/api/v1/stocks/year/{year}/calculate-purification",
+				"method":      "POST",
+				"description": "Calculate stock purification amount",
+				"example": map[string]interface{}{
+					"url": fmt.Sprintf("/api/v1/stocks/year/%s/calculate-purification", latestYear),
+					"body": map[string]interface{}{
+						"start_date":       "2023-01-01",
+						"end_date":         "2023-12-31",
+						"number_of_stocks": 100,
+						"stock_code":       "1111",
+					},
+				},
+			},
 		},
-		"example": fmt.Sprintf("/api/v1/stocks/year/%s", constants.AvailableYears[len(constants.AvailableYears)-1]),
+		"documentation": "https://github.com/anqorithm/naqa-api",
 	})
 }

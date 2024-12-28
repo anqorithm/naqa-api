@@ -15,12 +15,9 @@ func main() {
 	// ###############################################################################
 	// Environment and Configuration Setup
 	// ###############################################################################
-	if os.Getenv("ENV") != "production" {
-		if err := godotenv.Load(); err != nil {
-			log.Printf("Warning: Error loading .env file: %v", err)
-		}
+	if err := godotenv.Load(); err != nil {
+		log.Printf("Warning: Error loading .env file: %v", err)
 	}
-
 	mongoConfig := config.NewMongoConfig()
 	db, err := config.ConnectDB(mongoConfig)
 	if err != nil {

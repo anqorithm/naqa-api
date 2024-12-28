@@ -120,6 +120,8 @@ Set the following environment variables or edit the .env file:
    http://localhost:3000/api/v1
    ```
 
+![dev make - air](./assets/1.png)
+
 ## Environment Variables
 
 Before running the application, make sure to set up your environment variables:
@@ -438,7 +440,11 @@ graph LR
         api --> |port| port1[3000:3000]
         mongo --> |port| port2[27017:27017]
         
-        env1[Environment:<br/>MONGODB_URI<br/>PORT] --> api
+        subgraph Environment
+            env[Environment Variables:<br/>API_VERSION<br/>ENVIRONMENT<br/>PORT<br/>APP_NAME<br/>APP_DESCRIPTION<br/>MONGO_URI<br/>MONGO_DATABASE]
+        end
+        
+        env --> api
     end
 ```
 
