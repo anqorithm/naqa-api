@@ -481,7 +481,7 @@ go build -o naqa-api cmd/api/main.go
 3. أضف تعديلاتك (`git add .`)
 4. ثبّت التغييرات (`git commit -m 'Add some amazing feature'`)
 5. ارفع التعديلات (`git push origin feature/amazing-feature`)
-6. أنشئ طلب سحب (Pull Request)
+6. أنشئ طلب تغيير (Pull Request)
 
 </div>
 
