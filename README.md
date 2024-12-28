@@ -46,7 +46,7 @@ PORT=
 - غير متوافقة | Non-Compliant: أسهم غير متوافقة مع الشريعة | Non-Shariah Compliant Stocks
 
 ### السنوات المدعومة | Supported Years
-> السنوات المتوفرة | Available Years: 2018, 2019, 2020, 2021, 2022, 2023
+> السنوات المتوفرة | Available Years: 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023
 
 </div>
 
@@ -268,7 +268,7 @@ This API is inspired by [NaqausStocks.com](https://naquastocks.com/).
 Data source: [Almaqased Cleansing Calculator](https://almaqased.net/cleansing-calculator/%D9%82%D9%88%D8%A7%D8%A6%D9%85-%D8%A7%D9%84%D8%AA%D8%AD%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A-%D9%84%D9%84%D8%B4%D8%B1%D9%83%D8%A7%D8%AA/)  
 المشرف العام: د. محمد بن سعود العصيمي
 
-> **Note:** Supported Years: 2018, 2019, 2020, 2021, 2022, 2023
+> **Note:** Supported Years: 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023
 
 
 ## Development
