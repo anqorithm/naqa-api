@@ -1,5 +1,9 @@
 package handlers
 
+// ###############################################################################
+// Stock Handler Functions
+// ###############################################################################
+
 import (
 	"strconv"
 	"time"
@@ -12,10 +16,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
-// ###############################################################################
-// Stock Handler Functions
-// ###############################################################################
-
+// GetStocksHandler fetches all stocks for a given year
 func (h *Handler) GetStocksByYearHandler(c *fiber.Ctx) error {
 	collection := h.db.Collection(c.Params("year"))
 
@@ -48,6 +49,7 @@ func (h *Handler) GetStocksByYearHandler(c *fiber.Ctx) error {
 	return c.JSON(models.StockResponse{Stocks: result})
 }
 
+// GetStockByCodeHandler fetches a stock by its code for a given year
 func (h *Handler) SearchStocksHandler(c *fiber.Ctx) error {
 	filter := bson.M{}
 
@@ -95,6 +97,7 @@ func (h *Handler) SearchStocksHandler(c *fiber.Ctx) error {
 	return c.JSON(models.StockResponse{Stocks: result})
 }
 
+// CalculatePurificationHandler calculates purification amount for a stock
 func (h *Handler) CalculatePurificationHandler(c *fiber.Ctx) error {
 	const daysInYear = 365.0
 
@@ -155,4 +158,3 @@ func (h *Handler) CalculatePurificationHandler(c *fiber.Ctx) error {
 
 	return c.JSON(response)
 }
-

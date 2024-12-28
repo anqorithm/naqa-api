@@ -1,7 +1,12 @@
 package models
 
+// ###############################################################################
+// Stock Model
+// ###############################################################################
+
 import "go.mongodb.org/mongo-driver/bson/primitive"
 
+// Stock represents a stock entity
 type Stock struct {
 	ID            primitive.ObjectID `json:"_id" bson:"_id,omitempty"`
 	Name          string             `json:"name" bson:"name"`
@@ -11,11 +16,12 @@ type Stock struct {
 	Purification  string             `json:"purification" bson:"purification"`
 }
 
+// StockResponse represents a response containing a list of stocks
 type StockResponse struct {
 	Stocks []Stock `json:"stocks"`
 }
 
-
+// PurificationRequest represents a request to calculate purification amount
 type PurificationRequest struct {
 	StartDate      string `json:"start_date" validate:"required,datetime=2006-01-02"`
 	EndDate        string `json:"end_date" validate:"required,datetime=2006-01-02"`
@@ -23,7 +29,7 @@ type PurificationRequest struct {
 	StockCode      string `json:"stock_code" validate:"required"`
 }
 
-
+// PurificationResponse represents a response containing the purification amount
 type PurificationResponse struct {
 	ID                 primitive.ObjectID `json:"_id" bson:"_id,omitempty"`
 	PurificationAmount float64            `json:"purification_amount"`

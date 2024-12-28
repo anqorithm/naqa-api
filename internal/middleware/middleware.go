@@ -1,5 +1,9 @@
 package middleware
 
+// ###############################################################################
+// Middleware Functions
+// ###############################################################################
+
 import (
 	"fmt"
 	"time"
@@ -13,10 +17,6 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/gofiber/fiber/v2/middleware/monitor"
 )
-
-// ###############################################################################
-// Middleware Functions
-// ###############################################################################
 
 // Logger returns a logger middleware
 func Logger() fiber.Handler {

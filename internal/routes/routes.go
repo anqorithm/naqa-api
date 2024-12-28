@@ -1,5 +1,9 @@
 package routes
 
+// ###############################################################################
+// Routes
+// ###############################################################################
+
 import (
 	"github.com/anqorithm/naqa-api/internal/handlers"
 	"github.com/anqorithm/naqa-api/internal/middleware"

@@ -1,5 +1,9 @@
 package middleware
 
+// ###############################################################################
+// Year Validation Middleware
+// ###############################################################################
+
 import (
 	"fmt"
 
@@ -9,11 +13,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
-// ###############################################################################
-// Year Validation Middleware
-// ###############################################################################
-
-
+// ValidateYear validates the year parameter
 func ValidateYear() fiber.Handler {
 	return func(c *fiber.Ctx) error {
 		year := c.Params("year")

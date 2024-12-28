@@ -1,5 +1,9 @@
 package models
 
+// ###############################################################################
+// Error Response Model
+// ###############################################################################
+
 type ErrorResponse struct {
 	Status  string      `json:"status"`
 	Code    string      `json:"code"`
