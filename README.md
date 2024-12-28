@@ -468,15 +468,33 @@ sequenceDiagram
 go build -o naqa-api cmd/api/main.go
 ```
 
-## Contributing
+## المساهمة | Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+<div dir="rtl">
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/NewFeature`)
-3. Commit your Changes (`git commit -m 'Add some NewFeature'`)
-4. Push to the Branch (`git push origin feature/NewFeature`)
-5. Open a Pull Request
+> (أَمَّا الزَّبَدُ فَيَذْهَبُ جُفَاءً ۖ وَأَمَّا مَا يَنفَعُ النَّاسَ فَيَمْكُثُ فِي الْأَرْضِ)
+
+نرحب بمساهماتكم في تطوير هذا المشروع. للمساهمة:
+
+1. انسخ المستودع (Fork)
+2. أنشئ فرعاً جديداً (`git checkout -b feature/amazing-feature`)
+3. أضف تعديلاتك (`git add .`)
+4. ثبّت التغييرات (`git commit -m 'Add some amazing feature'`)
+5. ارفع التعديلات (`git push origin feature/amazing-feature`)
+6. أنشئ طلب سحب (Pull Request)
+
+</div>
+
+We welcome contributions to enhance this project. To contribute:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Add your changes (`git add .`)
+4. Commit your changes (`git commit -m 'Add some amazing feature'`)
+5. Push to the branch (`git push origin feature/amazing-feature`)
+6. Open a Pull Request
+
+Please make sure to update tests as appropriate and follow our code of conduct.
 
 ## Contributors
 
