@@ -113,7 +113,7 @@ Set the following environment variables or edit the .env file:
 ## Usage
 1. Run the server:
    ```
-   go run cmd/api/main.go
+   make dev
    ```
 2. Access the API at:
    ```
