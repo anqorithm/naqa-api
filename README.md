@@ -365,43 +365,59 @@ $$
 
 ```mermaid
 classDiagram
+    %% Core Classes based on actual project structure
     class Config {
         +MongoDB mongodb
-        +Load()
+        +Load() error
+        +GetEnvVariable(key string, defaultValue string) string
     }
 
     class MongoDB {
         +string URI
         +string Database
-        +string Collection
-        +Connect()
+        +Connect() error
+        +GetClient() *mongo.Client
     }
 
-    class Handlers {
-        +HandleError(w ResponseWriter, err error, status int)
-        +GetStocks(w ResponseWriter, r *Request)
-        +GetStocksByYear(w ResponseWriter, r *Request)
+    class Stock {
+        +string ID
+        +string Code
+        +string Name
+        +string Sector
+        +string ShariaOpinion
+        +float64 PurificationRate
+        +int Year
     }
 
-    class Middleware {
-        +YearValidator(next http.Handler) http.Handler
+    class StockHandler {
+        +GetStocks(c *fiber.Ctx) error
+        +GetStocksByYear(c *fiber.Ctx) error
+        +SearchStocks(c *fiber.Ctx) error
+        +CalculatePurification(c *fiber.Ctx) error
+    }
+
+    class ErrorHandler {
+        +HandleError(c *fiber.Ctx, err error) error
+        +NewAPIError(message string, status int) *APIError
+    }
+
+    class YearValidator {
         +ValidateYear(year string) bool
+        +YearMiddleware(c *fiber.Ctx) error
     }
 
     class Routes {
-        +SetupRoutes(r *mux.Router)
+        +SetupRoutes(app *fiber.App)
+        +setupStockRoutes(app *fiber.App)
     }
 
-    class main {
-        +main()
-    }
+    %% Relationships
+    Config --> MongoDB : uses
+    Routes --> StockHandler : registers
+    Routes --> YearValidator : uses
+    StockHandler --> ErrorHandler : uses
+    StockHandler --> Stock : manages
 
-    Config --> MongoDB : contains
-    Routes --> Handlers : uses
-    Routes --> Middleware : uses
-    main --> Routes : initializes
-    main --> Config : loads
-    Handlers --> MongoDB : uses
 ```
 
 ### Docker-Compose Diagram
@@ -422,6 +438,30 @@ graph LR
         mongo --> |port| port2[27017:27017]
         
         env1[Environment:<br/>MONGODB_URI<br/>PORT] --> api
+    end
+```
+
+
+### Request Flow Diagram
+
+
+```mermid
+sequenceDiagram
+    participant C as Client
+    participant F as Fiber App
+    participant M as Year Validator
+    participant H as Stock Handler
+    participant DB as MongoDB
+
+    C->>F: HTTP Request
+    F->>M: Validate Year
+    alt Invalid Year
+        M-->>C: Error Response
+    else Valid Year
+        M->>H: Process Request
+        H->>DB: Query Data
+        DB-->>H: Return Results
+        H-->>C: JSON Response
     end
 ```
 
