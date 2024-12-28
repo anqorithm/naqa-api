@@ -4,10 +4,12 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/anqorithm/naqa-api/internal/constants"
 	"github.com/anqorithm/naqa-api/internal/models"
 	"github.com/anqorithm/naqa-api/internal/utils"
 	"github.com/gofiber/fiber/v2"
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
 // ###############################################################################
@@ -31,7 +33,9 @@ func (h *Handler) GetStocksByYearHandler(c *fiber.Ctx) error {
 	}
 	result := make([]models.Stock, 0, len(stocks))
 	for _, doc := range stocks {
+		id, _ := doc["_id"].(primitive.ObjectID)
 		stock := models.Stock{
+			ID:            id,
 			Name:          utils.SafeString(doc["name"]),
 			Code:          utils.SafeString(doc["code"]),
 			Sector:        utils.SafeString(doc["sector"]),
@@ -76,7 +80,9 @@ func (h *Handler) SearchStocksHandler(c *fiber.Ctx) error {
 	}
 	result := make([]models.Stock, 0, len(stocks))
 	for _, doc := range stocks {
+		id, _ := doc["_id"].(primitive.ObjectID)
 		stock := models.Stock{
+			ID:            id,
 			Name:          utils.SafeString(doc["name"]),
 			Code:          utils.SafeString(doc["code"]),
 			Sector:        utils.SafeString(doc["sector"]),
@@ -90,55 +96,58 @@ func (h *Handler) SearchStocksHandler(c *fiber.Ctx) error {
 }
 
 func (h *Handler) CalculatePurificationHandler(c *fiber.Ctx) error {
+	const daysInYear = 365.0
+
 	var req models.PurificationRequest
 	if err := c.BodyParser(&req); err != nil {
 		return SendError(c, fiber.StatusBadRequest, models.ErrCodeInvalidRequest,
-			"Invalid request body", nil)
+			constants.MsgInvalidRequestBody, nil)
 	}
 
-	startDate, err := time.Parse("2006-01-02", req.StartDate)
-	if err != nil {
-		return SendError(c, fiber.StatusBadRequest, models.ErrCodeInvalidDateFormat,
-			"Invalid start date format", map[string]string{
-				"expected_format": "YYYY-MM-DD",
-				"provided_value":  req.StartDate,
-			})
+	if errors := utils.ValidateRequest(&req); len(errors) > 0 {
+		return SendError(c, fiber.StatusBadRequest, models.ErrCodeValidationFailed,
+			constants.MsgValidationFailed, fiber.Map{"errors": errors})
 	}
 
-	endDate, err := time.Parse("2006-01-02", req.EndDate)
+	startDate, err := time.Parse(constants.DateFormat, req.StartDate)
 	if err != nil {
-		return SendError(c, fiber.StatusBadRequest, models.ErrCodeInvalidDateFormat,
-			"Invalid end date format", map[string]string{
-				"expected_format": "YYYY-MM-DD",
-				"provided_value":  req.EndDate,
-			})
+		return SendError(c, fiber.StatusBadRequest, models.ErrCodeInvalidRequest,
+			constants.MsgInvalidStartDateFormat, nil)
+	}
+
+	endDate, err := time.Parse(constants.DateFormat, req.EndDate)
+	if err != nil {
+		return SendError(c, fiber.StatusBadRequest, models.ErrCodeInvalidRequest,
+			constants.MsgInvalidEndDateFormat, nil)
+	}
+
+	if !endDate.After(startDate) {
+		return SendError(c, fiber.StatusBadRequest, models.ErrCodeValidationFailed,
+			constants.MsgEndDateAfterStartDate, nil)
 	}
 
 	daysHeld := int(endDate.Sub(startDate).Hours() / 24)
-	if daysHeld < 0 {
-		return SendError(c, fiber.StatusBadRequest, models.ErrCodeValidationFailed,
-			"End date must be after start date", map[string]string{
-				"start_date": req.StartDate,
-				"end_date":   req.EndDate,
-			})
-	}
 
 	collection := h.db.Collection(c.Params("year"))
 	var stock bson.M
 	err = collection.FindOne(c.Context(), bson.M{"code": req.StockCode}).Decode(&stock)
 	if err != nil {
-		return c.Status(404).JSON(fiber.Map{"error": "Stock not found"})
+		return SendError(c, fiber.StatusNotFound, models.ErrCodeNotFound,
+			constants.MsgStockNotFound, nil)
 	}
 
+	id, _ := stock["_id"].(primitive.ObjectID)
 	purificationStr := utils.SafeString(stock["purification"])
 	purificationRate, err := strconv.ParseFloat(purificationStr, 64)
 	if err != nil {
-		return c.Status(500).JSON(fiber.Map{"error": "Invalid purification rate in database"})
+		return SendError(c, fiber.StatusInternalServerError, models.ErrCodeInvalidData,
+			constants.MsgInvalidPurificationRate, nil)
 	}
 
-	purificationAmount := float64(req.NumberOfStocks) * purificationRate * float64(daysHeld) / 365.0
+	purificationAmount := float64(req.NumberOfStocks) * purificationRate * float64(daysHeld) / daysInYear
 
 	response := models.PurificationResponse{
+		ID:                 id,
 		PurificationAmount: purificationAmount,
 		DaysHeld:           daysHeld,
 		PurificationRate:   purificationRate,
@@ -146,3 +155,4 @@ func (h *Handler) CalculatePurificationHandler(c *fiber.Ctx) error {
 
 	return c.JSON(response)
 }
+

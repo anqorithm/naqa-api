@@ -1,9 +1,11 @@
 package handlers
 
 import (
+	"fmt"
 	"os"
 	"time"
 
+	"github.com/anqorithm/naqa-api/internal/constants"
 	"github.com/gofiber/fiber/v2"
 	"github.com/google/uuid"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -56,5 +58,19 @@ func (h *Handler) HealthCheckHandler(c *fiber.Ctx) error {
 	return c.JSON(fiber.Map{
 		"status":    "OK",
 		"timestamp": time.Now().Format(time.RFC3339),
+	})
+}
+
+func (h *Handler) GetStocksBaseHandler(c *fiber.Ctx) error {
+	return c.JSON(fiber.Map{
+		"status":          "success",
+		"message":         "Welcome to Stocks API",
+		"available_years": constants.AvailableYears,
+		"endpoints": map[string]string{
+			"get_stocks": "/api/v1/stocks/year/{year}",
+			"search":     "/api/v1/stocks/year/{year}/search",
+			"calculate":  "/api/v1/stocks/year/{year}/calculate-purification",
+		},
+		"example": fmt.Sprintf("/api/v1/stocks/year/%s", constants.AvailableYears[len(constants.AvailableYears)-1]),
 	})
 }

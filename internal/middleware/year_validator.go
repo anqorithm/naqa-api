@@ -3,6 +3,7 @@ package middleware
 import (
 	"fmt"
 
+	"github.com/anqorithm/naqa-api/internal/constants"
 	"github.com/anqorithm/naqa-api/internal/handlers"
 	"github.com/anqorithm/naqa-api/internal/models"
 	"github.com/gofiber/fiber/v2"
@@ -12,7 +13,6 @@ import (
 // Year Validation Middleware
 // ###############################################################################
 
-var availableYears = []string{"2018", "2019", "2020", "2021", "2022", "2023"}
 
 func ValidateYear() fiber.Handler {
 	return func(c *fiber.Ctx) error {
@@ -22,13 +22,13 @@ func ValidateYear() fiber.Handler {
 				models.ErrCodeValidationFailed,
 				"Year parameter is required",
 				fiber.Map{
-					"available_years": availableYears,
-					"example":         fmt.Sprintf("/api/v1/stocks/year/%s", availableYears[len(availableYears)-1]),
+					"available_years": constants.AvailableYears,
+					"example":         fmt.Sprintf("/api/v1/stocks/year/%s", constants.AvailableYears[len(constants.AvailableYears)-1]),
 				})
 		}
 
 		valid := false
-		for _, y := range availableYears {
+		for _, y := range constants.AvailableYears {
 			if y == year {
 				valid = true
 				break
@@ -41,9 +41,9 @@ func ValidateYear() fiber.Handler {
 				fmt.Sprintf("Year '%s' not found", year),
 				fiber.Map{
 					"provided_year":   year,
-					"available_years": availableYears,
-					"latest_year":     availableYears[len(availableYears)-1],
-					"suggestion":      fmt.Sprintf("Try using the latest available year: %s", availableYears[len(availableYears)-1]),
+					"available_years": constants.AvailableYears,
+					"latest_year":     constants.AvailableYears[len(constants.AvailableYears)-1],
+					"suggestion":      fmt.Sprintf("Try using the latest available year: %s", constants.AvailableYears[len(constants.AvailableYears)-1]),
 				})
 		}
 

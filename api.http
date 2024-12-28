@@ -1,15 +1,15 @@
 // ###############################################################################
 // Environment Variables
 // ###############################################################################
-@baseUrl = https://naqa-api-36462279645.europe-west1.run.app
+@baseUrl = http://127.0.0.1:3000 
 @contentType = application/json
 
 // ###############################################################################
 // API Endpoints
 // ###############################################################################
 
-### Health Check
-GET {{baseUrl}}/api/health
+### Health Check (v1)
+GET {{baseUrl}}/api/v1/health
 Content-Type: {{contentType}}
 
 ### Metrics Dashboard

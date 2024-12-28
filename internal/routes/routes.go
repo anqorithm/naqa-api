@@ -31,17 +31,9 @@ func (r *Router) SetupRoutes() {
 
 	// API Version 1 Routes
 	v1 := r.app.Group("/api/v1")
+	v1.Get("/", r.h.ApiV1Handler)
+	v1.Get("/health", r.h.HealthCheckHandler)
 	r.setupV1Routes(v1)
-
-	// General API Routes
-	api := r.app.Group("/api")
-
-	// Health check route
-	api.Get("/health", func(c *fiber.Ctx) error {
-		return c.JSON(fiber.Map{
-			"status": "ok",
-		})
-	})
 }
 
 // ###############################################################################
@@ -57,6 +49,8 @@ func (r *Router) setupV1Routes(v1 fiber.Router) {
 func (r *Router) setupStockRoutes(v1 fiber.Router) {
 	stocks := v1.Group("/stocks")
 
+	stocks.Get("/", r.h.GetStocksBaseHandler)
+
 	// Year-Based Stock Routes
 	yearGroup := stocks.Group("/year/:year", middleware.ValidateYear())
 
@@ -69,3 +63,4 @@ func (r *Router) setupStockRoutes(v1 fiber.Router) {
 	// Calculate purification for a specific stock
 	yearGroup.Post("/calculate-purification", r.h.CalculatePurificationHandler)
 }
+

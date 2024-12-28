@@ -9,10 +9,11 @@ type ErrorResponse struct {
 
 // Common error codes
 const (
-	ErrCodeInvalidRequest     = "INVALID_REQUEST"
+	ErrCodeInvalidRequest    = "INVALID_REQUEST"
 	ErrCodeNotFound          = "NOT_FOUND"
 	ErrCodeInternalError     = "INTERNAL_ERROR"
 	ErrCodeValidationFailed  = "VALIDATION_FAILED"
 	ErrCodeDatabaseError     = "DATABASE_ERROR"
 	ErrCodeInvalidDateFormat = "INVALID_DATE_FORMAT"
+	ErrCodeInvalidData       = "INVALID_DATA"
 )
