@@ -35,9 +35,15 @@ go mod download
 
 ### المتغيرات البيئية | Environment Variables
 ```bash
-MONGO_URI=       
-MONGO_DATABASE=
-PORT=
+cp .env.example .env
+API_VERSION=1.0.0
+ENVIRONMENT=development
+PORT=3000
+APP_NAME="Naqa API"
+APP_DESCRIPTION="Naqa API is a RESTful service designed to provide data on the purification process of Saudi stocks."
+MONGO_URI="mongodb://mongodb:27017"
+MONGO_DATABASE="naqa"
+SEED_DATA="false"
 ```
 
 ### التصنيف الشرعي | Shariah Classification
