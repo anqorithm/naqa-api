@@ -1204,25 +1204,25 @@
       "id": 151,
       "purification": "151",
       "sharia_opinion": "غير متوافقة النشاط",
-      "name": NaN,
-      "code": NaN,
-      "sector": NaN
+      "name": "",
+      "code": "",
+      "sector": ""
     },
     {
       "id": 152,
       "purification": "152",
       "sharia_opinion": "غير متوافقة النشاط",
-      "name": NaN,
-      "code": NaN,
-      "sector": NaN
+      "name": "",
+      "code": "",
+      "sector": ""
     },
     {
       "id": 153,
       "purification": "153",
       "sharia_opinion": "غير متوافقة النشاط",
-      "name": NaN,
-      "code": NaN,
-      "sector": NaN
+      "name": "",
+      "code": "",
+      "sector": ""
     }
   ]
 }

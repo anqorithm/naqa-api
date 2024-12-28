@@ -94,7 +94,14 @@ go mod download
 3. Set up environment variables:
 ```bash
 cp .env.example .env
-# Edit .env with your configurations
+API_VERSION=1.0.0
+ENVIRONMENT=development
+PORT=3000
+APP_NAME="Naqa API"
+APP_DESCRIPTION="Naqa API is a RESTful service designed to provide data on the purification process of Saudi stocks."
+MONGO_URI="mongodb://mongodb:27017"
+MONGO_DATABASE="naqa"
+SEED_DATA="false"
 ```
 
 ## Installation
@@ -277,6 +284,8 @@ Data source: [Almaqased Cleansing Calculator](https://almaqased.net/cleansing-ca
 ```
 .
 ├── api.http
+├── assets
+│   └── 1.png
 ├── cmd
 │   └── api
 │       └── main.go
@@ -302,11 +311,23 @@ Data source: [Almaqased Cleansing Calculator](https://almaqased.net/cleansing-ca
 │   │   └── stock.go
 │   ├── routes
 │   │   └── routes.go
+│   ├── seeders
+│   │   └── seeders.go
 │   └── utils
 │       └── utils.go
 ├── LICENSE
 ├── Makefile
-└── README.md
+├── README.md
+└── sources
+    ├── final_2015.json
+    ├── final_2016.json
+    ├── final_2017.json
+    ├── final_2018.json
+    ├── final_2019.json
+    ├── final_2020.json
+    ├── final_2021.json
+    ├── final_2022.json
+    └── final_2023.json
 ```
 
 
@@ -441,7 +462,7 @@ graph LR
         mongo --> |port| port2[27017:27017]
         
         subgraph Environment
-            env[Environment Variables:<br/>API_VERSION<br/>ENVIRONMENT<br/>PORT<br/>APP_NAME<br/>APP_DESCRIPTION<br/>MONGO_URI<br/>MONGO_DATABASE]
+            env[Environment Variables:<br/>API_VERSION<br/>ENVIRONMENT<br/>PORT<br/>APP_NAME<br/>APP_DESCRIPTION<br/>MONGO_URI<br/>MONGO_DATABASE<br/>SEED_DATA]
         end
         
         env --> api

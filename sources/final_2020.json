@@ -1266,11 +1266,11 @@
     },
     {
       "id": 159,
-      "purification": NaN,
-      "sharia_opinion": NaN,
-      "name": NaN,
-      "code": NaN,
-      "sector": NaN
+      "purification": "",
+      "sharia_opinion": "",
+      "name": "",
+      "code": "",
+      "sector": ""
     },
     {
       "id": 160,
@@ -1330,7 +1330,7 @@
     },
     {
       "id": 167,
-      "purification": NaN,
+      "purification": "",
       "sharia_opinion": "غير متوافقة النشاط",
       "name": "الأبحاث والإعلام",
       "code": "4210",
@@ -1338,7 +1338,7 @@
     },
     {
       "id": 168,
-      "purification": NaN,
+      "purification": "",
       "sharia_opinion": "غير متوافقة النشاط",
       "name": "المملكة",
       "code": "4280",

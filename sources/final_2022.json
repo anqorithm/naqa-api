@@ -1922,7 +1922,7 @@
     },
     {
       "id": 241,
-      "purification": NaN,
+      "purification": "",
       "sharia_opinion": "غير متوافقة النشاط",
       "name": "الأبحاث والإعلام",
       "code": "4210",
@@ -1930,7 +1930,7 @@
     },
     {
       "id": 242,
-      "purification": NaN,
+      "purification": "",
       "sharia_opinion": "غير متوافقة النشاط",
       "name": "المملكة",
       "code": "4280",

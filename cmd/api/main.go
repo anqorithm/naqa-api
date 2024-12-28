@@ -3,10 +3,12 @@ package main
 import (
 	"log"
 	"os"
+	"strings"
 
 	"github.com/anqorithm/naqa-api/internal/config"
 	"github.com/anqorithm/naqa-api/internal/middleware"
 	"github.com/anqorithm/naqa-api/internal/routes"
+	"github.com/anqorithm/naqa-api/internal/seeders"
 	"github.com/gofiber/fiber/v2"
 	"github.com/joho/godotenv"
 )
@@ -22,6 +24,19 @@ func main() {
 	db, err := config.ConnectDB(mongoConfig)
 	if err != nil {
 		log.Fatal("Database Connection Error: ", err)
+	}
+
+	// ###############################################################################
+	// Data Seeding
+	// ###############################################################################
+	shouldSeed := strings.ToLower(os.Getenv("SEED_DATA")) == "true"
+	if shouldSeed {
+		log.Println("Starting data seeding process...")
+		if err := seeders.LoadDataSources(db); err != nil {
+			log.Printf("Warning: Error seeding data: %v", err)
+		}
+	} else {
+		log.Println("Skipping data seeding (SEED_DATA is not set to 'true')")
 	}
 
 	// ###############################################################################

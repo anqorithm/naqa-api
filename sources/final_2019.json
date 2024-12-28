@@ -4,9 +4,9 @@
       "id": 1,
       "purification": "1",
       "sharia_opinion": "نقية",
-      "name": NaN,
-      "code": NaN,
-      "sector": NaN
+      "name": "",
+      "code": "",
+      "sector": ""
     },
     {
       "id": 2,
@@ -626,7 +626,7 @@
     },
     {
       "id": 79,
-      "purification": NaN,
+      "purification": "",
       "sharia_opinion": "غير متوافقة النشاط",
       "name": "طباعة وتغليف",
       "code": "4270",
@@ -634,7 +634,7 @@
     },
     {
       "id": 80,
-      "purification": NaN,
+      "purification": "",
       "sharia_opinion": "غير متوافقة النشاط",
       "name": "الأبحاث والتسويق",
       "code": "4210",
@@ -642,7 +642,7 @@
     },
     {
       "id": 81,
-      "purification": NaN,
+      "purification": "",
       "sharia_opinion": "غير متوافقة النشاط",
       "name": "المملكة",
       "code": "4280",
