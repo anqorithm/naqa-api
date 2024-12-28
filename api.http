@@ -21,7 +21,7 @@ GET {{baseUrl}}/
 Content-Type: {{contentType}}
 
 ### Get Stocks by Year
-GET {{baseUrl}}/api/v1/stocks/year/2023
+GET {{baseUrl}}/api/v1/stocks/year/2015
 Content-Type: {{contentType}}
 
 ### Search Stocks with Parameters

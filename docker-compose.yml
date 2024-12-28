@@ -29,6 +29,10 @@ services:
       - "${MONGO_PORT:-27017}:27017"
     volumes:
       - mongodb_data:/data/db
+      - ./sources:/docker-entrypoint-initdb.d
+    environment:
+      - MONGO_INITDB_DATABASE=${MONGO_DATABASE}
+    command: mongod --bind_ip_all
     networks:
       - naqa-network
 
