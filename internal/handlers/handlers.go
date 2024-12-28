@@ -49,6 +49,7 @@ func (h *Handler) ApiV1Handler(c *fiber.Ctx) error {
 		"endpoints": []string{
 			"/api/v1/stocks",
 			"/api/v1/health",
+			"/api/v1/metrics",
 		},
 	})
 }

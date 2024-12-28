@@ -1,11 +1,16 @@
 package utils
 
+// ###############################################################################
+// Utility Functions
+// ###############################################################################
+
 import (
 	"fmt"
 
 	"github.com/go-playground/validator/v10"
 )
 
+// SafeString converts an interface to a string
 func SafeString(v interface{}) string {
 	switch val := v.(type) {
 	case string:
@@ -19,6 +24,7 @@ func SafeString(v interface{}) string {
 	}
 }
 
+// ValidateRequest validates the request using the validator package
 var validate *validator.Validate
 
 func init() {

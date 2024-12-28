@@ -1,8 +1,10 @@
 package middleware
 
 import (
+	"fmt"
 	"time"
 
+	"github.com/anqorithm/naqa-api/internal/constants"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/compress"
 	"github.com/gofiber/fiber/v2/middleware/cors"
@@ -54,11 +56,12 @@ func RateLimit() fiber.Handler {
 	})
 }
 
-// Monitor returns an enhanced dashboard monitoring middleware
+// Monitor returns a monitor middleware
 func Monitor() fiber.Handler {
-	return monitor.New(monitor.Config{
-		Title:   "Naqa API - System Metrics",
-		Refresh: 3 * time.Second, // Refresh metrics every 3 seconds
-		APIOnly: true,            // Monitor only API routes
-	})
+    return monitor.New(monitor.Config{
+        Title:      fmt.Sprintf("%s | %s", constants.MonitorTitleAr, constants.MonitorTitleEn),
+        Refresh:    3 * time.Second,
+        Next:       nil,
+        APIOnly:    false,
+    })
 }

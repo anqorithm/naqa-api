@@ -55,7 +55,7 @@ func main() {
 	app.Use(middleware.Compress())
 	app.Use(middleware.CORS())
 	app.Use(middleware.RateLimit())
-	app.Use("/metrics", middleware.Monitor())
+	app.Use("/api/v1/metrics", middleware.Monitor())
 
 	// ###############################################################################
 	// Router Setup and Server Startup
