@@ -42,7 +42,7 @@ func (h *Handler) ApiV1Handler(c *fiber.Ctx) error {
 	return c.JSON(fiber.Map{
 		"status":      "active",
 		"message":     "Welcome to NAQA API v1",
-		"version":     "1.0.0",
+		"version":     os.Getenv("API_VERSION"),
 		"env":         os.Getenv("ENVIRONMENT"),
 		"server_time": time.Now().Format(time.RFC3339),
 		"request_id":  c.Get("X-Request-ID", uuid.New().String()),
