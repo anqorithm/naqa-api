@@ -334,7 +334,8 @@ Data source: [Almaqased Cleansing Calculator](https://almaqased.net/cleansing-ca
 .
 ├── api.http
 ├── assets
-│   └── 1.png
+│   ├── 1.png
+│   └── 2.png
 ├── cmd
 │   └── api
 │       └── main.go
