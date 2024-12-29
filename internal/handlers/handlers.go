@@ -1,9 +1,5 @@
 package handlers
 
-// ###############################################################################
-// Handler Functions
-// ###############################################################################
-
 import (
 	"fmt"
 	"os"
@@ -25,6 +21,10 @@ func NewHandler(db *mongo.Database) *Handler {
 	}
 }
 
+// ###############################################################################
+// Handler Functions
+// ###############################################################################
+
 // RootHandler handles the "/" endpoint
 func (h *Handler) RootHandler(c *fiber.Ctx) error {
 	return c.JSON(fiber.Map{
@@ -42,7 +42,7 @@ func (h *Handler) ApiV1Handler(c *fiber.Ctx) error {
 	return c.JSON(fiber.Map{
 		"status":      "active",
 		"message":     "Welcome to NAQA API v1",
-		"version":     os.Getenv("API_VERSION"),
+		"version":     "1.0.0",
 		"env":         os.Getenv("ENVIRONMENT"),
 		"server_time": time.Now().Format(time.RFC3339),
 		"request_id":  c.Get("X-Request-ID", uuid.New().String()),
@@ -57,8 +57,10 @@ func (h *Handler) ApiV1Handler(c *fiber.Ctx) error {
 // HealthCheckHandler handles the health check endpoint
 func (h *Handler) HealthCheckHandler(c *fiber.Ctx) error {
 	return c.JSON(fiber.Map{
-		"status":    "OK",
-		"timestamp": time.Now().Format(time.RFC3339),
+		"status":     "OK",
+		"timestamp":  time.Now().Format(time.RFC3339),
+		"message":    constants.SuccessHealthCheck,
+		"request_id": c.Get("X-Request-ID", uuid.New().String()),
 	})
 }
 

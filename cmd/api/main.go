@@ -6,6 +6,7 @@ import (
 	"strings"
 
 	"github.com/anqorithm/naqa-api/internal/config"
+	"github.com/anqorithm/naqa-api/internal/constants"
 	"github.com/anqorithm/naqa-api/internal/middleware"
 	"github.com/anqorithm/naqa-api/internal/routes"
 	"github.com/anqorithm/naqa-api/internal/seeders"
@@ -23,7 +24,7 @@ func main() {
 	mongoConfig := config.NewMongoConfig()
 	db, err := config.ConnectDB(mongoConfig)
 	if err != nil {
-		log.Fatal("Database Connection Error: ", err)
+		log.Fatal(constants.ErrDatabaseConnection, err)
 	}
 
 	// ###############################################################################
@@ -31,12 +32,12 @@ func main() {
 	// ###############################################################################
 	shouldSeed := strings.ToLower(os.Getenv("SEED_DATA")) == "true"
 	if shouldSeed {
-		log.Println("Starting data seeding process...")
+		log.Println(constants.InfoStartingSeeding)
 		if err := seeders.LoadDataSources(db); err != nil {
-			log.Printf("Warning: Error seeding data: %v", err)
+			log.Printf("Warning: %s: %v", constants.ErrDataSeeding, err)
 		}
 	} else {
-		log.Println("Skipping data seeding (SEED_DATA is not set to 'true')")
+		log.Println(constants.InfoSkippingSeeding)
 	}
 
 	// ###############################################################################
@@ -68,6 +69,6 @@ func main() {
 		port = "3000"
 	}
 
-	log.Printf("Server starting on port %s", port)
+	log.Printf(constants.InfoServerStarting, port)
 	log.Fatal(app.Listen(":" + port))
 }
