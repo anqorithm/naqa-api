@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yml
+    kompose.version: 1.35.0 (HEAD)
+  labels:
+    io.kompose.service: api
+  name: api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: api
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose.yml
+        kompose.version: 1.35.0 (HEAD)
+      labels:
+        io.kompose.service: api
+    spec:
+      containers:
+        - env:
+            - name: API_VERSION
+            - name: APP_DESCRIPTION
+            - name: APP_NAME
+            - name: ENVIRONMENT
+            - name: MONGODB_URI
+              value: /
+            - name: PORT
+          image: api
+          name: api
+          ports:
+            - containerPort: 3000
+              protocol: TCP
+      restartPolicy: Always
