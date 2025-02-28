@@ -1,5 +1,9 @@
 # NAQA API | نقاء API
 
+<div align="center">
+  <img src="./assets/logo.svg" alt="NAQA API Logo" width="600">
+</div>
+
 [![Go Version](https://img.shields.io/github/go-mod/go-version/anqorithm/naqa-api)](https://golang.org/)
 [![Go Report Card](https://goreportcard.com/badge/github.com/anqorithm/naqa-api)](https://goreportcard.com/report/github.com/anqorithm/naqa-api)
 [![License](https://img.shields.io/github/license/anqorithm/naqa-api)](LICENSE)
