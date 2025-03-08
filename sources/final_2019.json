@@ -6,7 +6,10 @@
       "sharia_opinion": "نقية",
       "name": "",
       "code": "",
-      "sector": ""
+      "sector": "",
+      "name_en": "Company_",
+      "name_ar": "",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/1111.webp"
     },
     {
       "id": 2,
@@ -14,7 +17,10 @@
       "sharia_opinion": "نقية",
       "name": "دور",
       "code": "4010",
-      "sector": "الخدمات الإستهلاكية"
+      "sector": "الخدمات الإستهلاكية",
+      "name_en": "Company_4010",
+      "name_ar": "دور",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4010.webp"
     },
     {
       "id": 3,
@@ -22,7 +28,10 @@
       "sharia_opinion": "نقية",
       "name": "شمس",
       "code": "4170",
-      "sector": "الخدمات الإستهلاكية"
+      "sector": "الخدمات الإستهلاكية",
+      "name_en": "Tourism Enterprise Co.",
+      "name_ar": "شمس",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4170.webp"
     },
     {
       "id": 4,
@@ -30,7 +39,10 @@
       "sharia_opinion": "نقية",
       "name": "الخليج للتدريب",
       "code": "4290",
-      "sector": "الخدمات الإستهلاكية"
+      "sector": "الخدمات الإستهلاكية",
+      "name_en": "Alkhaleej Training and Education Co.",
+      "name_ar": "الخليج للتدريب",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4290.webp"
     },
     {
       "id": 5,
@@ -38,7 +50,10 @@
       "sharia_opinion": "نقية",
       "name": "الوطنية للتعليم",
       "code": "4291",
-      "sector": "الخدمات الإستهلاكية"
+      "sector": "الخدمات الإستهلاكية",
+      "name_en": "National Company for Learning and Education",
+      "name_ar": "الوطنية للتعليم",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4291.webp"
     },
     {
       "id": 6,
@@ -46,7 +61,10 @@
       "sharia_opinion": "نقية",
       "name": "هرفي للأغذية",
       "code": "6002",
-      "sector": "الخدمات الإستهلاكية"
+      "sector": "الخدمات الإستهلاكية",
+      "name_en": "Herfy Food Services Co.",
+      "name_ar": "هرفي للأغذية",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/6002.webp"
     },
     {
       "id": 7,
@@ -54,7 +72,10 @@
       "sharia_opinion": "نقية",
       "name": "ريدان الغذائية",
       "code": "6012",
-      "sector": "الخدمات الإستهلاكية"
+      "sector": "الخدمات الإستهلاكية",
+      "name_en": "Raydan Food Co.",
+      "name_ar": "ريدان الغذائية",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/6012.webp"
     },
     {
       "id": 8,
@@ -62,7 +83,10 @@
       "sharia_opinion": "نقية",
       "name": "اكسترا",
       "code": "4003",
-      "sector": "تجزئة السلع الكمالية"
+      "sector": "تجزئة السلع الكمالية",
+      "name_en": "United Electronics Co.",
+      "name_ar": "اكسترا",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4003.webp"
     },
     {
       "id": 9,
@@ -70,7 +94,10 @@
       "sharia_opinion": "نقية",
       "name": "ساكو",
       "code": "4008",
-      "sector": "تجزئة السلع الكمالية"
+      "sector": "تجزئة السلع الكمالية",
+      "name_en": "Saudi Company for Hardware",
+      "name_ar": "ساكو",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4008.webp"
     },
     {
       "id": 10,
@@ -78,7 +105,10 @@
       "sharia_opinion": "نقية",
       "name": "ساسكو",
       "code": "4050",
-      "sector": "تجزئة السلع الكمالية"
+      "sector": "تجزئة السلع الكمالية",
+      "name_en": "Saudi Automotive Services Co.",
+      "name_ar": "ساسكو",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4050.webp"
     },
     {
       "id": 11,
@@ -86,7 +116,10 @@
       "sharia_opinion": "نقية",
       "name": "أسواق ع العثيم",
       "code": "4001",
-      "sector": "تجزئة الأغذية"
+      "sector": "تجزئة الأغذية",
+      "name_en": "Abdullah Al Othaim Markets Co.",
+      "name_ar": "أسواق ع العثيم",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4001.webp"
     },
     {
       "id": 12,
@@ -94,7 +127,10 @@
       "sharia_opinion": "نقية",
       "name": "أنعام القابضة",
       "code": "4061",
-      "sector": "تجزئة الأغذية"
+      "sector": "تجزئة الأغذية",
+      "name_en": "Anaam International Holding Group",
+      "name_ar": "أنعام القابضة",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4061.webp"
     },
     {
       "id": 13,
@@ -102,7 +138,10 @@
       "sharia_opinion": "نقية",
       "name": "وفرة",
       "code": "2100",
-      "sector": "إنتاج الأغذية"
+      "sector": "إنتاج الأغذية",
+      "name_en": "Wafrah for Industry and Development Co.",
+      "name_ar": "وفرة",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/2100.webp"
     },
     {
       "id": 14,
@@ -110,7 +149,10 @@
       "sharia_opinion": "نقية",
       "name": "نادك",
       "code": "6010",
-      "sector": "إنتاج الأغذية"
+      "sector": "إنتاج الأغذية",
+      "name_en": "National Agricultural Development Co.",
+      "name_ar": "نادك",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/6010.webp"
     },
     {
       "id": 15,
@@ -118,7 +160,10 @@
       "sharia_opinion": "نقية",
       "name": "جاكو",
       "code": "6020",
-      "sector": "إنتاج الأغذية"
+      "sector": "إنتاج الأغذية",
+      "name_en": "Al Gassim Investment Holding Co.",
+      "name_ar": "جاكو",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/6020.webp"
     },
     {
       "id": 16,
@@ -126,7 +171,10 @@
       "sharia_opinion": "نقية",
       "name": "الشرقية للتنمية",
       "code": "6060",
-      "sector": "إنتاج الأغذية"
+      "sector": "إنتاج الأغذية",
+      "name_en": "Ash-Sharqiyah Development Co.",
+      "name_ar": "الشرقية للتنمية",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/6060.webp"
     },
     {
       "id": 17,
@@ -134,7 +182,10 @@
       "sharia_opinion": "نقية",
       "name": "البحري",
       "code": "4030",
-      "sector": "الطاقة"
+      "sector": "الطاقة",
+      "name_en": "National Shipping Company of Saudi Arabia",
+      "name_ar": "البحري",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4030.webp"
     },
     {
       "id": 18,
@@ -142,7 +193,10 @@
       "sharia_opinion": "نقية",
       "name": "بي سي اي",
       "code": "1210",
-      "sector": "المواد الأساسية"
+      "sector": "المواد الأساسية",
+      "name_en": "Basic Chemical Industries Co.",
+      "name_ar": "بي سي اي",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/1210.webp"
     },
     {
       "id": 19,
@@ -150,7 +204,10 @@
       "sharia_opinion": "نقية",
       "name": "معادن",
       "code": "1211",
-      "sector": "المواد الأساسية"
+      "sector": "المواد الأساسية",
+      "name_en": "Saudi Arabian Mining Co.",
+      "name_ar": "معادن",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/1211.webp"
     },
     {
       "id": 20,
@@ -158,7 +215,10 @@
       "sharia_opinion": "نقية",
       "name": "بتروكيم",
       "code": "2002",
-      "sector": "المواد الأساسية"
+      "sector": "المواد الأساسية",
+      "name_en": "Company_2002",
+      "name_ar": "بتروكيم",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/2002.webp"
     },
     {
       "id": 21,
@@ -166,7 +226,10 @@
       "sharia_opinion": "نقية",
       "name": "سابك",
       "code": "2010",
-      "sector": "المواد الأساسية"
+      "sector": "المواد الأساسية",
+      "name_en": "Saudi Basic Industries Corp.",
+      "name_ar": "سابك",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/2010.webp"
     },
     {
       "id": 22,
@@ -174,7 +237,10 @@
       "sharia_opinion": "نقية",
       "name": "التصنيع",
       "code": "2060",
-      "sector": "المواد الأساسية"
+      "sector": "المواد الأساسية",
+      "name_en": "National Industrialization Co.",
+      "name_ar": "التصنيع",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/2060.webp"
     },
     {
       "id": 23,
@@ -182,7 +248,10 @@
       "sharia_opinion": "نقية",
       "name": "زجاج",
       "code": "2150",
-      "sector": "المواد الأساسية"
+      "sector": "المواد الأساسية",
+      "name_en": "The National Company for Glass Industries",
+      "name_ar": "زجاج",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/2150.webp"
     },
     {
       "id": 24,
@@ -190,7 +259,10 @@
       "sharia_opinion": "نقية",
       "name": "نماء للكيماويات",
       "code": "2210",
-      "sector": "المواد الأساسية"
+      "sector": "المواد الأساسية",
+      "name_en": "Nama Chemicals Co.",
+      "name_ar": "نماء للكيماويات",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/2210.webp"
     },
     {
       "id": 25,
@@ -198,7 +270,10 @@
       "sharia_opinion": "نقية",
       "name": "معدنية",
       "code": "2220",
-      "sector": "المواد الأساسية"
+      "sector": "المواد الأساسية",
+      "name_en": "National Metal Manufacturing and Casting Co.",
+      "name_ar": "معدنية",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/2220.webp"
     },
     {
       "id": 26,
@@ -206,7 +281,10 @@
       "sharia_opinion": "نقية",
       "name": "المجموعة السعودية",
       "code": "2250",
-      "sector": "المواد الأساسية"
+      "sector": "المواد الأساسية",
+      "name_en": "Saudi Industrial Investment Group",
+      "name_ar": "المجموعة السعودية",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/2250.webp"
     },
     {
       "id": 27,
@@ -214,7 +292,10 @@
       "sharia_opinion": "نقية",
       "name": "سبكيم العالمية",
       "code": "2310",
-      "sector": "المواد الأساسية"
+      "sector": "المواد الأساسية",
+      "name_en": "Sahara International Petrochemical Co.",
+      "name_ar": "سبكيم العالمية",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/2310.webp"
     },
     {
       "id": 28,
@@ -222,7 +303,10 @@
       "sharia_opinion": "نقية",
       "name": "أسمنت المدينة",
       "code": "3003",
-      "sector": "المواد الأساسية"
+      "sector": "المواد الأساسية",
+      "name_en": "City Cement Co.",
+      "name_ar": "أسمنت المدينة",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/3003.webp"
     },
     {
       "id": 29,
@@ -230,7 +314,10 @@
       "sharia_opinion": "نقية",
       "name": "أسمنت الشمالية",
       "code": "3004",
-      "sector": "المواد الأساسية"
+      "sector": "المواد الأساسية",
+      "name_en": "Northern Region Cement Co.",
+      "name_ar": "أسمنت الشمالية",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/3004.webp"
     },
     {
       "id": 30,
@@ -238,7 +325,10 @@
       "sharia_opinion": "نقية",
       "name": "أسمنت العربية",
       "code": "3010",
-      "sector": "المواد الأساسية"
+      "sector": "المواد الأساسية",
+      "name_en": "Arabian Cement Co.",
+      "name_ar": "أسمنت العربية",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/3010.webp"
     },
     {
       "id": 31,
@@ -246,7 +336,10 @@
       "sharia_opinion": "نقية",
       "name": "أسمنت الجنوب",
       "code": "3050",
-      "sector": "المواد الأساسية"
+      "sector": "المواد الأساسية",
+      "name_en": "Southern Province Cement Co.",
+      "name_ar": "أسمنت الجنوب",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/3050.webp"
     },
     {
       "id": 32,
@@ -254,7 +347,10 @@
       "sharia_opinion": "نقية",
       "name": "أسترا الصناعية",
       "code": "1212",
-      "sector": "السلع الرأس مالية"
+      "sector": "السلع الرأس مالية",
+      "name_en": "Astra Industrial Group",
+      "name_ar": "أسترا الصناعية",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/1212.webp"
     },
     {
       "id": 33,
@@ -262,7 +358,10 @@
       "sharia_opinion": "نقية",
       "name": "الكابلات",
       "code": "2110",
-      "sector": "السلع الرأس مالية"
+      "sector": "السلع الرأس مالية",
+      "name_en": "Saudi Cable Co.",
+      "name_ar": "الكابلات",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/2110.webp"
     },
     {
       "id": 34,
@@ -270,7 +369,10 @@
       "sharia_opinion": "نقية",
       "name": "مسك",
       "code": "2370",
-      "sector": "السلع الرأس مالية"
+      "sector": "السلع الرأس مالية",
+      "name_en": "Middle East Specialized Cables Co.",
+      "name_ar": "مسك",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/2370.webp"
     },
     {
       "id": 35,
@@ -278,7 +380,10 @@
       "sharia_opinion": "نقية",
       "name": "مهارة",
       "code": "1831",
-      "sector": "الخدمات التجارية والمهنية"
+      "sector": "الخدمات التجارية والمهنية",
+      "name_en": "Maharah Human Resources Co.",
+      "name_ar": "مهارة",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/1831.webp"
     },
     {
       "id": 36,
@@ -286,7 +391,10 @@
       "sharia_opinion": "نقية",
       "name": "الخدمات الأرضية",
       "code": "4031",
-      "sector": "النقل"
+      "sector": "النقل",
+      "name_en": "Saudi Ground Services Co.",
+      "name_ar": "الخدمات الأرضية",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4031.webp"
     },
     {
       "id": 37,
@@ -294,7 +402,10 @@
       "sharia_opinion": "نقية",
       "name": "صدق",
       "code": "2130",
-      "sector": "السلع طويلة الأجل"
+      "sector": "السلع طويلة الأجل",
+      "name_en": "Saudi Industrial Development Co.",
+      "name_ar": "صدق",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/2130.webp"
     },
     {
       "id": 38,
@@ -302,7 +413,10 @@
       "sharia_opinion": "نقية",
       "name": "الطيار (سيرا القابضة)",
       "code": "1810",
-      "sector": "الخدمات الإستهلاكية"
+      "sector": "الخدمات الإستهلاكية",
+      "name_en": "Seera Group Holding",
+      "name_ar": "الطيار (سيرا القابضة)",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/1810.webp"
     },
     {
       "id": 39,
@@ -310,7 +424,10 @@
       "sharia_opinion": "نقية",
       "name": "وقت اللياقة",
       "code": "1830",
-      "sector": "الخدمات الإستهلاكية"
+      "sector": "الخدمات الإستهلاكية",
+      "name_en": "Leejam Sports Co.",
+      "name_ar": "وقت اللياقة",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/1830.webp"
     },
     {
       "id": 40,
@@ -318,7 +435,10 @@
       "sharia_opinion": "نقية",
       "name": "عطاء",
       "code": "4292",
-      "sector": "الخدمات الإستهلاكية"
+      "sector": "الخدمات الإستهلاكية",
+      "name_en": "Ataa Educational Co.",
+      "name_ar": "عطاء",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4292.webp"
     },
     {
       "id": 41,
@@ -326,7 +446,10 @@
       "sharia_opinion": "نقية",
       "name": "تهامة",
       "code": "4070",
-      "sector": "الإعلام والترفيه"
+      "sector": "الإعلام والترفيه",
+      "name_en": "Tihama Advertising and Public Relations Co.",
+      "name_ar": "تهامة",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4070.webp"
     },
     {
       "id": 42,
@@ -334,7 +457,10 @@
       "sharia_opinion": "نقية",
       "name": "شاكر",
       "code": "1214",
-      "sector": "تجزئة السلع الكمالية"
+      "sector": "تجزئة السلع الكمالية",
+      "name_en": "Al Hassan Ghazi Ibrahim Shaker Co.",
+      "name_ar": "شاكر",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/1214.webp"
     },
     {
       "id": 43,
@@ -342,7 +468,10 @@
       "sharia_opinion": "نقية",
       "name": "باعظيم",
       "code": "4051",
-      "sector": "تجزئة السلع الكمالية"
+      "sector": "تجزئة السلع الكمالية",
+      "name_en": "Baazeem Trading Co.",
+      "name_ar": "باعظيم",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4051.webp"
     },
     {
       "id": 44,
@@ -350,7 +479,10 @@
       "sharia_opinion": "نقية",
       "name": "جرير",
       "code": "4190",
-      "sector": "تجزئة السلع الكمالية"
+      "sector": "تجزئة السلع الكمالية",
+      "name_en": "Jarir Marketing Co.",
+      "name_ar": "جرير",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4190.webp"
     },
     {
       "id": 45,
@@ -358,7 +490,10 @@
       "sharia_opinion": "نقية",
       "name": "أبو معطي",
       "code": "4191",
-      "sector": "تجزئة السلع الكمالية"
+      "sector": "تجزئة السلع الكمالية",
+      "name_en": "Abdullah Saad Mohammed Abo Moati for Bookstores Co.",
+      "name_ar": "أبو معطي",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4191.webp"
     },
     {
       "id": 46,
@@ -366,7 +501,10 @@
       "sharia_opinion": "نقية",
       "name": "فواز الحكير",
       "code": "4240",
-      "sector": "تجزئة السلع الكمالية"
+      "sector": "تجزئة السلع الكمالية",
+      "name_en": "Fawaz Abdulaziz Alhokair Co.",
+      "name_ar": "فواز الحكير",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4240.webp"
     },
     {
       "id": 47,
@@ -374,7 +512,10 @@
       "sharia_opinion": "نقية",
       "name": "أسواق المزرعة",
       "code": "4006",
-      "sector": "تجزئة الأغذية"
+      "sector": "تجزئة الأغذية",
+      "name_en": "Saudi Marketing Co.",
+      "name_ar": "أسواق المزرعة",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4006.webp"
     },
     {
       "id": 48,
@@ -382,7 +523,10 @@
       "sharia_opinion": "نقية",
       "name": "صافولا",
       "code": "2050",
-      "sector": "إنتاج الأغذية"
+      "sector": "إنتاج الأغذية",
+      "name_en": "Savola Group",
+      "name_ar": "صافولا",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/2050.webp"
     },
     {
       "id": 49,
@@ -390,7 +534,10 @@
       "sharia_opinion": "نقية",
       "name": "سدافكو",
       "code": "2270",
-      "sector": "إنتاج الأغذية"
+      "sector": "إنتاج الأغذية",
+      "name_en": "Saudia Dairy and Foodstuff Co.",
+      "name_ar": "سدافكو",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/2270.webp"
     },
     {
       "id": 50,
@@ -398,7 +545,10 @@
       "sharia_opinion": "نقية",
       "name": "المراعي",
       "code": "2280",
-      "sector": "إنتاج الأغذية"
+      "sector": "إنتاج الأغذية",
+      "name_en": "Almarai Co.",
+      "name_ar": "المراعي",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/2280.webp"
     },
     {
       "id": 51,
@@ -406,7 +556,10 @@
       "sharia_opinion": "نقية",
       "name": "حلواني إخوان",
       "code": "6001",
-      "sector": "إنتاج الأغذية"
+      "sector": "إنتاج الأغذية",
+      "name_en": "Halwani Bros. Co.",
+      "name_ar": "حلواني إخوان",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/6001.webp"
     },
     {
       "id": 52,
@@ -414,7 +567,10 @@
       "sharia_opinion": "نقية",
       "name": "تبوك الزراعية",
       "code": "6040",
-      "sector": "إنتاج الأغذية"
+      "sector": "إنتاج الأغذية",
+      "name_en": "Tabuk Agricultural Development Co.",
+      "name_ar": "تبوك الزراعية",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/6040.webp"
     },
     {
       "id": 53,
@@ -422,7 +578,10 @@
       "sharia_opinion": "نقية",
       "name": "رعاية",
       "code": "4005",
-      "sector": "الرعاية الصحية"
+      "sector": "الرعاية الصحية",
+      "name_en": "National Medical Care Co.",
+      "name_ar": "رعاية",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4005.webp"
     },
     {
       "id": 54,
@@ -430,7 +589,10 @@
       "sharia_opinion": "نقية",
       "name": "الحمادي",
       "code": "4007",
-      "sector": "الرعاية الصحية"
+      "sector": "الرعاية الصحية",
+      "name_en": "Al Hammadi Holding",
+      "name_ar": "الحمادي",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4007.webp"
     },
     {
       "id": 55,
@@ -438,7 +600,10 @@
       "sharia_opinion": "نقية",
       "name": "ـمستشفى السعودي الألمانـ",
       "code": "4009",
-      "sector": "الرعاية الصحية"
+      "sector": "الرعاية الصحية",
+      "name_en": "Middle East Healthcare Co.",
+      "name_ar": "ـمستشفى السعودي الألمانـ",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4009.webp"
     },
     {
       "id": 56,
@@ -446,7 +611,10 @@
       "sharia_opinion": "نقية",
       "name": "عسير",
       "code": "4080",
-      "sector": "الاستثمار والتمويل"
+      "sector": "الاستثمار والتمويل",
+      "name_en": "Sinad Holding Co.",
+      "name_ar": "عسير",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4080.webp"
     },
     {
       "id": 57,
@@ -454,7 +622,10 @@
       "sharia_opinion": "نقية",
       "name": "اتحاد اتصالات",
       "code": "7020",
-      "sector": "الاتصالات"
+      "sector": "الاتصالات",
+      "name_en": "Etihad Etisalat Co.",
+      "name_ar": "اتحاد اتصالات",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/7020.webp"
     },
     {
       "id": 58,
@@ -462,7 +633,10 @@
       "sharia_opinion": "نقية",
       "name": "زين السعودية",
       "code": "7030",
-      "sector": "الاتصالات"
+      "sector": "الاتصالات",
+      "name_en": "Mobile Telecommunication Company Saudi Arabia",
+      "name_ar": "زين السعودية",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/7030.webp"
     },
     {
       "id": 59,
@@ -470,7 +644,10 @@
       "sharia_opinion": "نقية",
       "name": "كهرباء السعودية",
       "code": "5110",
-      "sector": "المرافق العامة"
+      "sector": "المرافق العامة",
+      "name_en": "Saudi Electricity Co.",
+      "name_ar": "كهرباء السعودية",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/5110.webp"
     },
     {
       "id": 60,
@@ -478,7 +655,10 @@
       "sharia_opinion": "نقية",
       "name": "العقارية",
       "code": "4020",
-      "sector": "إدارة وتطوير العقارات"
+      "sector": "إدارة وتطوير العقارات",
+      "name_en": "Saudi Real Estate Co.",
+      "name_ar": "العقارية",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4020.webp"
     },
     {
       "id": 61,
@@ -486,7 +666,10 @@
       "sharia_opinion": "نقية",
       "name": "إعمار",
       "code": "4220",
-      "sector": "إدارة وتطوير العقارات"
+      "sector": "إدارة وتطوير العقارات",
+      "name_en": "Emaar The Economic City",
+      "name_ar": "إعمار",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4220.webp"
     },
     {
       "id": 62,
@@ -494,7 +677,10 @@
       "sharia_opinion": "نقية",
       "name": "البحر الأحمر",
       "code": "4230",
-      "sector": "إدارة وتطوير العقارات"
+      "sector": "إدارة وتطوير العقارات",
+      "name_en": "Red Sea International Co.",
+      "name_ar": "البحر الأحمر",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4230.webp"
     },
     {
       "id": 63,
@@ -502,7 +688,10 @@
       "sharia_opinion": "نقية",
       "name": "جبل عمر",
       "code": "4250",
-      "sector": "إدارة وتطوير العقارات"
+      "sector": "إدارة وتطوير العقارات",
+      "name_en": "Jabal Omar Development Co.",
+      "name_ar": "جبل عمر",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4250.webp"
     },
     {
       "id": 64,
@@ -510,7 +699,10 @@
       "sharia_opinion": "نقية",
       "name": "المراكز العربية",
       "code": "4321",
-      "sector": "إدارة وتطوير العقارات"
+      "sector": "إدارة وتطوير العقارات",
+      "name_en": "Arabian Centres Co.",
+      "name_ar": "المراكز العربية",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4321.webp"
     },
     {
       "id": 65,
@@ -518,7 +710,10 @@
       "sharia_opinion": "نقية",
       "name": "التطويرية الغذائية",
       "code": "9501",
-      "sector": "الخدمات الإستهلاكية (موازي)"
+      "sector": "الخدمات الإستهلاكية (موازي)",
+      "name_en": "Company_9501",
+      "name_ar": "التطويرية الغذائية",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/9501.webp"
     },
     {
       "id": 66,
@@ -526,7 +721,10 @@
       "sharia_opinion": "نقية",
       "name": "سمو",
       "code": "9511",
-      "sector": "إدارة وتطوير العقارات (موازي)"
+      "sector": "إدارة وتطوير العقارات (موازي)",
+      "name_en": "Company_9511",
+      "name_ar": "سمو",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/9511.webp"
     },
     {
       "id": 67,
@@ -534,7 +732,10 @@
       "sharia_opinion": "نقية",
       "name": "نسبة الدخل التقليدية",
       "code": "نسبة الاستثمارات التقليدية",
-      "sector": "نسبة القروض التقليدية"
+      "sector": "نسبة القروض التقليدية",
+      "name_en": "Company_نسبة الاستثمارات التقليدية",
+      "name_ar": "نسبة الدخل التقليدية",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/نسبة الاستثمارات التقليدية.webp"
     },
     {
       "id": 68,
@@ -542,7 +743,10 @@
       "sharia_opinion": "غير متوافقة",
       "name": "0.78%",
       "code": "4.89%",
-      "sector": "52.29%"
+      "sector": "52.29%",
+      "name_en": "Company_4.89%",
+      "name_ar": "0.78%",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4.89%.webp"
     },
     {
       "id": 69,
@@ -550,7 +754,10 @@
       "sharia_opinion": "غير متوافقة",
       "name": "0.00%",
       "code": "0.36%",
-      "sector": "35.36%"
+      "sector": "35.36%",
+      "name_en": "Company_0.36%",
+      "name_ar": "0.00%",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/0.36%.webp"
     },
     {
       "id": 70,
@@ -558,7 +765,10 @@
       "sharia_opinion": "غير متوافقة",
       "name": "0.00%",
       "code": "0.00%",
-      "sector": "44.71%"
+      "sector": "44.71%",
+      "name_en": "Company_0.00%",
+      "name_ar": "0.00%",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/0.00%.webp"
     },
     {
       "id": 71,
@@ -566,7 +776,10 @@
       "sharia_opinion": "غير متوافقة",
       "name": "0.00%",
       "code": "0.00%",
-      "sector": "41.65%"
+      "sector": "41.65%",
+      "name_en": "Company_0.00%",
+      "name_ar": "0.00%",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/0.00%.webp"
     },
     {
       "id": 72,
@@ -574,7 +787,10 @@
       "sharia_opinion": "غير متوافقة",
       "name": "0.00%",
       "code": "0.00%",
-      "sector": "41.20%"
+      "sector": "41.20%",
+      "name_en": "Company_0.00%",
+      "name_ar": "0.00%",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/0.00%.webp"
     },
     {
       "id": 73,
@@ -582,7 +798,10 @@
       "sharia_opinion": "غير متوافقة",
       "name": "0.99%",
       "code": "1.36%",
-      "sector": "44.10%"
+      "sector": "44.10%",
+      "name_en": "Company_1.36%",
+      "name_ar": "0.99%",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/1.36%.webp"
     },
     {
       "id": 74,
@@ -590,7 +809,10 @@
       "sharia_opinion": "غير متوافقة",
       "name": "0.00%",
       "code": "0.00%",
-      "sector": "38.54%"
+      "sector": "38.54%",
+      "name_en": "Company_0.00%",
+      "name_ar": "0.00%",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/0.00%.webp"
     },
     {
       "id": 75,
@@ -598,7 +820,10 @@
       "sharia_opinion": "غير متوافقة",
       "name": "أميانتيت",
       "code": "2160",
-      "sector": "السلع الرأس مالية"
+      "sector": "السلع الرأس مالية",
+      "name_en": "Saudi Arabian Amiantit Co.",
+      "name_ar": "أميانتيت",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/2160.webp"
     },
     {
       "id": 76,
@@ -606,7 +831,10 @@
       "sharia_opinion": "غير متوافقة",
       "name": "البابطين",
       "code": "2320",
-      "sector": "السلع الرأس مالية"
+      "sector": "السلع الرأس مالية",
+      "name_en": "Al-Babtain Power and Telecommunication Co.",
+      "name_ar": "البابطين",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/2320.webp"
     },
     {
       "id": 77,
@@ -614,7 +842,10 @@
       "sharia_opinion": "غير متوافقة",
       "name": "الأسماك",
       "code": "6050",
-      "sector": "إنتاج الأغذية"
+      "sector": "إنتاج الأغذية",
+      "name_en": "Saudi Fisheries Co.",
+      "name_ar": "الأسماك",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/6050.webp"
     },
     {
       "id": 78,
@@ -622,7 +853,10 @@
       "sharia_opinion": "غير متوافقة",
       "name": "الخبير ريت",
       "code": "4348",
-      "sector": "الصناديق العقارية المتداولة"
+      "sector": "الصناديق العقارية المتداولة",
+      "name_en": "Alkhabeer REIT Fund",
+      "name_ar": "الخبير ريت",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4348.webp"
     },
     {
       "id": 79,
@@ -630,7 +864,10 @@
       "sharia_opinion": "غير متوافقة النشاط",
       "name": "طباعة وتغليف",
       "code": "4270",
-      "sector": "الخدمات التجارية والمهنية"
+      "sector": "الخدمات التجارية والمهنية",
+      "name_en": "Saudi Printing and Packaging Co.",
+      "name_ar": "طباعة وتغليف",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4270.webp"
     },
     {
       "id": 80,
@@ -638,7 +875,10 @@
       "sharia_opinion": "غير متوافقة النشاط",
       "name": "الأبحاث والتسويق",
       "code": "4210",
-      "sector": "الإعلام"
+      "sector": "الإعلام",
+      "name_en": "Saudi Research and Media Group",
+      "name_ar": "الأبحاث والتسويق",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4210.webp"
     },
     {
       "id": 81,
@@ -646,7 +886,10 @@
       "sharia_opinion": "غير متوافقة النشاط",
       "name": "المملكة",
       "code": "4280",
-      "sector": "الاستثمار والتمويل"
+      "sector": "الاستثمار والتمويل",
+      "name_en": "Kingdom Holding Co.",
+      "name_ar": "المملكة",
+      "logo": "https://web.alrajhi-capital.sa/stock-images/4280.webp"
     }
   ]
 }
