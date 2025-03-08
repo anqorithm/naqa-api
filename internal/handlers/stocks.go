@@ -37,12 +37,22 @@ func (h *Handler) GetStocksByYearHandler(c *fiber.Ctx) error {
 		id, _ := doc["_id"].(primitive.ObjectID)
 		stock := models.Stock{
 			ID:            id,
-			Name:          utils.SafeString(doc["name"]),
 			Code:          utils.SafeString(doc["code"]),
 			Sector:        utils.SafeString(doc["sector"]),
 			ShariaOpinion: utils.SafeString(doc["sharia_opinion"]),
 			Purification:  utils.SafeString(doc["purification"]),
+			NameAr:        utils.SafeString(doc["name_ar"]),
+			NameEn:        utils.SafeString(doc["name_en"]),
+			Logo:          utils.SafeString(doc["logo"]),
 		}
+		
+		if createdAt, ok := doc["created_at"].(primitive.DateTime); ok {
+			stock.CreatedAt = createdAt
+		}
+		if updatedAt, ok := doc["updated_at"].(primitive.DateTime); ok {
+			stock.UpdatedAt = updatedAt
+		}
+		
 		result = append(result, stock)
 	}
 
@@ -54,7 +64,10 @@ func (h *Handler) SearchStocksHandler(c *fiber.Ctx) error {
 	filter := bson.M{}
 
 	if name := c.Query("name"); name != "" {
-		filter["name"] = bson.M{"$regex": name, "$options": "i"}
+		filter["$or"] = []bson.M{
+			{"name_ar": bson.M{"$regex": name, "$options": "i"}},
+			{"name_en": bson.M{"$regex": name, "$options": "i"}},
+		}
 	}
 	if code := c.Query("code"); code != "" {
 		filter["code"] = code
@@ -85,12 +98,23 @@ func (h *Handler) SearchStocksHandler(c *fiber.Ctx) error {
 		id, _ := doc["_id"].(primitive.ObjectID)
 		stock := models.Stock{
 			ID:            id,
-			Name:          utils.SafeString(doc["name"]),
 			Code:          utils.SafeString(doc["code"]),
 			Sector:        utils.SafeString(doc["sector"]),
 			ShariaOpinion: utils.SafeString(doc["sharia_opinion"]),
 			Purification:  utils.SafeString(doc["purification"]),
+			NameAr:        utils.SafeString(doc["name_ar"]),
+			NameEn:        utils.SafeString(doc["name_en"]),
+			Logo:          utils.SafeString(doc["logo"]),
 		}
+		
+		// Handle timestamps if they exist
+		if createdAt, ok := doc["created_at"].(primitive.DateTime); ok {
+			stock.CreatedAt = createdAt
+		}
+		if updatedAt, ok := doc["updated_at"].(primitive.DateTime); ok {
+			stock.UpdatedAt = updatedAt
+		}
+		
 		result = append(result, stock)
 	}
 

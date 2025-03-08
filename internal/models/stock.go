@@ -9,11 +9,15 @@ import "go.mongodb.org/mongo-driver/bson/primitive"
 // Stock represents a stock entity
 type Stock struct {
 	ID            primitive.ObjectID `json:"_id" bson:"_id,omitempty"`
-	Name          string             `json:"name" bson:"name"`
 	Code          string             `json:"code" bson:"code"`
 	Sector        string             `json:"sector" bson:"sector"`
 	ShariaOpinion string             `json:"sharia_opinion" bson:"sharia_opinion"`
 	Purification  string             `json:"purification" bson:"purification"`
+	NameAr        string             `json:"name_ar" bson:"name_ar"`
+	NameEn        string             `json:"name_en" bson:"name_en"`
+	Logo          string             `json:"logo" bson:"logo"`
+	CreatedAt     primitive.DateTime `json:"created_at" bson:"created_at"`
+	UpdatedAt     primitive.DateTime `json:"updated_at" bson:"updated_at"`
 }
 
 // StockResponse represents a response containing a list of stocks
