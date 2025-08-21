@@ -2181,7 +2181,7 @@
     {
       "id": 199,
       "purification": "",
-      "sharia_opinion": "غير متوافقة النشاط",
+      "sharia_opinion": "غير متوافقة",
       "name": "الأبحاث والإعلام",
       "code": "4210",
       "sector": "الإعلام والترفيه",
@@ -2192,7 +2192,7 @@
     {
       "id": 200,
       "purification": "",
-      "sharia_opinion": "غير متوافقة النشاط",
+      "sharia_opinion": "غير متوافقة",
       "name": "المملكة",
       "code": "4280",
       "sector": "المالية",

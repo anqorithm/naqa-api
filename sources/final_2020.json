@@ -3,7 +3,7 @@
     {
       "id": 1,
       "purification": "0.0126",
-      "sharia_opinion": "*",
+      "sharia_opinion": "نقية",
       "name": "أرامكو السعودية",
       "code": "2222",
       "sector": "الطاقة",
@@ -1807,7 +1807,7 @@
     {
       "id": 165,
       "purification": "",
-      "sharia_opinion": "غير متوافقة النشاط",
+      "sharia_opinion": "غير متوافقة",
       "name": "الأبحاث والإعلام",
       "code": "4210",
       "sector": "الإعلام والترفيه",
@@ -1818,7 +1818,7 @@
     {
       "id": 166,
       "purification": "",
-      "sharia_opinion": "غير متوافقة النشاط",
+      "sharia_opinion": "غير متوافقة",
       "name": "المملكة",
       "code": "4280",
       "sector": "الاستثمار والتمويل",

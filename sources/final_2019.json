@@ -806,7 +806,7 @@
     {
       "id": 74,
       "purification": "",
-      "sharia_opinion": "غير متوافقة النشاط",
+      "sharia_opinion": "غير متوافقة",
       "name": "طباعة وتغليف",
       "code": "4270",
       "sector": "الخدمات التجارية والمهنية",
@@ -817,7 +817,7 @@
     {
       "id": 75,
       "purification": "",
-      "sharia_opinion": "غير متوافقة النشاط",
+      "sharia_opinion": "غير متوافقة",
       "name": "الأبحاث والتسويق",
       "code": "4210",
       "sector": "الإعلام",
@@ -828,7 +828,7 @@
     {
       "id": 76,
       "purification": "",
-      "sharia_opinion": "غير متوافقة النشاط",
+      "sharia_opinion": "غير متوافقة",
       "name": "المملكة",
       "code": "4280",
       "sector": "الاستثمار والتمويل",
