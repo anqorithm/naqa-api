@@ -1,9 +1,5 @@
 package handlers
 
-// ###############################################################################
-// Stock Handler Functions
-// ###############################################################################
-
 import (
 	"strconv"
 	"time"
@@ -16,7 +12,6 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
-// GetStocksHandler fetches all stocks for a given year
 func (h *Handler) GetStocksByYearHandler(c *fiber.Ctx) error {
 	collection := h.db.Collection(c.Params("year"))
 
@@ -59,7 +54,6 @@ func (h *Handler) GetStocksByYearHandler(c *fiber.Ctx) error {
 	return c.JSON(models.StockResponse{Stocks: result})
 }
 
-// GetStockByCodeHandler fetches a stock by its code for a given year
 func (h *Handler) SearchStocksHandler(c *fiber.Ctx) error {
 	filter := bson.M{}
 
@@ -107,7 +101,6 @@ func (h *Handler) SearchStocksHandler(c *fiber.Ctx) error {
 			Logo:          utils.SafeString(doc["logo"]),
 		}
 		
-		// Handle timestamps if they exist
 		if createdAt, ok := doc["created_at"].(primitive.DateTime); ok {
 			stock.CreatedAt = createdAt
 		}
@@ -121,10 +114,7 @@ func (h *Handler) SearchStocksHandler(c *fiber.Ctx) error {
 	return c.JSON(models.StockResponse{Stocks: result})
 }
 
-// CalculatePurificationHandler calculates purification amount for a stock
 func (h *Handler) CalculatePurificationHandler(c *fiber.Ctx) error {
-	const daysInYear = 365.0
-
 	var req models.PurificationRequest
 	if err := c.BodyParser(&req); err != nil {
 		return SendError(c, fiber.StatusBadRequest, models.ErrCodeInvalidRequest,
@@ -153,32 +143,143 @@ func (h *Handler) CalculatePurificationHandler(c *fiber.Ctx) error {
 			constants.MsgEndDateAfterStartDate, nil)
 	}
 
-	daysHeld := int(endDate.Sub(startDate).Hours() / 24)
-
-	collection := h.db.Collection(c.Params("year"))
-	var stock bson.M
-	err = collection.FindOne(c.Context(), bson.M{"code": req.StockCode}).Decode(&stock)
+	response, err := h.calculateMultiYearPurification(c, req, startDate, endDate)
 	if err != nil {
-		return SendError(c, fiber.StatusNotFound, models.ErrCodeNotFound,
-			constants.MsgStockNotFound, nil)
-	}
-
-	id, _ := stock["_id"].(primitive.ObjectID)
-	purificationStr := utils.SafeString(stock["purification"])
-	purificationRate, err := strconv.ParseFloat(purificationStr, 64)
-	if err != nil {
-		return SendError(c, fiber.StatusInternalServerError, models.ErrCodeInvalidData,
-			constants.MsgInvalidPurificationRate, nil)
-	}
-
-	purificationAmount := float64(req.NumberOfStocks) * purificationRate * float64(daysHeld) / daysInYear
-
-	response := models.PurificationResponse{
-		ID:                 id,
-		PurificationAmount: purificationAmount,
-		DaysHeld:           daysHeld,
-		PurificationRate:   purificationRate,
+		return err
 	}
 
 	return c.JSON(response)
+}
+
+func (h *Handler) calculateMultiYearPurification(c *fiber.Ctx, req models.PurificationRequest, startDate, endDate time.Time) (*models.PurificationResponse, error) {
+	years := getYearsInPeriod(startDate, endDate)
+	
+	var totalPurification float64
+	var yearlyBreakdown []models.YearlyPurificationInfo
+	var warnings []string
+	var totalDaysHeld int
+	var lastFoundID primitive.ObjectID
+
+	isMultiYear := len(years) > 1
+	if isMultiYear {
+		warnings = append(warnings, "Multi-year period detected. Each year calculated separately.")
+	}
+	for _, year := range years {
+		collection := h.db.Collection(strconv.Itoa(year))
+		var stock bson.M
+		err := collection.FindOne(c.Context(), bson.M{"code": req.StockCode}).Decode(&stock)
+		if err != nil {
+			warnings = append(warnings, "No data found for company "+req.StockCode+" in year "+strconv.Itoa(year))
+			continue
+		}
+
+		lastFoundID, _ = stock["_id"].(primitive.ObjectID)
+
+		purificationStr := utils.SafeString(stock["purification"])
+		purificationRate, err := strconv.ParseFloat(purificationStr, 64)
+		if err != nil {
+			warnings = append(warnings, "Invalid purification rate for "+req.StockCode+" in year "+strconv.Itoa(year))
+			continue
+		}
+
+		daysInYear := getDaysInYearForPeriod(startDate, endDate, year)
+		totalDaysInYear := getDaysInYear(year)
+		
+		if daysInYear == 0 {
+			continue
+		}
+
+		totalDaysHeld += daysInYear
+		yearProportion := float64(daysInYear) / float64(totalDaysInYear)
+		yearPurification := float64(req.NumberOfStocks) * purificationRate * yearProportion
+		totalPurification += yearPurification
+
+		yearInfo := models.YearlyPurificationInfo{
+			Year:               year,
+			PurificationRate:   purificationRate,
+			DaysInPeriod:       daysInYear,
+			TotalDaysInYear:    totalDaysInYear,
+			YearProportion:     yearProportion,
+			PurificationAmount: yearPurification,
+			CompanyNameEn:      utils.SafeString(stock["name_en"]),
+			CompanyNameAr:      utils.SafeString(stock["name_ar"]),
+			ShariaOpinion:      utils.SafeString(stock["sharia_opinion"]),
+		}
+		yearlyBreakdown = append(yearlyBreakdown, yearInfo)
+	}
+
+	if len(yearlyBreakdown) == 0 {
+		return nil, SendError(c, fiber.StatusNotFound, models.ErrCodeNotFound,
+			constants.MsgStockNotFound, nil)
+	}
+
+	var avgPurificationRate float64
+	if len(yearlyBreakdown) > 0 {
+		var totalRate float64
+		for _, info := range yearlyBreakdown {
+			totalRate += info.PurificationRate
+		}
+		avgPurificationRate = totalRate / float64(len(yearlyBreakdown))
+	}
+
+	response := &models.PurificationResponse{
+		ID:                 lastFoundID,
+		PurificationAmount: totalPurification,
+		DaysHeld:           totalDaysHeld,
+		PurificationRate:   avgPurificationRate,
+		YearlyBreakdown:    yearlyBreakdown,
+		IsMultiYear:        isMultiYear,
+		Warnings:           warnings,
+	}
+
+	return response, nil
+}
+
+func getYearsInPeriod(startDate, endDate time.Time) []int {
+	var years []int
+	currentYear := startDate.Year()
+	endYear := endDate.Year()
+	
+	for currentYear <= endYear {
+		years = append(years, currentYear)
+		currentYear++
+	}
+	
+	return years
+}
+
+func getDaysInYearForPeriod(startDate, endDate time.Time, year int) int {
+	// Get the year boundaries
+	yearStart := time.Date(year, 1, 1, 0, 0, 0, 0, time.UTC)
+	yearEnd := time.Date(year, 12, 31, 23, 59, 59, 999999999, time.UTC)
+	
+	// Find the overlap between the period and the year
+	overlapStart := startDate
+	if yearStart.After(startDate) {
+		overlapStart = yearStart
+	}
+	
+	overlapEnd := endDate
+	if yearEnd.Before(endDate) {
+		overlapEnd = yearEnd
+	}
+	
+	if overlapStart.After(overlapEnd) {
+		return 0
+	}
+	
+	return int(overlapEnd.Sub(overlapStart).Hours()/24) + 1
+}
+
+// getDaysInYear returns the number of days in a year (considering leap years)
+func getDaysInYear(year int) int {
+	if isLeapYear(year) {
+		return 366
+	}
+	return 365
+}
+
+// isLeapYear checks if a year is a leap year
+func isLeapYear(year int) bool {
+	return year%4 == 0 && (year%100 != 0 || year%400 == 0)
 }

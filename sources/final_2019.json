@@ -2,17 +2,6 @@
   "stocks": [
     {
       "id": 1,
-      "purification": "1",
-      "sharia_opinion": "نقية",
-      "name": "",
-      "code": "",
-      "sector": "",
-      "name_en": "Company_",
-      "name_ar": "",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/1111.webp"
-    },
-    {
-      "id": 2,
       "purification": "0.0020",
       "sharia_opinion": "نقية",
       "name": "دور",
@@ -20,10 +9,10 @@
       "sector": "الخدمات الإستهلاكية",
       "name_en": "Company_4010",
       "name_ar": "دور",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4010.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4010.png"
     },
     {
-      "id": 3,
+      "id": 2,
       "purification": "0.0028",
       "sharia_opinion": "نقية",
       "name": "شمس",
@@ -31,10 +20,10 @@
       "sector": "الخدمات الإستهلاكية",
       "name_en": "Tourism Enterprise Co.",
       "name_ar": "شمس",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4170.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4170.png"
     },
     {
-      "id": 4,
+      "id": 3,
       "purification": "0.0245",
       "sharia_opinion": "نقية",
       "name": "الخليج للتدريب",
@@ -42,10 +31,10 @@
       "sector": "الخدمات الإستهلاكية",
       "name_en": "Alkhaleej Training and Education Co.",
       "name_ar": "الخليج للتدريب",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4290.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4290.png"
     },
     {
-      "id": 5,
+      "id": 4,
       "purification": "0.0024",
       "sharia_opinion": "نقية",
       "name": "الوطنية للتعليم",
@@ -53,10 +42,10 @@
       "sector": "الخدمات الإستهلاكية",
       "name_en": "National Company for Learning and Education",
       "name_ar": "الوطنية للتعليم",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4291.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4291.png"
     },
     {
-      "id": 6,
+      "id": 5,
       "purification": "0.0011",
       "sharia_opinion": "نقية",
       "name": "هرفي للأغذية",
@@ -64,10 +53,10 @@
       "sector": "الخدمات الإستهلاكية",
       "name_en": "Herfy Food Services Co.",
       "name_ar": "هرفي للأغذية",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/6002.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/6002.png"
     },
     {
-      "id": 7,
+      "id": 6,
       "purification": "0.0092",
       "sharia_opinion": "نقية",
       "name": "ريدان الغذائية",
@@ -75,10 +64,10 @@
       "sector": "الخدمات الإستهلاكية",
       "name_en": "Raydan Food Co.",
       "name_ar": "ريدان الغذائية",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/6012.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/6012.png"
     },
     {
-      "id": 8,
+      "id": 7,
       "purification": "0.0209",
       "sharia_opinion": "نقية",
       "name": "اكسترا",
@@ -86,10 +75,10 @@
       "sector": "تجزئة السلع الكمالية",
       "name_en": "United Electronics Co.",
       "name_ar": "اكسترا",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4003.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4003.png"
     },
     {
-      "id": 9,
+      "id": 8,
       "purification": "0.0019",
       "sharia_opinion": "نقية",
       "name": "ساكو",
@@ -97,10 +86,10 @@
       "sector": "تجزئة السلع الكمالية",
       "name_en": "Saudi Company for Hardware",
       "name_ar": "ساكو",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4008.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4008.png"
     },
     {
-      "id": 10,
+      "id": 9,
       "purification": "0.0143",
       "sharia_opinion": "نقية",
       "name": "ساسكو",
@@ -108,10 +97,10 @@
       "sector": "تجزئة السلع الكمالية",
       "name_en": "Saudi Automotive Services Co.",
       "name_ar": "ساسكو",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4050.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4050.png"
     },
     {
-      "id": 11,
+      "id": 10,
       "purification": "0.0129",
       "sharia_opinion": "نقية",
       "name": "أسواق ع العثيم",
@@ -119,10 +108,10 @@
       "sector": "تجزئة الأغذية",
       "name_en": "Abdullah Al Othaim Markets Co.",
       "name_ar": "أسواق ع العثيم",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4001.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4001.png"
     },
     {
-      "id": 12,
+      "id": 11,
       "purification": "0.0017",
       "sharia_opinion": "نقية",
       "name": "أنعام القابضة",
@@ -130,10 +119,10 @@
       "sector": "تجزئة الأغذية",
       "name_en": "Anaam International Holding Group",
       "name_ar": "أنعام القابضة",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4061.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4061.png"
     },
     {
-      "id": 13,
+      "id": 12,
       "purification": "0.0028",
       "sharia_opinion": "نقية",
       "name": "وفرة",
@@ -141,10 +130,10 @@
       "sector": "إنتاج الأغذية",
       "name_en": "Wafrah for Industry and Development Co.",
       "name_ar": "وفرة",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/2100.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/2100.png"
     },
     {
-      "id": 14,
+      "id": 13,
       "purification": "0.0019",
       "sharia_opinion": "نقية",
       "name": "نادك",
@@ -152,10 +141,10 @@
       "sector": "إنتاج الأغذية",
       "name_en": "National Agricultural Development Co.",
       "name_ar": "نادك",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/6010.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/6010.png"
     },
     {
-      "id": 15,
+      "id": 14,
       "purification": "0.0026",
       "sharia_opinion": "نقية",
       "name": "جاكو",
@@ -163,10 +152,10 @@
       "sector": "إنتاج الأغذية",
       "name_en": "Al Gassim Investment Holding Co.",
       "name_ar": "جاكو",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/6020.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/6020.png"
     },
     {
-      "id": 16,
+      "id": 15,
       "purification": "0.0005",
       "sharia_opinion": "نقية",
       "name": "الشرقية للتنمية",
@@ -174,10 +163,10 @@
       "sector": "إنتاج الأغذية",
       "name_en": "Ash-Sharqiyah Development Co.",
       "name_ar": "الشرقية للتنمية",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/6060.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/6060.png"
     },
     {
-      "id": 17,
+      "id": 16,
       "purification": "0.0351",
       "sharia_opinion": "نقية",
       "name": "البحري",
@@ -185,10 +174,10 @@
       "sector": "الطاقة",
       "name_en": "National Shipping Company of Saudi Arabia",
       "name_ar": "البحري",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4030.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4030.png"
     },
     {
-      "id": 18,
+      "id": 17,
       "purification": "0.0077",
       "sharia_opinion": "نقية",
       "name": "بي سي اي",
@@ -196,10 +185,10 @@
       "sector": "المواد الأساسية",
       "name_en": "Basic Chemical Industries Co.",
       "name_ar": "بي سي اي",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/1210.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/1210.png"
     },
     {
-      "id": 19,
+      "id": 18,
       "purification": "0.1831",
       "sharia_opinion": "نقية",
       "name": "معادن",
@@ -207,10 +196,10 @@
       "sector": "المواد الأساسية",
       "name_en": "Saudi Arabian Mining Co.",
       "name_ar": "معادن",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/1211.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/1211.png"
     },
     {
-      "id": 20,
+      "id": 19,
       "purification": "0.1751",
       "sharia_opinion": "نقية",
       "name": "بتروكيم",
@@ -218,10 +207,10 @@
       "sector": "المواد الأساسية",
       "name_en": "Company_2002",
       "name_ar": "بتروكيم",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/2002.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/2002.png"
     },
     {
-      "id": 21,
+      "id": 20,
       "purification": "0.1247",
       "sharia_opinion": "نقية",
       "name": "سابك",
@@ -229,10 +218,10 @@
       "sector": "المواد الأساسية",
       "name_en": "Saudi Basic Industries Corp.",
       "name_ar": "سابك",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/2010.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/2010.png"
     },
     {
-      "id": 22,
+      "id": 21,
       "purification": "0.1076",
       "sharia_opinion": "نقية",
       "name": "التصنيع",
@@ -240,10 +229,10 @@
       "sector": "المواد الأساسية",
       "name_en": "National Industrialization Co.",
       "name_ar": "التصنيع",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/2060.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/2060.png"
     },
     {
-      "id": 23,
+      "id": 22,
       "purification": "0.0308",
       "sharia_opinion": "نقية",
       "name": "زجاج",
@@ -251,10 +240,10 @@
       "sector": "المواد الأساسية",
       "name_en": "The National Company for Glass Industries",
       "name_ar": "زجاج",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/2150.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/2150.png"
     },
     {
-      "id": 24,
+      "id": 23,
       "purification": "0.0168",
       "sharia_opinion": "نقية",
       "name": "نماء للكيماويات",
@@ -262,10 +251,10 @@
       "sector": "المواد الأساسية",
       "name_en": "Nama Chemicals Co.",
       "name_ar": "نماء للكيماويات",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/2210.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/2210.png"
     },
     {
-      "id": 25,
+      "id": 24,
       "purification": "0.0021",
       "sharia_opinion": "نقية",
       "name": "معدنية",
@@ -273,10 +262,10 @@
       "sector": "المواد الأساسية",
       "name_en": "National Metal Manufacturing and Casting Co.",
       "name_ar": "معدنية",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/2220.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/2220.png"
     },
     {
-      "id": 26,
+      "id": 25,
       "purification": "0.2686",
       "sharia_opinion": "نقية",
       "name": "المجموعة السعودية",
@@ -284,10 +273,10 @@
       "sector": "المواد الأساسية",
       "name_en": "Saudi Industrial Investment Group",
       "name_ar": "المجموعة السعودية",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/2250.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/2250.png"
     },
     {
-      "id": 27,
+      "id": 26,
       "purification": "0.0177",
       "sharia_opinion": "نقية",
       "name": "سبكيم العالمية",
@@ -295,10 +284,10 @@
       "sector": "المواد الأساسية",
       "name_en": "Sahara International Petrochemical Co.",
       "name_ar": "سبكيم العالمية",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/2310.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/2310.png"
     },
     {
-      "id": 28,
+      "id": 27,
       "purification": "0.0371",
       "sharia_opinion": "نقية",
       "name": "أسمنت المدينة",
@@ -306,10 +295,10 @@
       "sector": "المواد الأساسية",
       "name_en": "City Cement Co.",
       "name_ar": "أسمنت المدينة",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/3003.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/3003.png"
     },
     {
-      "id": 29,
+      "id": 28,
       "purification": "0.0092",
       "sharia_opinion": "نقية",
       "name": "أسمنت الشمالية",
@@ -317,10 +306,10 @@
       "sector": "المواد الأساسية",
       "name_en": "Northern Region Cement Co.",
       "name_ar": "أسمنت الشمالية",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/3004.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/3004.png"
     },
     {
-      "id": 30,
+      "id": 29,
       "purification": "0.0079",
       "sharia_opinion": "نقية",
       "name": "أسمنت العربية",
@@ -328,10 +317,10 @@
       "sector": "المواد الأساسية",
       "name_en": "Arabian Cement Co.",
       "name_ar": "أسمنت العربية",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/3010.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/3010.png"
     },
     {
-      "id": 31,
+      "id": 30,
       "purification": "0.0059",
       "sharia_opinion": "نقية",
       "name": "أسمنت الجنوب",
@@ -339,10 +328,10 @@
       "sector": "المواد الأساسية",
       "name_en": "Southern Province Cement Co.",
       "name_ar": "أسمنت الجنوب",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/3050.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/3050.png"
     },
     {
-      "id": 32,
+      "id": 31,
       "purification": "0.0131",
       "sharia_opinion": "نقية",
       "name": "أسترا الصناعية",
@@ -350,10 +339,10 @@
       "sector": "السلع الرأس مالية",
       "name_en": "Astra Industrial Group",
       "name_ar": "أسترا الصناعية",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/1212.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/1212.png"
     },
     {
-      "id": 33,
+      "id": 32,
       "purification": "0.0750",
       "sharia_opinion": "نقية",
       "name": "الكابلات",
@@ -361,10 +350,10 @@
       "sector": "السلع الرأس مالية",
       "name_en": "Saudi Cable Co.",
       "name_ar": "الكابلات",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/2110.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/2110.png"
     },
     {
-      "id": 34,
+      "id": 33,
       "purification": "0.0009",
       "sharia_opinion": "نقية",
       "name": "مسك",
@@ -372,10 +361,10 @@
       "sector": "السلع الرأس مالية",
       "name_en": "Middle East Specialized Cables Co.",
       "name_ar": "مسك",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/2370.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/2370.png"
     },
     {
-      "id": 35,
+      "id": 34,
       "purification": "0.0158",
       "sharia_opinion": "نقية",
       "name": "مهارة",
@@ -383,10 +372,10 @@
       "sector": "الخدمات التجارية والمهنية",
       "name_en": "Maharah Human Resources Co.",
       "name_ar": "مهارة",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/1831.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/1831.png"
     },
     {
-      "id": 36,
+      "id": 35,
       "purification": "0.0733",
       "sharia_opinion": "نقية",
       "name": "الخدمات الأرضية",
@@ -394,10 +383,10 @@
       "sector": "النقل",
       "name_en": "Saudi Ground Services Co.",
       "name_ar": "الخدمات الأرضية",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4031.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4031.png"
     },
     {
-      "id": 37,
+      "id": 36,
       "purification": "0.0128",
       "sharia_opinion": "نقية",
       "name": "صدق",
@@ -405,10 +394,10 @@
       "sector": "السلع طويلة الأجل",
       "name_en": "Saudi Industrial Development Co.",
       "name_ar": "صدق",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/2130.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/2130.png"
     },
     {
-      "id": 38,
+      "id": 37,
       "purification": "0.0167",
       "sharia_opinion": "نقية",
       "name": "الطيار (سيرا القابضة)",
@@ -416,10 +405,10 @@
       "sector": "الخدمات الإستهلاكية",
       "name_en": "Seera Group Holding",
       "name_ar": "الطيار (سيرا القابضة)",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/1810.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/1810.png"
     },
     {
-      "id": 39,
+      "id": 38,
       "purification": "0.0036",
       "sharia_opinion": "نقية",
       "name": "وقت اللياقة",
@@ -427,10 +416,10 @@
       "sector": "الخدمات الإستهلاكية",
       "name_en": "Leejam Sports Co.",
       "name_ar": "وقت اللياقة",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/1830.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/1830.png"
     },
     {
-      "id": 40,
+      "id": 39,
       "purification": "0.0005",
       "sharia_opinion": "نقية",
       "name": "عطاء",
@@ -438,10 +427,10 @@
       "sector": "الخدمات الإستهلاكية",
       "name_en": "Ataa Educational Co.",
       "name_ar": "عطاء",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4292.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4292.png"
     },
     {
-      "id": 41,
+      "id": 40,
       "purification": "0.0194",
       "sharia_opinion": "نقية",
       "name": "تهامة",
@@ -449,10 +438,10 @@
       "sector": "الإعلام والترفيه",
       "name_en": "Tihama Advertising and Public Relations Co.",
       "name_ar": "تهامة",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4070.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4070.png"
     },
     {
-      "id": 42,
+      "id": 41,
       "purification": "0.0220",
       "sharia_opinion": "نقية",
       "name": "شاكر",
@@ -460,10 +449,10 @@
       "sector": "تجزئة السلع الكمالية",
       "name_en": "Al Hassan Ghazi Ibrahim Shaker Co.",
       "name_ar": "شاكر",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/1214.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/1214.png"
     },
     {
-      "id": 43,
+      "id": 42,
       "purification": "0.0050",
       "sharia_opinion": "نقية",
       "name": "باعظيم",
@@ -471,10 +460,10 @@
       "sector": "تجزئة السلع الكمالية",
       "name_en": "Baazeem Trading Co.",
       "name_ar": "باعظيم",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4051.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4051.png"
     },
     {
-      "id": 44,
+      "id": 43,
       "purification": "0.0011",
       "sharia_opinion": "نقية",
       "name": "جرير",
@@ -482,10 +471,10 @@
       "sector": "تجزئة السلع الكمالية",
       "name_en": "Jarir Marketing Co.",
       "name_ar": "جرير",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4190.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4190.png"
     },
     {
-      "id": 45,
+      "id": 44,
       "purification": "0.0033",
       "sharia_opinion": "نقية",
       "name": "أبو معطي",
@@ -493,10 +482,10 @@
       "sector": "تجزئة السلع الكمالية",
       "name_en": "Abdullah Saad Mohammed Abo Moati for Bookstores Co.",
       "name_ar": "أبو معطي",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4191.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4191.png"
     },
     {
-      "id": 46,
+      "id": 45,
       "purification": "0.0109",
       "sharia_opinion": "نقية",
       "name": "فواز الحكير",
@@ -504,10 +493,10 @@
       "sector": "تجزئة السلع الكمالية",
       "name_en": "Fawaz Abdulaziz Alhokair Co.",
       "name_ar": "فواز الحكير",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4240.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4240.png"
     },
     {
-      "id": 47,
+      "id": 46,
       "purification": "0.0010",
       "sharia_opinion": "نقية",
       "name": "أسواق المزرعة",
@@ -515,10 +504,10 @@
       "sector": "تجزئة الأغذية",
       "name_en": "Saudi Marketing Co.",
       "name_ar": "أسواق المزرعة",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4006.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4006.png"
     },
     {
-      "id": 48,
+      "id": 47,
       "purification": "0.2366",
       "sharia_opinion": "نقية",
       "name": "صافولا",
@@ -526,10 +515,10 @@
       "sector": "إنتاج الأغذية",
       "name_en": "Savola Group",
       "name_ar": "صافولا",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/2050.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/2050.png"
     },
     {
-      "id": 49,
+      "id": 48,
       "purification": "0.0122",
       "sharia_opinion": "نقية",
       "name": "سدافكو",
@@ -537,10 +526,10 @@
       "sector": "إنتاج الأغذية",
       "name_en": "Saudia Dairy and Foodstuff Co.",
       "name_ar": "سدافكو",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/2270.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/2270.png"
     },
     {
-      "id": 50,
+      "id": 49,
       "purification": "0.0231",
       "sharia_opinion": "نقية",
       "name": "المراعي",
@@ -548,10 +537,10 @@
       "sector": "إنتاج الأغذية",
       "name_en": "Almarai Co.",
       "name_ar": "المراعي",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/2280.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/2280.png"
     },
     {
-      "id": 51,
+      "id": 50,
       "purification": "0.0029",
       "sharia_opinion": "نقية",
       "name": "حلواني إخوان",
@@ -559,10 +548,10 @@
       "sector": "إنتاج الأغذية",
       "name_en": "Halwani Bros. Co.",
       "name_ar": "حلواني إخوان",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/6001.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/6001.png"
     },
     {
-      "id": 52,
+      "id": 51,
       "purification": "0.0023",
       "sharia_opinion": "نقية",
       "name": "تبوك الزراعية",
@@ -570,10 +559,10 @@
       "sector": "إنتاج الأغذية",
       "name_en": "Tabuk Agricultural Development Co.",
       "name_ar": "تبوك الزراعية",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/6040.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/6040.png"
     },
     {
-      "id": 53,
+      "id": 52,
       "purification": "0.1719",
       "sharia_opinion": "نقية",
       "name": "رعاية",
@@ -581,10 +570,10 @@
       "sector": "الرعاية الصحية",
       "name_en": "National Medical Care Co.",
       "name_ar": "رعاية",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4005.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4005.png"
     },
     {
-      "id": 54,
+      "id": 53,
       "purification": "0.0016",
       "sharia_opinion": "نقية",
       "name": "الحمادي",
@@ -592,10 +581,10 @@
       "sector": "الرعاية الصحية",
       "name_en": "Al Hammadi Holding",
       "name_ar": "الحمادي",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4007.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4007.png"
     },
     {
-      "id": 55,
+      "id": 54,
       "purification": "0.0017",
       "sharia_opinion": "نقية",
       "name": "ـمستشفى السعودي الألمانـ",
@@ -603,10 +592,10 @@
       "sector": "الرعاية الصحية",
       "name_en": "Middle East Healthcare Co.",
       "name_ar": "ـمستشفى السعودي الألمانـ",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4009.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4009.png"
     },
     {
-      "id": 56,
+      "id": 55,
       "purification": "0.0221",
       "sharia_opinion": "نقية",
       "name": "عسير",
@@ -614,10 +603,10 @@
       "sector": "الاستثمار والتمويل",
       "name_en": "Sinad Holding Co.",
       "name_ar": "عسير",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4080.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4080.png"
     },
     {
-      "id": 57,
+      "id": 56,
       "purification": "0.0647",
       "sharia_opinion": "نقية",
       "name": "اتحاد اتصالات",
@@ -625,10 +614,10 @@
       "sector": "الاتصالات",
       "name_en": "Etihad Etisalat Co.",
       "name_ar": "اتحاد اتصالات",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/7020.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/7020.png"
     },
     {
-      "id": 58,
+      "id": 57,
       "purification": "0.0501",
       "sharia_opinion": "نقية",
       "name": "زين السعودية",
@@ -636,10 +625,10 @@
       "sector": "الاتصالات",
       "name_en": "Mobile Telecommunication Company Saudi Arabia",
       "name_ar": "زين السعودية",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/7030.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/7030.png"
     },
     {
-      "id": 59,
+      "id": 58,
       "purification": "0.0098",
       "sharia_opinion": "نقية",
       "name": "كهرباء السعودية",
@@ -647,10 +636,10 @@
       "sector": "المرافق العامة",
       "name_en": "Saudi Electricity Co.",
       "name_ar": "كهرباء السعودية",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/5110.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/5110.png"
     },
     {
-      "id": 60,
+      "id": 59,
       "purification": "0.0147",
       "sharia_opinion": "نقية",
       "name": "العقارية",
@@ -658,10 +647,10 @@
       "sector": "إدارة وتطوير العقارات",
       "name_en": "Saudi Real Estate Co.",
       "name_ar": "العقارية",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4020.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4020.png"
     },
     {
-      "id": 61,
+      "id": 60,
       "purification": "0.0075",
       "sharia_opinion": "نقية",
       "name": "إعمار",
@@ -669,10 +658,10 @@
       "sector": "إدارة وتطوير العقارات",
       "name_en": "Emaar The Economic City",
       "name_ar": "إعمار",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4220.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4220.png"
     },
     {
-      "id": 62,
+      "id": 61,
       "purification": "0.0342",
       "sharia_opinion": "نقية",
       "name": "البحر الأحمر",
@@ -680,10 +669,10 @@
       "sector": "إدارة وتطوير العقارات",
       "name_en": "Red Sea International Co.",
       "name_ar": "البحر الأحمر",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4230.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4230.png"
     },
     {
-      "id": 63,
+      "id": 62,
       "purification": "0.0055",
       "sharia_opinion": "نقية",
       "name": "جبل عمر",
@@ -691,10 +680,10 @@
       "sector": "إدارة وتطوير العقارات",
       "name_en": "Jabal Omar Development Co.",
       "name_ar": "جبل عمر",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4250.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4250.png"
     },
     {
-      "id": 64,
+      "id": 63,
       "purification": "0.0063",
       "sharia_opinion": "نقية",
       "name": "المراكز العربية",
@@ -702,10 +691,10 @@
       "sector": "إدارة وتطوير العقارات",
       "name_en": "Arabian Centres Co.",
       "name_ar": "المراكز العربية",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4321.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4321.png"
     },
     {
-      "id": 65,
+      "id": 64,
       "purification": "0.0085",
       "sharia_opinion": "نقية",
       "name": "التطويرية الغذائية",
@@ -713,10 +702,10 @@
       "sector": "الخدمات الإستهلاكية (موازي)",
       "name_en": "Company_9501",
       "name_ar": "التطويرية الغذائية",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/9501.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/9501.png"
     },
     {
-      "id": 66,
+      "id": 65,
       "purification": "0.0240",
       "sharia_opinion": "نقية",
       "name": "سمو",
@@ -724,10 +713,10 @@
       "sector": "إدارة وتطوير العقارات (موازي)",
       "name_en": "Company_9511",
       "name_ar": "سمو",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/9511.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/9511.png"
     },
     {
-      "id": 67,
+      "id": 66,
       "purification": "الرقم",
       "sharia_opinion": "نقية",
       "name": "نسبة الدخل التقليدية",
@@ -735,10 +724,10 @@
       "sector": "نسبة القروض التقليدية",
       "name_en": "Company_نسبة الاستثمارات التقليدية",
       "name_ar": "نسبة الدخل التقليدية",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/نسبة الاستثمارات التقليدية.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/نسبة الاستثمارات التقليدية.png"
     },
     {
-      "id": 68,
+      "id": 67,
       "purification": "146",
       "sharia_opinion": "غير متوافقة",
       "name": "0.78%",
@@ -746,10 +735,10 @@
       "sector": "52.29%",
       "name_en": "Company_4.89%",
       "name_ar": "0.78%",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4.89%.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4.89%.png"
     },
     {
-      "id": 69,
+      "id": 68,
       "purification": "147",
       "sharia_opinion": "غير متوافقة",
       "name": "0.00%",
@@ -757,43 +746,10 @@
       "sector": "35.36%",
       "name_en": "Company_0.36%",
       "name_ar": "0.00%",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/0.36%.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/0.36%.png"
     },
     {
-      "id": 70,
-      "purification": "148",
-      "sharia_opinion": "غير متوافقة",
-      "name": "0.00%",
-      "code": "0.00%",
-      "sector": "44.71%",
-      "name_en": "Company_0.00%",
-      "name_ar": "0.00%",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/0.00%.webp"
-    },
-    {
-      "id": 71,
-      "purification": "149",
-      "sharia_opinion": "غير متوافقة",
-      "name": "0.00%",
-      "code": "0.00%",
-      "sector": "41.65%",
-      "name_en": "Company_0.00%",
-      "name_ar": "0.00%",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/0.00%.webp"
-    },
-    {
-      "id": 72,
-      "purification": "150",
-      "sharia_opinion": "غير متوافقة",
-      "name": "0.00%",
-      "code": "0.00%",
-      "sector": "41.20%",
-      "name_en": "Company_0.00%",
-      "name_ar": "0.00%",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/0.00%.webp"
-    },
-    {
-      "id": 73,
+      "id": 69,
       "purification": "151",
       "sharia_opinion": "غير متوافقة",
       "name": "0.99%",
@@ -801,21 +757,10 @@
       "sector": "44.10%",
       "name_en": "Company_1.36%",
       "name_ar": "0.99%",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/1.36%.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/1.36%.png"
     },
     {
-      "id": 74,
-      "purification": "152",
-      "sharia_opinion": "غير متوافقة",
-      "name": "0.00%",
-      "code": "0.00%",
-      "sector": "38.54%",
-      "name_en": "Company_0.00%",
-      "name_ar": "0.00%",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/0.00%.webp"
-    },
-    {
-      "id": 75,
+      "id": 70,
       "purification": "0.0332",
       "sharia_opinion": "غير متوافقة",
       "name": "أميانتيت",
@@ -823,10 +768,10 @@
       "sector": "السلع الرأس مالية",
       "name_en": "Saudi Arabian Amiantit Co.",
       "name_ar": "أميانتيت",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/2160.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/2160.png"
     },
     {
-      "id": 76,
+      "id": 71,
       "purification": "0.0180",
       "sharia_opinion": "غير متوافقة",
       "name": "البابطين",
@@ -834,10 +779,10 @@
       "sector": "السلع الرأس مالية",
       "name_en": "Al-Babtain Power and Telecommunication Co.",
       "name_ar": "البابطين",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/2320.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/2320.png"
     },
     {
-      "id": 77,
+      "id": 72,
       "purification": "0.0018",
       "sharia_opinion": "غير متوافقة",
       "name": "الأسماك",
@@ -845,10 +790,10 @@
       "sector": "إنتاج الأغذية",
       "name_en": "Saudi Fisheries Co.",
       "name_ar": "الأسماك",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/6050.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/6050.png"
     },
     {
-      "id": 78,
+      "id": 73,
       "purification": "0.0001",
       "sharia_opinion": "غير متوافقة",
       "name": "الخبير ريت",
@@ -856,10 +801,10 @@
       "sector": "الصناديق العقارية المتداولة",
       "name_en": "Alkhabeer REIT Fund",
       "name_ar": "الخبير ريت",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4348.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4348.png"
     },
     {
-      "id": 79,
+      "id": 74,
       "purification": "",
       "sharia_opinion": "غير متوافقة النشاط",
       "name": "طباعة وتغليف",
@@ -867,10 +812,10 @@
       "sector": "الخدمات التجارية والمهنية",
       "name_en": "Saudi Printing and Packaging Co.",
       "name_ar": "طباعة وتغليف",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4270.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4270.png"
     },
     {
-      "id": 80,
+      "id": 75,
       "purification": "",
       "sharia_opinion": "غير متوافقة النشاط",
       "name": "الأبحاث والتسويق",
@@ -878,10 +823,10 @@
       "sector": "الإعلام",
       "name_en": "Saudi Research and Media Group",
       "name_ar": "الأبحاث والتسويق",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4210.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4210.png"
     },
     {
-      "id": 81,
+      "id": 76,
       "purification": "",
       "sharia_opinion": "غير متوافقة النشاط",
       "name": "المملكة",
@@ -889,7 +834,7 @@
       "sector": "الاستثمار والتمويل",
       "name_en": "Kingdom Holding Co.",
       "name_ar": "المملكة",
-      "logo": "https://web.alrajhi-capital.sa/stock-images/4280.webp"
+      "logo": "https://www.tadawulgroup.sa/Resources/SEMOBILELOGOS/4280.png"
     }
   ]
 }

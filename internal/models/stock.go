@@ -35,8 +35,24 @@ type PurificationRequest struct {
 
 // PurificationResponse represents a response containing the purification amount
 type PurificationResponse struct {
-	ID                 primitive.ObjectID `json:"_id" bson:"_id,omitempty"`
-	PurificationAmount float64            `json:"purification_amount"`
-	DaysHeld           int                `json:"days_held"`
-	PurificationRate   float64            `json:"purification_rate"`
+	ID                 primitive.ObjectID       `json:"_id" bson:"_id,omitempty"`
+	PurificationAmount float64                  `json:"purification_amount"`
+	DaysHeld           int                      `json:"days_held"`
+	PurificationRate   float64                  `json:"purification_rate"`
+	YearlyBreakdown    []YearlyPurificationInfo `json:"yearly_breakdown,omitempty"`
+	IsMultiYear        bool                     `json:"is_multi_year"`
+	Warnings           []string                 `json:"warnings,omitempty"`
+}
+
+// YearlyPurificationInfo represents purification calculation for a specific year
+type YearlyPurificationInfo struct {
+	Year               int     `json:"year"`
+	PurificationRate   float64 `json:"purification_rate"`
+	DaysInPeriod       int     `json:"days_in_period"`
+	TotalDaysInYear    int     `json:"total_days_in_year"`
+	YearProportion     float64 `json:"year_proportion"`
+	PurificationAmount float64 `json:"purification_amount"`
+	CompanyNameEn      string  `json:"company_name_en"`
+	CompanyNameAr      string  `json:"company_name_ar"`
+	ShariaOpinion      string  `json:"sharia_opinion"`
 }

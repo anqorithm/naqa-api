@@ -21,20 +21,20 @@ GET {{baseUrl}}/
 Content-Type: {{contentType}}
 
 ### Get Stocks by Year
-GET {{baseUrl}}/api/v1/stocks/year/2015
+GET {{baseUrl}}/api/v1/stocks/year/2024
 Content-Type: {{contentType}}
 
 ### Search Stocks with Parameters
-GET {{baseUrl}}/api/v1/stocks/year/2023/search?sector=الطاقة&sharia_opinion=نقية
+GET {{baseUrl}}/api/v1/stocks/year/2024/search?sector=الطاقة&sharia_opinion=نقية
 Content-Type: {{contentType}}
 
 ### Calculate Purification Amount
-POST {{baseUrl}}/api/v1/stocks/year/2023/calculate-purification
+POST {{baseUrl}}/api/v1/stocks/year/2024/calculate-purification
 Content-Type: {{contentType}}
 
 {
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31",
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31",
     "number_of_stocks": 100,
     "stock_code": "1111"
 }
@@ -44,21 +44,21 @@ Content-Type: {{contentType}}
 // ###############################################################################
 
 ### Search by Name
-GET {{baseUrl}}/api/v1/stocks/year/2023/search?name=%D8%A3%D8%B1%D8%A7%D9%85%D9%83%D9%88
+GET {{baseUrl}}/api/v1/stocks/year/2024/search?name=%D8%A3%D8%B1%D8%A7%D9%85%D9%83%D9%88
 Content-Type: {{contentType}}
 
 ### Search by Code
-GET {{baseUrl}}/api/v1/stocks/year/2023/search?code=2222
+GET {{baseUrl}}/api/v1/stocks/year/2024/search?code=2222
 Content-Type: {{contentType}}
 
 ### Search by Sector
-GET {{baseUrl}}/api/v1/stocks/year/2023/search?sector=%D8%A7%D9%84%D8%B7%D8%A7%D9%82%D8%A9
+GET {{baseUrl}}/api/v1/stocks/year/2024/search?sector=%D8%A7%D9%84%D8%B7%D8%A7%D9%82%D8%A9
 Content-Type: {{contentType}}
 
 ### Search by Sharia Opinion
-GET {{baseUrl}}/api/v1/stocks/year/2023/search?sharia_opinion=%D9%86%D9%82%D9%8A%D8%A9
+GET {{baseUrl}}/api/v1/stocks/year/2024/search?sharia_opinion=%D9%86%D9%82%D9%8A%D8%A9
 Content-Type: {{contentType}}
 
 ### Combined Search
-GET {{baseUrl}}/api/v1/stocks/year/2023/search?sector=%D8%A7%D9%84%D8%B7%D8%A7%D9%82%D8%A9&sharia_opinion=%D9%86%D9%82%D9%8A%D8%A9
+GET {{baseUrl}}/api/v1/stocks/year/2024/search?sector=%D8%A7%D9%84%D8%B7%D8%A7%D9%82%D8%A9&sharia_opinion=%D9%86%D9%82%D9%8A%D8%A9
 Content-Type: {{contentType}}
