@@ -1,0 +1,419 @@
+basePath: /
+definitions:
+  models.ApiV1Response:
+    properties:
+      endpoints:
+        example:
+        - /api/v1/stocks
+        - /api/v1/health
+        - /api/v1/metrics
+        items:
+          type: string
+        type: array
+      env:
+        example: development
+        type: string
+      message:
+        example: Welcome to NAQA API v1
+        type: string
+      request_id:
+        example: 123e4567-e89b-12d3-a456-426614174000
+        type: string
+      server_time:
+        example: "2023-01-01T00:00:00Z"
+        type: string
+      status:
+        example: active
+        type: string
+      version:
+        example: 1.0.0
+        type: string
+    type: object
+  models.EndpointInfo:
+    properties:
+      description:
+        example: Get all stocks for a specific year
+        type: string
+      example: {}
+      method:
+        example: GET
+        type: string
+      name:
+        example: Get Stocks
+        type: string
+      parameters:
+        example:
+        - name
+        - code
+        - sector
+        items:
+          type: string
+        type: array
+      path:
+        example: /api/v1/stocks/year/{year}
+        type: string
+    type: object
+  models.HealthResponse:
+    properties:
+      message:
+        example: API is healthy
+        type: string
+      request_id:
+        example: 123e4567-e89b-12d3-a456-426614174000
+        type: string
+      status:
+        example: OK
+        type: string
+      timestamp:
+        example: "2023-01-01T00:00:00Z"
+        type: string
+    type: object
+  models.PurificationRequest:
+    properties:
+      end_date:
+        example: "2023-12-31"
+        type: string
+      number_of_stocks:
+        example: 100
+        type: integer
+      start_date:
+        example: "2023-01-01"
+        type: string
+      stock_code:
+        example: "1111"
+        type: string
+    required:
+    - end_date
+    - number_of_stocks
+    - start_date
+    - stock_code
+    type: object
+  models.PurificationResponse:
+    properties:
+      _id:
+        type: string
+      days_held:
+        example: 365
+        type: integer
+      is_multi_year:
+        example: false
+        type: boolean
+      purification_amount:
+        example: 25.5
+        type: number
+      purification_rate:
+        example: 0.25
+        type: number
+      warnings:
+        items:
+          type: string
+        type: array
+      yearly_breakdown:
+        items:
+          $ref: '#/definitions/models.YearlyPurificationInfo'
+        type: array
+    type: object
+  models.RootResponse:
+    properties:
+      app_name:
+        example: Naqa API
+        type: string
+      description:
+        example: A stock analysis and Sharia compliance API
+        type: string
+      environment:
+        example: development
+        type: string
+      request_time:
+        example: "2023-01-01T00:00:00Z"
+        type: string
+      supported_api:
+        example:
+        - /api/v1
+        items:
+          type: string
+        type: array
+      version:
+        example: 1.0.0
+        type: string
+    type: object
+  models.Stock:
+    properties:
+      _id:
+        type: string
+      code:
+        example: "1111"
+        type: string
+      created_at:
+        format: date-time
+        type: string
+      logo:
+        example: https://example.com/logo.png
+        type: string
+      name_ar:
+        example: شركة الطاقة السعودية
+        type: string
+      name_en:
+        example: Saudi Energy Company
+        type: string
+      purification:
+        example: "0.25"
+        type: string
+      sector:
+        example: الطاقة
+        type: string
+      sharia_opinion:
+        example: نقية
+        type: string
+      updated_at:
+        format: date-time
+        type: string
+    type: object
+  models.StockResponse:
+    properties:
+      stocks:
+        items:
+          $ref: '#/definitions/models.Stock'
+        type: array
+    type: object
+  models.StocksBaseResponse:
+    properties:
+      available_years:
+        example:
+        - "2023"
+        - "2024"
+        items:
+          type: string
+        type: array
+      documentation:
+        example: https://github.com/anqorithm/naqa-api
+        type: string
+      endpoints:
+        items:
+          $ref: '#/definitions/models.EndpointInfo'
+        type: array
+      message:
+        example: Welcome to Stocks API
+        type: string
+      status:
+        example: success
+        type: string
+    type: object
+  models.YearlyPurificationInfo:
+    properties:
+      company_name_ar:
+        type: string
+      company_name_en:
+        type: string
+      days_in_period:
+        type: integer
+      purification_amount:
+        type: number
+      purification_rate:
+        type: number
+      sharia_opinion:
+        type: string
+      total_days_in_year:
+        type: integer
+      year:
+        type: integer
+      year_proportion:
+        type: number
+    type: object
+host: localhost:3000
+info:
+  contact:
+    email: support@naqa-api.com
+    name: API Support
+  description: A stock analysis and Sharia compliance API
+  title: NAQA API
+  version: "1.0"
+paths:
+  /:
+    get:
+      consumes:
+      - application/json
+      description: Get basic API information including version, description, and supported
+        endpoints
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: API information
+          schema:
+            $ref: '#/definitions/models.RootResponse'
+      summary: Get API root information
+      tags:
+      - Root
+  /api/v1:
+    get:
+      consumes:
+      - application/json
+      description: Get API v1 status, version, and available endpoints
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: API v1 information
+          schema:
+            $ref: '#/definitions/models.ApiV1Response'
+      summary: Get API v1 information
+      tags:
+      - API Info
+  /api/v1/health:
+    get:
+      consumes:
+      - application/json
+      description: Check if the API is healthy and running
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Health check response
+          schema:
+            $ref: '#/definitions/models.HealthResponse'
+      summary: Health check
+      tags:
+      - Health
+  /api/v1/stocks:
+    get:
+      consumes:
+      - application/json
+      description: Get information about available stock endpoints, years, and examples
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Stocks API information
+          schema:
+            $ref: '#/definitions/models.StocksBaseResponse'
+      summary: Get stocks API information
+      tags:
+      - Stocks
+  /api/v1/stocks/year/{year}:
+    get:
+      consumes:
+      - application/json
+      description: Retrieve all stocks and their information for a given year
+      parameters:
+      - description: Year (e.g., 2024)
+        in: path
+        name: year
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: List of stocks
+          schema:
+            $ref: '#/definitions/models.StockResponse'
+        "400":
+          description: Invalid year
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Database error
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Get all stocks for a specific year
+      tags:
+      - Stocks
+  /api/v1/stocks/year/{year}/calculate-purification:
+    post:
+      consumes:
+      - application/json
+      description: Calculate the purification amount for a stock based on holding
+        period and number of shares
+      parameters:
+      - description: Year (e.g., 2024)
+        in: path
+        name: year
+        required: true
+        type: string
+      - description: Purification calculation request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.PurificationRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Purification calculation result
+          schema:
+            $ref: '#/definitions/models.PurificationResponse'
+        "400":
+          description: Invalid request
+          schema:
+            additionalProperties: true
+            type: object
+        "404":
+          description: Stock not found
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Server error
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Calculate stock purification amount
+      tags:
+      - Stocks
+  /api/v1/stocks/year/{year}/search:
+    get:
+      consumes:
+      - application/json
+      description: Search for stocks using various filters like name, code, sector,
+        or sharia opinion
+      parameters:
+      - description: Year (e.g., 2024)
+        in: path
+        name: year
+        required: true
+        type: string
+      - description: Stock name (Arabic or English)
+        in: query
+        name: name
+        type: string
+      - description: Stock code
+        in: query
+        name: code
+        type: string
+      - description: Business sector
+        in: query
+        name: sector
+        type: string
+      - description: Sharia compliance opinion
+        in: query
+        name: sharia_opinion
+        type: string
+      - description: Purification percentage
+        in: query
+        name: purification
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Filtered list of stocks
+          schema:
+            $ref: '#/definitions/models.StockResponse'
+        "400":
+          description: Invalid parameters
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Database error
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Search stocks with filters
+      tags:
+      - Stocks
+swagger: "2.0"

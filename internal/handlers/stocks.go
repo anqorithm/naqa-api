@@ -12,6 +12,17 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
+// GetStocksByYearHandler handles getting stocks for a specific year
+// @Summary Get all stocks for a specific year
+// @Description Retrieve all stocks and their information for a given year
+// @Tags Stocks
+// @Accept json
+// @Produce json
+// @Param year path string true "Year (e.g., 2024)"
+// @Success 200 {object} models.StockResponse "List of stocks"
+// @Failure 400 {object} map[string]interface{} "Invalid year"
+// @Failure 500 {object} map[string]interface{} "Database error"
+// @Router /api/v1/stocks/year/{year} [get]
 func (h *Handler) GetStocksByYearHandler(c *fiber.Ctx) error {
 	collection := h.db.Collection(c.Params("year"))
 
@@ -42,10 +53,10 @@ func (h *Handler) GetStocksByYearHandler(c *fiber.Ctx) error {
 		}
 		
 		if createdAt, ok := doc["created_at"].(primitive.DateTime); ok {
-			stock.CreatedAt = createdAt
+			stock.CreatedAt = createdAt.Time()
 		}
 		if updatedAt, ok := doc["updated_at"].(primitive.DateTime); ok {
-			stock.UpdatedAt = updatedAt
+			stock.UpdatedAt = updatedAt.Time()
 		}
 		
 		result = append(result, stock)
@@ -54,6 +65,22 @@ func (h *Handler) GetStocksByYearHandler(c *fiber.Ctx) error {
 	return c.JSON(models.StockResponse{Stocks: result})
 }
 
+// SearchStocksHandler handles searching stocks with filters
+// @Summary Search stocks with filters
+// @Description Search for stocks using various filters like name, code, sector, or sharia opinion
+// @Tags Stocks
+// @Accept json
+// @Produce json
+// @Param year path string true "Year (e.g., 2024)"
+// @Param name query string false "Stock name (Arabic or English)"
+// @Param code query string false "Stock code"
+// @Param sector query string false "Business sector"
+// @Param sharia_opinion query string false "Sharia compliance opinion"
+// @Param purification query string false "Purification percentage"
+// @Success 200 {object} models.StockResponse "Filtered list of stocks"
+// @Failure 400 {object} map[string]interface{} "Invalid parameters"
+// @Failure 500 {object} map[string]interface{} "Database error"
+// @Router /api/v1/stocks/year/{year}/search [get]
 func (h *Handler) SearchStocksHandler(c *fiber.Ctx) error {
 	filter := bson.M{}
 
@@ -102,10 +129,10 @@ func (h *Handler) SearchStocksHandler(c *fiber.Ctx) error {
 		}
 		
 		if createdAt, ok := doc["created_at"].(primitive.DateTime); ok {
-			stock.CreatedAt = createdAt
+			stock.CreatedAt = createdAt.Time()
 		}
 		if updatedAt, ok := doc["updated_at"].(primitive.DateTime); ok {
-			stock.UpdatedAt = updatedAt
+			stock.UpdatedAt = updatedAt.Time()
 		}
 		
 		result = append(result, stock)
@@ -114,6 +141,19 @@ func (h *Handler) SearchStocksHandler(c *fiber.Ctx) error {
 	return c.JSON(models.StockResponse{Stocks: result})
 }
 
+// CalculatePurificationHandler handles purification calculation requests
+// @Summary Calculate stock purification amount
+// @Description Calculate the purification amount for a stock based on holding period and number of shares
+// @Tags Stocks
+// @Accept json
+// @Produce json
+// @Param year path string true "Year (e.g., 2024)"
+// @Param request body models.PurificationRequest true "Purification calculation request"
+// @Success 200 {object} models.PurificationResponse "Purification calculation result"
+// @Failure 400 {object} map[string]interface{} "Invalid request"
+// @Failure 404 {object} map[string]interface{} "Stock not found"
+// @Failure 500 {object} map[string]interface{} "Server error"
+// @Router /api/v1/stocks/year/{year}/calculate-purification [post]
 func (h *Handler) CalculatePurificationHandler(c *fiber.Ctx) error {
 	var req models.PurificationRequest
 	if err := c.BodyParser(&req); err != nil {
@@ -152,7 +192,7 @@ func (h *Handler) CalculatePurificationHandler(c *fiber.Ctx) error {
 }
 
 func (h *Handler) calculateMultiYearPurification(c *fiber.Ctx, req models.PurificationRequest, startDate, endDate time.Time) (*models.PurificationResponse, error) {
-	years := getYearsInPeriod(startDate, endDate)
+	years := GetYearsInPeriod(startDate, endDate)
 	
 	var totalPurification float64
 	var yearlyBreakdown []models.YearlyPurificationInfo
@@ -182,8 +222,8 @@ func (h *Handler) calculateMultiYearPurification(c *fiber.Ctx, req models.Purifi
 			continue
 		}
 
-		daysInYear := getDaysInYearForPeriod(startDate, endDate, year)
-		totalDaysInYear := getDaysInYear(year)
+		daysInYear := GetDaysInYearForPeriod(startDate, endDate, year)
+		totalDaysInYear := GetDaysInYear(year)
 		
 		if daysInYear == 0 {
 			continue
@@ -235,7 +275,7 @@ func (h *Handler) calculateMultiYearPurification(c *fiber.Ctx, req models.Purifi
 	return response, nil
 }
 
-func getYearsInPeriod(startDate, endDate time.Time) []int {
+func GetYearsInPeriod(startDate, endDate time.Time) []int {
 	var years []int
 	currentYear := startDate.Year()
 	endYear := endDate.Year()
@@ -248,7 +288,7 @@ func getYearsInPeriod(startDate, endDate time.Time) []int {
 	return years
 }
 
-func getDaysInYearForPeriod(startDate, endDate time.Time, year int) int {
+func GetDaysInYearForPeriod(startDate, endDate time.Time, year int) int {
 	// Get the year boundaries
 	yearStart := time.Date(year, 1, 1, 0, 0, 0, 0, time.UTC)
 	yearEnd := time.Date(year, 12, 31, 23, 59, 59, 999999999, time.UTC)
@@ -271,15 +311,15 @@ func getDaysInYearForPeriod(startDate, endDate time.Time, year int) int {
 	return int(overlapEnd.Sub(overlapStart).Hours()/24) + 1
 }
 
-// getDaysInYear returns the number of days in a year (considering leap years)
-func getDaysInYear(year int) int {
-	if isLeapYear(year) {
+// GetDaysInYear returns the number of days in a year (considering leap years)
+func GetDaysInYear(year int) int {
+	if IsLeapYear(year) {
 		return 366
 	}
 	return 365
 }
 
-// isLeapYear checks if a year is a leap year
-func isLeapYear(year int) bool {
+// IsLeapYear checks if a year is a leap year
+func IsLeapYear(year int) bool {
 	return year%4 == 0 && (year%100 != 0 || year%400 == 0)
 }

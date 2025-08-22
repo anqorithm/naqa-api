@@ -395,7 +395,7 @@ Data source: [Almaqased Cleansing Calculator](https://almaqased.net/cleansing-ca
 </div>
 
 $$
-\text{مبلغ التطهير} = \frac{\text{عدد الأسهم} \times \text{نسبة التطهير} \times \text{عدد أيام التملك}}{365.0}
+\text{مبلغ التطهير} = \text{عدد الأسهم} \times \text{نسبة التطهير} \times \frac{\text{عدد أيام التملك في السنة}}{\text{إجمالي أيام السنة}}
 $$
 
 <div dir="rtl">
@@ -403,38 +403,58 @@ $$
 حيث:
 - `عدد الأسهم`: إجمالي عدد الأسهم المملوكة
 - `نسبة التطهير`: نسبة التطهير السنوية (النسبة المئوية)
-- `عدد أيام التملك`: عدد الأيام التي تم فيها امتلاك الأسهم
-- `365.0`: عدد أيام السنة (ثابت)
+- `عدد أيام التملك في السنة`: عدد الأيام التي تم فيها امتلاك الأسهم في كل سنة على حدة
+- `إجمالي أيام السنة`: عدد أيام السنة (365 للسنة العادية، 366 للسنة الكبيسة)
 
-### مثال
-لـ 100 سهم بنسبة تطهير 2.5% تم امتلاكها لمدة 180 يوم:
+**ملاحظة مهمة**: يأخذ النظام بعين الاعتبار السنوات الكبيسة والفترات متعددة السنوات، حيث يتم حساب كل سنة على حدة.
+
+### أمثلة
+لـ 100 سهم بنسبة تطهير 2.5% تم امتلاكها لمدة 180 يوم في السنة العادية:
 
 </div>
 
 $$
-\text{مبلغ التطهير} = \frac{100 \times 0.025 \times 180}{365.0} = 1.23
+\text{مبلغ التطهير} = 100 \times 0.025 \times \frac{180}{365} = 1.233
+$$
+
+<div dir="rtl">
+
+لنفس المثال في السنة الكبيسة (366 يوم):
+
+</div>
+
+$$
+\text{مبلغ التطهير} = 100 \times 0.025 \times \frac{180}{366} = 1.230
 $$
 
 
 ## Stock Purification Amount Calculation
 
-The purification amount for stocks is calculated using the following formula:
+The purification amount for stocks is calculated using the following accurate formula that handles leap years and multi-year periods:
 
 $$
-\text{purificationAmount} = \frac{\text{numberOfStocks} \times \text{purificationRate} \times \text{daysHeld}}{365.0}
+\text{purificationAmount} = \text{numberOfStocks} \times \text{purificationRate} \times \frac{\text{daysHeldInYear}}{\text{totalDaysInYear}}
 $$
 
 Where:
 - `numberOfStocks`: Total number of stocks held
 - `purificationRate`: Annual purification rate (percentage)
-- `daysHeld`: Number of days the stocks were held
-- `365.0`: Days in a year (constant)
+- `daysHeldInYear`: Number of days the stocks were held in each year separately
+- `totalDaysInYear`: Total days in the year (365 for regular years, 366 for leap years)
 
-### Example
-For 100 stocks with 2.5% purification rate held for 180 days:
+**Important Note**: The system accounts for leap years and multi-year periods by calculating each year separately.
+
+### Examples
+For 100 stocks with 2.5% purification rate held for 180 days in a regular year:
 
 $$
-\text{purificationAmount} = \frac{100 \times 0.025 \times 180}{365.0} = 1.23
+\text{purificationAmount} = 100 \times 0.025 \times \frac{180}{365} = 1.233
+$$
+
+For the same example in a leap year (366 days):
+
+$$
+\text{purificationAmount} = 100 \times 0.025 \times \frac{180}{366} = 1.230
 $$
 
 

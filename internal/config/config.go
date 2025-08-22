@@ -21,9 +21,7 @@ type Config struct {
 }
 
 func LoadConfig() (*Config, error) {
-	if err := godotenv.Load(); err != nil {
-		return nil, err
-	}
+	godotenv.Load() // Ignore error if .env file doesn't exist
 
 	return &Config{
 		AppName:       getEnv("APP_NAME", "Naqa API"),
