@@ -92,13 +92,11 @@ func TestGetDaysInYear(t *testing.T) {
 	}
 
 
-	for _, tt := range te
-	
+	for _, tt := range tests {
 		result := handlers.GetDaysInYear(tt.year)
-			if result != tt.expected {
-				t.Errorf("getDaysInYear(%d) = %d, expected %d", tt.year, result, tt.expected)
-			}
-		})
+		if result != tt.expected {
+			t.Errorf("getDaysInYear(%d) = %d, expected %d", tt.year, result, tt.expected)
+		}
 	}
 }
 

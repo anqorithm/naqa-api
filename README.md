@@ -86,6 +86,10 @@ NAQA API is a RESTful service designed to provide data about the purification pr
 
 [Access the API on GCP](https://naqa-api-36462279645.europe-west1.run.app/)
 
+### API Documentation
+
+[Swagger Documentation](https://naqa-api-36462279645.europe-west1.run.app/docs/index.html) - Interactive API documentation
+
 ### Prerequisites
 - Go 1.23.4 or higher
 - Git
@@ -195,6 +199,8 @@ Server will start at `http://localhost:3000`
 - Memory Usage: 31.1 MB
 - Response Time: 195ms
 - Open Connections: 7.8 MB
+
+![Additional Performance View](./assets/3.png)
 
 <details>
 <summary>Monitoring Features</summary>
