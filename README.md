@@ -1,7 +1,7 @@
 # NAQA API | نقاء API
 
 <div align="center">
-  <img src="./assets/logo.svg" alt="NAQA API Logo" width="600">
+  <img src="./assets/logo.png" alt="NAQA API Logo" width="200">
 </div>
 
 [![Go Version](https://img.shields.io/github/go-mod/go-version/anqorithm/naqa-api)](https://golang.org/)
