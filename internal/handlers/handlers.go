@@ -26,6 +26,13 @@ func NewHandler(db *mongo.Database) *Handler {
 // ###############################################################################
 
 // RootHandler handles the "/" endpoint
+// @Summary Get API root information
+// @Description Get basic API information including version, description, and supported endpoints
+// @Tags Root
+// @Accept json
+// @Produce json
+// @Success 200 {object} models.RootResponse "API information"
+// @Router / [get]
 func (h *Handler) RootHandler(c *fiber.Ctx) error {
 	return c.JSON(fiber.Map{
 		"app_name":      os.Getenv("APP_NAME"),
@@ -38,6 +45,13 @@ func (h *Handler) RootHandler(c *fiber.Ctx) error {
 }
 
 // ApiV1Handler handles the "/api/v1" endpoint
+// @Summary Get API v1 information
+// @Description Get API v1 status, version, and available endpoints
+// @Tags API Info
+// @Accept json
+// @Produce json
+// @Success 200 {object} models.ApiV1Response "API v1 information"
+// @Router /api/v1 [get]
 func (h *Handler) ApiV1Handler(c *fiber.Ctx) error {
 	return c.JSON(fiber.Map{
 		"status":      "active",
@@ -55,6 +69,13 @@ func (h *Handler) ApiV1Handler(c *fiber.Ctx) error {
 }
 
 // HealthCheckHandler handles the health check endpoint
+// @Summary Health check
+// @Description Check if the API is healthy and running
+// @Tags Health
+// @Accept json
+// @Produce json
+// @Success 200 {object} models.HealthResponse "Health check response"
+// @Router /api/v1/health [get]
 func (h *Handler) HealthCheckHandler(c *fiber.Ctx) error {
 	return c.JSON(fiber.Map{
 		"status":     "OK",
@@ -64,6 +85,14 @@ func (h *Handler) HealthCheckHandler(c *fiber.Ctx) error {
 	})
 }
 
+// GetStocksBaseHandler handles the base stocks endpoint
+// @Summary Get stocks API information
+// @Description Get information about available stock endpoints, years, and examples
+// @Tags Stocks
+// @Accept json
+// @Produce json
+// @Success 200 {object} models.StocksBaseResponse "Stocks API information"
+// @Router /api/v1/stocks [get]
 func (h *Handler) GetStocksBaseHandler(c *fiber.Ctx) error {
 	latestYear := constants.AvailableYears[len(constants.AvailableYears)-1]
 	return c.JSON(fiber.Map{
