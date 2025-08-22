@@ -27,9 +27,6 @@ func NewRouter(app *fiber.App, db *mongo.Database) *Router {
 // Router Setup and Server Startup
 // ###############################################################################
 func (r *Router) SetupRoutes() {
-	// Global middleware
-	r.app.Use(middleware.Logger())
-
 	// Root route
 	r.app.Get("/", r.h.RootHandler)
 

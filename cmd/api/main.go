@@ -12,7 +12,17 @@ import (
 	"github.com/anqorithm/naqa-api/internal/seeders"
 	"github.com/gofiber/fiber/v2"
 	"github.com/joho/godotenv"
+	fiberSwagger "github.com/swaggo/fiber-swagger"
+	_ "github.com/anqorithm/naqa-api/docs"
 )
+
+// @title NAQA API
+// @version 1.0
+// @description A stock analysis and Sharia compliance API
+// @contact.name API Support
+// @contact.email support@naqa-api.com
+// @host localhost:3000
+// @BasePath /
 
 func main() {
 	// ###############################################################################
@@ -63,6 +73,9 @@ func main() {
 	// ###############################################################################
 	router := routes.NewRouter(app, db)
 	router.SetupRoutes()
+	
+	// Swagger documentation route
+	app.Get("/docs/*", fiberSwagger.WrapHandler)
 
 	port := os.Getenv("PORT")
 	if port == "" {
