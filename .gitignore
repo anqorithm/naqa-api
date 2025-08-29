@@ -3,6 +3,17 @@
 .env.local
 .env.*.local
 
+# Service Account Keys
+*.json
+sa.json
+gcps.json
+
+# Terraform
+terraform/terraform.tfvars
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.backup
+
 # Binaries
 /bin/
 *.exe
