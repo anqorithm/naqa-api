@@ -15,7 +15,7 @@ COPY . .
 RUN go build -o main ./cmd/api
 
 # App port
-EXPOSE 3000
+EXPOSE 8080
 
 # Run application
 CMD ["./main"]

@@ -1,0 +1,5 @@
+project_id = "your-gcp-project-id"
+region = "us-central1"
+service_name = "naqa-api"
+mongo_uri = "mongodb+srv://username:password@cluster.mongodb.net/"
+mongo_database = "naqa"
