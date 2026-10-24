@@ -6,11 +6,11 @@ package handlers
 
 import (
 	"github.com/anqorithm/naqa-api/internal/models"
-	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v3"
 )
 
 // SendError sends an error response to the client
-func SendError(c *fiber.Ctx, status int, code string, message string, details interface{}) error {
+func SendError(c fiber.Ctx, status int, code string, message string, details interface{}) error {
 	return c.Status(status).JSON(&models.ErrorResponse{
 		Status:  "error",
 		Code:    code,

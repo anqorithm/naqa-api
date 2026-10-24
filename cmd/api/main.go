@@ -10,9 +10,9 @@ import (
 	"github.com/anqorithm/naqa-api/internal/middleware"
 	"github.com/anqorithm/naqa-api/internal/routes"
 	"github.com/anqorithm/naqa-api/internal/seeders"
-	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v3"
 	"github.com/joho/godotenv"
-	fiberSwagger "github.com/swaggo/fiber-swagger"
+	"github.com/gofiber/contrib/v3/swaggo"
 	_ "github.com/anqorithm/naqa-api/docs"
 )
 
@@ -55,10 +55,12 @@ func main() {
 	// ###############################################################################
 	app := fiber.New(fiber.Config{
 		// Behind ingress-nginx; read the client IP from X-Real-IP only when the caller is a private-network proxy
-		ProxyHeader:             "X-Real-IP",
-		EnableTrustedProxyCheck: true,
-		TrustedProxies:          []string{"10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16", "127.0.0.1"},
-		ErrorHandler: func(c *fiber.Ctx, err error) error {
+		ProxyHeader: "X-Real-IP",
+		TrustProxy:  true,
+		TrustProxyConfig: fiber.TrustProxyConfig{
+			Proxies: []string{"10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16", "127.0.0.1"},
+		},
+		ErrorHandler: func(c fiber.Ctx, err error) error {
 			return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
 				"error": err.Error(),
 			})
@@ -70,7 +72,7 @@ func main() {
 	app.Use(middleware.Compress())
 	app.Use(middleware.CORS())
 	app.Use(middleware.RateLimit())
-	app.Use("/api/v1/metrics", middleware.Monitor())
+	app.Get("/api/v1/metrics", middleware.Monitor())
 
 	// ###############################################################################
 	// Router Setup and Server Startup
@@ -79,7 +81,7 @@ func main() {
 	router.SetupRoutes()
 	
 	// Swagger documentation route
-	app.Get("/docs/*", fiberSwagger.WrapHandler)
+	app.Get("/docs/*", swaggo.HandlerDefault)
 
 	port := os.Getenv("PORT")
 	if port == "" {

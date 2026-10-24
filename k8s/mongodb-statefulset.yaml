@@ -1,0 +1,93 @@
+# MongoDB replica set (rs0) with 3 members; the API connects with ?replicaSet=rs0 and fails over automatically
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb-rs
+  namespace: naqa
+spec:
+  clusterIP: None
+  publishNotReadyAddresses: true
+  selector:
+    app: mongodb-rs
+  ports:
+    - name: mongo
+      port: 27017
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mongodb-rs
+  namespace: naqa
+spec:
+  serviceName: mongodb-rs
+  replicas: 3
+  podManagementPolicy: Parallel
+  selector:
+    matchLabels:
+      app: mongodb-rs
+  template:
+    metadata:
+      labels:
+        app: mongodb-rs
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 100
+              podAffinityTerm:
+                topologyKey: kubernetes.io/hostname
+                labelSelector:
+                  matchLabels:
+                    app: mongodb-rs
+      terminationGracePeriodSeconds: 30
+      securityContext:
+        runAsUser: 999
+        runAsGroup: 999
+        fsGroup: 999
+      containers:
+        - name: mongodb
+          image: mongo:8.2
+          # The data set is a few MB; cap the cache so three members fit on one node
+          args: ["mongod", "--replSet", "rs0", "--bind_ip_all", "--wiredTigerCacheSizeGB", "0.25"]
+          ports:
+            - containerPort: 27017
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              memory: 1Gi
+          readinessProbe:
+            exec:
+              command: ["mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+            periodSeconds: 10
+            timeoutSeconds: 5
+          livenessProbe:
+            tcpSocket:
+              port: 27017
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            failureThreshold: 6
+          volumeMounts:
+            - name: data
+              mountPath: /data/db
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        storageClassName: microk8s-hostpath
+        resources:
+          requests:
+            storage: 2Gi
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: mongodb-rs
+  namespace: naqa
+spec:
+  minAvailable: 2
+  selector:
+    matchLabels:
+      app: mongodb-rs

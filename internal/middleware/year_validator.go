@@ -10,12 +10,12 @@ import (
 	"github.com/anqorithm/naqa-api/internal/constants"
 	"github.com/anqorithm/naqa-api/internal/handlers"
 	"github.com/anqorithm/naqa-api/internal/models"
-	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v3"
 )
 
 // ValidateYear validates the year parameter
 func ValidateYear() fiber.Handler {
-	return func(c *fiber.Ctx) error {
+	return func(c fiber.Ctx) error {
 		year := c.Params("year")
 		if year == "" {
 			return handlers.SendError(c, fiber.StatusNotFound,

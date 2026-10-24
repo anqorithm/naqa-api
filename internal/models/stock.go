@@ -6,12 +6,12 @@ package models
 
 import (
 	"time"
-	"go.mongodb.org/mongo-driver/bson/primitive"
+	"go.mongodb.org/mongo-driver/v2/bson"
 )
 
 // Stock represents a stock entity
 type Stock struct {
-	ID            primitive.ObjectID `json:"_id" bson:"_id,omitempty"`
+	ID            bson.ObjectID `json:"_id" bson:"_id,omitempty"`
 	Code          string             `json:"code" bson:"code" example:"1111"`
 	Sector        string             `json:"sector" bson:"sector" example:"الطاقة"`
 	ShariaOpinion string             `json:"sharia_opinion" bson:"sharia_opinion" example:"نقية"`
@@ -38,7 +38,7 @@ type PurificationRequest struct {
 
 // PurificationResponse represents a response containing the purification amount
 type PurificationResponse struct {
-	ID                 primitive.ObjectID       `json:"_id" bson:"_id,omitempty"`
+	ID                 bson.ObjectID       `json:"_id" bson:"_id,omitempty"`
 	PurificationAmount float64                  `json:"purification_amount" example:"25.5"`
 	DaysHeld           int                      `json:"days_held" example:"365"`
 	PurificationRate   float64                  `json:"purification_rate" example:"0.25"`

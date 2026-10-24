@@ -21,3 +21,6 @@ terraform/*.tfstate.backup
 data/
 air.log
 main
+# cluster credentials
+kubeconfig
+*.archive

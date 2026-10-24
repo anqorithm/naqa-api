@@ -7,9 +7,8 @@ import (
 	"github.com/anqorithm/naqa-api/internal/constants"
 	"github.com/anqorithm/naqa-api/internal/models"
 	"github.com/anqorithm/naqa-api/internal/utils"
-	"github.com/gofiber/fiber/v2"
-	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/bson/primitive"
+	"github.com/gofiber/fiber/v3"
+	"go.mongodb.org/mongo-driver/v2/bson"
 )
 
 // GetStocksByYearHandler handles getting stocks for a specific year
@@ -23,7 +22,7 @@ import (
 // @Failure 400 {object} map[string]interface{} "Invalid year"
 // @Failure 500 {object} map[string]interface{} "Database error"
 // @Router /api/v1/stocks/year/{year} [get]
-func (h *Handler) GetStocksByYearHandler(c *fiber.Ctx) error {
+func (h *Handler) GetStocksByYearHandler(c fiber.Ctx) error {
 	collection := h.db.Collection(c.Params("year"))
 
 	var stocks []bson.M
@@ -40,7 +39,7 @@ func (h *Handler) GetStocksByYearHandler(c *fiber.Ctx) error {
 	}
 	result := make([]models.Stock, 0, len(stocks))
 	for _, doc := range stocks {
-		id, _ := doc["_id"].(primitive.ObjectID)
+		id, _ := doc["_id"].(bson.ObjectID)
 		stock := models.Stock{
 			ID:            id,
 			Code:          utils.SafeString(doc["code"]),
@@ -52,10 +51,10 @@ func (h *Handler) GetStocksByYearHandler(c *fiber.Ctx) error {
 			Logo:          utils.SafeString(doc["logo"]),
 		}
 		
-		if createdAt, ok := doc["created_at"].(primitive.DateTime); ok {
+		if createdAt, ok := doc["created_at"].(bson.DateTime); ok {
 			stock.CreatedAt = createdAt.Time()
 		}
-		if updatedAt, ok := doc["updated_at"].(primitive.DateTime); ok {
+		if updatedAt, ok := doc["updated_at"].(bson.DateTime); ok {
 			stock.UpdatedAt = updatedAt.Time()
 		}
 		
@@ -81,7 +80,7 @@ func (h *Handler) GetStocksByYearHandler(c *fiber.Ctx) error {
 // @Failure 400 {object} map[string]interface{} "Invalid parameters"
 // @Failure 500 {object} map[string]interface{} "Database error"
 // @Router /api/v1/stocks/year/{year}/search [get]
-func (h *Handler) SearchStocksHandler(c *fiber.Ctx) error {
+func (h *Handler) SearchStocksHandler(c fiber.Ctx) error {
 	filter := bson.M{}
 
 	if name := c.Query("name"); name != "" {
@@ -116,7 +115,7 @@ func (h *Handler) SearchStocksHandler(c *fiber.Ctx) error {
 	}
 	result := make([]models.Stock, 0, len(stocks))
 	for _, doc := range stocks {
-		id, _ := doc["_id"].(primitive.ObjectID)
+		id, _ := doc["_id"].(bson.ObjectID)
 		stock := models.Stock{
 			ID:            id,
 			Code:          utils.SafeString(doc["code"]),
@@ -128,10 +127,10 @@ func (h *Handler) SearchStocksHandler(c *fiber.Ctx) error {
 			Logo:          utils.SafeString(doc["logo"]),
 		}
 		
-		if createdAt, ok := doc["created_at"].(primitive.DateTime); ok {
+		if createdAt, ok := doc["created_at"].(bson.DateTime); ok {
 			stock.CreatedAt = createdAt.Time()
 		}
-		if updatedAt, ok := doc["updated_at"].(primitive.DateTime); ok {
+		if updatedAt, ok := doc["updated_at"].(bson.DateTime); ok {
 			stock.UpdatedAt = updatedAt.Time()
 		}
 		
@@ -154,9 +153,9 @@ func (h *Handler) SearchStocksHandler(c *fiber.Ctx) error {
 // @Failure 404 {object} map[string]interface{} "Stock not found"
 // @Failure 500 {object} map[string]interface{} "Server error"
 // @Router /api/v1/stocks/year/{year}/calculate-purification [post]
-func (h *Handler) CalculatePurificationHandler(c *fiber.Ctx) error {
+func (h *Handler) CalculatePurificationHandler(c fiber.Ctx) error {
 	var req models.PurificationRequest
-	if err := c.BodyParser(&req); err != nil {
+	if err := c.Bind().Body(&req); err != nil {
 		return SendError(c, fiber.StatusBadRequest, models.ErrCodeInvalidRequest,
 			constants.MsgInvalidRequestBody, nil)
 	}
@@ -191,14 +190,14 @@ func (h *Handler) CalculatePurificationHandler(c *fiber.Ctx) error {
 	return c.JSON(response)
 }
 
-func (h *Handler) calculateMultiYearPurification(c *fiber.Ctx, req models.PurificationRequest, startDate, endDate time.Time) (*models.PurificationResponse, error) {
+func (h *Handler) calculateMultiYearPurification(c fiber.Ctx, req models.PurificationRequest, startDate, endDate time.Time) (*models.PurificationResponse, error) {
 	years := GetYearsInPeriod(startDate, endDate)
 	
 	var totalPurification float64
 	var yearlyBreakdown []models.YearlyPurificationInfo
 	var warnings []string
 	var totalDaysHeld int
-	var lastFoundID primitive.ObjectID
+	var lastFoundID bson.ObjectID
 
 	isMultiYear := len(years) > 1
 	if isMultiYear {
@@ -213,7 +212,7 @@ func (h *Handler) calculateMultiYearPurification(c *fiber.Ctx, req models.Purifi
 			continue
 		}
 
-		lastFoundID, _ = stock["_id"].(primitive.ObjectID)
+		lastFoundID, _ = stock["_id"].(bson.ObjectID)
 
 		purificationStr := utils.SafeString(stock["purification"])
 		purificationRate, err := strconv.ParseFloat(purificationStr, 64)

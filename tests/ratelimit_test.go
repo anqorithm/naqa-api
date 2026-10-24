@@ -5,13 +5,13 @@ import (
 	"testing"
 
 	"github.com/anqorithm/naqa-api/internal/middleware"
-	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v3"
 )
 
 func TestRateLimit(t *testing.T) {
 	app := fiber.New()
 	app.Use(middleware.RateLimit())
-	ok := func(c *fiber.Ctx) error { return c.SendStatus(fiber.StatusOK) }
+	ok := func(c fiber.Ctx) error { return c.SendStatus(fiber.StatusOK) }
 	app.Get("/api/v1/stocks", ok)
 	app.Get("/api/v1/health", ok)
 

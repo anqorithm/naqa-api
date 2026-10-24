@@ -6,9 +6,9 @@ import (
 	"time"
 
 	"github.com/anqorithm/naqa-api/internal/constants"
-	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v3"
 	"github.com/google/uuid"
-	"go.mongodb.org/mongo-driver/mongo"
+	"go.mongodb.org/mongo-driver/v2/mongo"
 )
 
 type Handler struct {
@@ -33,7 +33,7 @@ func NewHandler(db *mongo.Database) *Handler {
 // @Produce json
 // @Success 200 {object} models.RootResponse "API information"
 // @Router / [get]
-func (h *Handler) RootHandler(c *fiber.Ctx) error {
+func (h *Handler) RootHandler(c fiber.Ctx) error {
 	return c.JSON(fiber.Map{
 		"app_name":      os.Getenv("APP_NAME"),
 		"version":       os.Getenv("API_VERSION"),
@@ -52,7 +52,7 @@ func (h *Handler) RootHandler(c *fiber.Ctx) error {
 // @Produce json
 // @Success 200 {object} models.ApiV1Response "API v1 information"
 // @Router /api/v1 [get]
-func (h *Handler) ApiV1Handler(c *fiber.Ctx) error {
+func (h *Handler) ApiV1Handler(c fiber.Ctx) error {
 	return c.JSON(fiber.Map{
 		"status":      "active",
 		"message":     "Welcome to NAQA API v1",
@@ -76,7 +76,7 @@ func (h *Handler) ApiV1Handler(c *fiber.Ctx) error {
 // @Produce json
 // @Success 200 {object} models.HealthResponse "Health check response"
 // @Router /api/v1/health [get]
-func (h *Handler) HealthCheckHandler(c *fiber.Ctx) error {
+func (h *Handler) HealthCheckHandler(c fiber.Ctx) error {
 	return c.JSON(fiber.Map{
 		"status":     "OK",
 		"timestamp":  time.Now().Format(time.RFC3339),
@@ -93,7 +93,7 @@ func (h *Handler) HealthCheckHandler(c *fiber.Ctx) error {
 // @Produce json
 // @Success 200 {object} models.StocksBaseResponse "Stocks API information"
 // @Router /api/v1/stocks [get]
-func (h *Handler) GetStocksBaseHandler(c *fiber.Ctx) error {
+func (h *Handler) GetStocksBaseHandler(c fiber.Ctx) error {
 	latestYear := constants.AvailableYears[len(constants.AvailableYears)-1]
 	return c.JSON(fiber.Map{
 		"status":          "success",

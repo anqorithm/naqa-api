@@ -10,8 +10,8 @@ import (
 	"os"
 	"time"
 
-	"go.mongodb.org/mongo-driver/mongo"
-	"go.mongodb.org/mongo-driver/mongo/options"
+	"go.mongodb.org/mongo-driver/v2/mongo"
+	"go.mongodb.org/mongo-driver/v2/mongo/options"
 )
 
 // MongoConfig holds MongoDB configuration
@@ -49,11 +49,10 @@ func ConnectDB(cfg *MongoConfig) (*mongo.Database, error) {
 		ApplyURI(cfg.URI).
 		SetTimeout(cfg.Timeout).
 		SetConnectTimeout(cfg.Timeout).
-		SetSocketTimeout(cfg.Timeout).
 		SetRetryWrites(true).
 		SetRetryReads(true)
 
-	client, err := mongo.Connect(ctx, clientOptions)
+	client, err := mongo.Connect(clientOptions)
 	if err != nil {
 		return nil, err
 	}

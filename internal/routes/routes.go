@@ -7,8 +7,8 @@ package routes
 import (
 	"github.com/anqorithm/naqa-api/internal/handlers"
 	"github.com/anqorithm/naqa-api/internal/middleware"
-	"github.com/gofiber/fiber/v2"
-	"go.mongodb.org/mongo-driver/mongo"
+	"github.com/gofiber/fiber/v3"
+	"go.mongodb.org/mongo-driver/v2/mongo"
 )
 
 type Router struct {
