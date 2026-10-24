@@ -1,16 +1,16 @@
+# Internal only; public traffic must go through the ingress (TLS, edge rate limit, real client IP)
 apiVersion: v1
 kind: Service
 metadata:
-  annotations:
-    kompose.cmd: kompose convert -f docker-compose.yml
-    kompose.version: 1.35.0 (HEAD)
+  name: api
+  namespace: naqa
   labels:
     io.kompose.service: api
-  name: api
 spec:
+  type: ClusterIP
+  selector:
+    io.kompose.service: api
   ports:
     - name: "3000"
       port: 3000
       targetPort: 3000
-  selector:
-    io.kompose.service: api

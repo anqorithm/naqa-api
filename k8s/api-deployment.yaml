@@ -1,37 +1,91 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    kompose.cmd: kompose convert -f docker-compose.yml
-    kompose.version: 1.35.0 (HEAD)
+  name: api
+  namespace: naqa
   labels:
     io.kompose.service: api
-  name: api
 spec:
-  replicas: 1
+  replicas: 5
   selector:
     matchLabels:
       io.kompose.service: api
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      # Never drop below 5 ready pods during a rollout
+      maxSurge: 1
+      maxUnavailable: 0
   template:
     metadata:
-      annotations:
-        kompose.cmd: kompose convert -f docker-compose.yml
-        kompose.version: 1.35.0 (HEAD)
       labels:
         io.kompose.service: api
     spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        seccompProfile:
+          type: RuntimeDefault
       containers:
-        - env:
+        - name: api
+          image: localhost:32000/naqa-api:latest
+          imagePullPolicy: Always
+          env:
             - name: API_VERSION
+              value: "1.0.0"
             - name: APP_DESCRIPTION
+              value: Naqa API is a RESTful service designed to provide data on the purification process of Saudi stocks.
             - name: APP_NAME
+              value: Naqa API
             - name: ENVIRONMENT
-            - name: MONGODB_URI
-              value: /
+              value: production
+            - name: MONGO_URI
+              value: mongodb://mongodb-rs-0.mongodb-rs:27017,mongodb-rs-1.mongodb-rs:27017,mongodb-rs-2.mongodb-rs:27017/?replicaSet=rs0
+            - name: MONGO_DATABASE
+              value: naqa
             - name: PORT
-          image: api
-          name: api
+              value: "3000"
+            - name: SEED_DATA
+              value: "true"
           ports:
             - containerPort: 3000
-              protocol: TCP
-      restartPolicy: Always
+          lifecycle:
+            # Keep serving while the ingress drops this pod from its endpoints
+            preStop:
+              exec:
+                command: ["sleep", "5"]
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: ["ALL"]
+          resources:
+            requests:
+              cpu: 50m
+              memory: 32Mi
+            limits:
+              memory: 256Mi
+          readinessProbe:
+            httpGet:
+              path: /api/v1/health
+              port: 3000
+            periodSeconds: 5
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /api/v1/health
+              port: 3000
+            initialDelaySeconds: 20
+            periodSeconds: 10
+            failureThreshold: 6
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: api
+  namespace: naqa
+spec:
+  minAvailable: 3
+  selector:
+    matchLabels:
+      io.kompose.service: api
