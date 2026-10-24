@@ -54,6 +54,10 @@ func main() {
 	// Application Setup and Middleware Configuration
 	// ###############################################################################
 	app := fiber.New(fiber.Config{
+		// Behind ingress-nginx; read the client IP from X-Real-IP only when the caller is a private-network proxy
+		ProxyHeader:             "X-Real-IP",
+		EnableTrustedProxyCheck: true,
+		TrustedProxies:          []string{"10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16", "127.0.0.1"},
 		ErrorHandler: func(c *fiber.Ctx, err error) error {
 			return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
 				"error": err.Error(),

@@ -1,0 +1,14 @@
+.git
+.github
+.claude
+.serena
+.env
+.env.*
+kubeconfig
+k8s
+terraform
+tests
+docs/*.md
+test_report.html
+naqa-api
+*.archive
