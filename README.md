@@ -64,7 +64,7 @@ SEED_DATA="false"
 - غير متوافقة | Non-Compliant: أسهم غير متوافقة مع الشريعة | Non-Shariah Compliant Stocks
 
 ### السنوات المدعومة | Supported Years
-> السنوات المتوفرة | Available Years: 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024
+> السنوات المتوفرة | Available Years: 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025
 
 </div>
 
@@ -311,6 +311,7 @@ Content-Type: {{contentType}}
 
 - [حاسبة التطهير - موقع المقاصد](https://almaqased.net/cleansing-calculator/%D9%82%D9%88%D8%A7%D8%A6%D9%85-%D8%A7%D9%84%D8%AA%D8%AD%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A-%D9%84%D9%84%D8%B4%D8%B1%D9%83%D8%A7%D8%AA/)
 - قوائم التحليل المالي للشركات المنشورة للعامة
+- [دراسة القوائم المالية لعام 2025](https://almaqased.net/wp-content/uploads/2026/financial-statements-study-2025.pdf)
 - حسابات نسب التطهير المعتمدة من قبل الشيخ د. محمد العصيمي
 
 </div>
@@ -334,7 +335,7 @@ This API is inspired by [NaqausStocks.com](https://naquastocks.com/).
 Data source: [Almaqased Cleansing Calculator](https://almaqased.net/cleansing-calculator/%D9%82%D9%88%D8%A7%D8%A6%D9%85-%D8%A7%D9%84%D8%AA%D8%AD%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A-%D9%84%D9%84%D8%B4%D8%B1%D9%83%D8%A7%D8%AA/)  
 المشرف العام: د. محمد بن سعود العصيمي
 
-> **Note:** Supported Years: 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024
+> **Note:** Supported Years: 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025
 
 
 ## Development
@@ -387,7 +388,9 @@ Data source: [Almaqased Cleansing Calculator](https://almaqased.net/cleansing-ca
     ├── final_2020.json
     ├── final_2021.json
     ├── final_2022.json
-    └── final_2023.json
+    ├── final_2023.json
+    ├── final_2024.json
+    └── final_2025.json
 ```
 
 
