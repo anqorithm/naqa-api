@@ -24,7 +24,7 @@ services:
       - naqa-network
   # MongoDB service
   mongodb:
-    image: mongo:latest
+    image: mongo:8.2
     ports:
       - "${MONGO_PORT:-27017}:27017"
     volumes:

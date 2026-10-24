@@ -28,7 +28,7 @@ spec:
             - --bind_ip_all
           env:
             - name: MONGO_INITDB_DATABASE
-          image: mongo:latest
+          image: mongo:8.2
           name: mongodb
           ports:
             - containerPort: 27017
