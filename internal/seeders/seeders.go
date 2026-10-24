@@ -15,6 +15,7 @@ import (
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
+	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
 const (
@@ -28,6 +29,9 @@ type StockData struct {
 	Name          string `json:"name" bson:"name"`
 	Code          string `json:"code" bson:"code"`
 	Sector        string `json:"sector" bson:"sector"`
+	NameEn        string `json:"name_en" bson:"name_en"`
+	NameAr        string `json:"name_ar" bson:"name_ar"`
+	Logo          string `json:"logo" bson:"logo"`
 	DataSource    string `json:"data_source" bson:"data_source"`
 }
 
@@ -81,8 +85,15 @@ func LoadDataSources(db *mongo.Database) error {
 		}
 
 		if len(documents) > 0 {
-			_, err = collection.InsertMany(ctx, documents)
-			if err != nil {
+			// Several API replicas seed at startup; the unique index makes concurrent runs insert each stock once
+			if _, err := collection.Indexes().CreateOne(ctx, mongo.IndexModel{
+				Keys:    bson.D{{Key: "code", Value: 1}},
+				Options: options.Index().SetUnique(true),
+			}); err != nil {
+				return fmt.Errorf("error creating index on %s: %v", collectionName, err)
+			}
+			_, err = collection.InsertMany(ctx, documents, options.InsertMany().SetOrdered(false))
+			if err != nil && !mongo.IsDuplicateKeyError(err) {
 				return fmt.Errorf("error inserting documents into %s: %v", collectionName, err)
 			}
 			fmt.Printf("Successfully inserted %d documents into collection %s\n", len(documents), collectionName)
