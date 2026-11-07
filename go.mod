@@ -3,7 +3,7 @@ module github.com/anqorithm/naqa-api
 go 1.26.0
 
 require (
-	github.com/go-playground/validator/v10 v10.30.5
+	github.com/go-playground/validator/v10 v10.30.6
 	github.com/gofiber/contrib/v3/monitor v1.2.3
 	github.com/gofiber/contrib/v3/swaggo v1.0.14
 	github.com/gofiber/fiber/v3 v3.6.1
